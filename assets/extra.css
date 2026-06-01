@@ -1,0 +1,36 @@
+/* ===== THEME XANH ĐẬM (navy) ===== */
+[data-md-color-primary="blue"]{
+  --md-primary-fg-color:#0d47a1;
+  --md-primary-fg-color--light:#5472d3;
+  --md-primary-fg-color--dark:#002171;
+}
+[data-md-color-accent="light blue"]{ --md-accent-fg-color:#2962ff; }
+[data-md-color-scheme="slate"]{
+  --md-primary-fg-color:#0d47a1;
+  --md-primary-fg-color--dark:#001a5c;
+}
+
+/* ===== MENU NGANG GOM NHÓM (hover dropdown) ===== */
+.tm-bar{position:sticky;top:2.4rem;z-index:5;background:var(--md-primary-fg-color--dark);
+  box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.tm-inner{max-width:61rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:stretch;padding:0 .8rem}
+@media(min-width:76.25em){ .tm-inner{max-width:none;padding:0 1.2rem} }
+.tm-item{position:relative;display:flex}
+.tm-link{display:flex;align-items:center;color:#fff;opacity:.92;text-decoration:none;
+  font-size:.72rem;font-weight:700;line-height:1;padding:.75rem .85rem;white-space:nowrap;cursor:pointer}
+.tm-link:hover{opacity:1}
+.tm-has:hover .tm-link{background:rgba(255,255,255,.14)}
+.tm-drop{position:absolute;top:100%;left:0;min-width:248px;background:var(--md-default-bg-color);
+  border:1px solid var(--md-default-fg-color--lightest);border-radius:.2rem;
+  box-shadow:0 8px 26px rgba(0,0,0,.22);padding:.3rem 0;display:none}
+.tm-has:hover .tm-drop{display:block}
+.tm-drop a{display:block;color:var(--md-default-fg-color);text-decoration:none;
+  font-size:.72rem;padding:.5rem 1rem;line-height:1.35}
+.tm-drop a:hover{background:var(--md-primary-fg-color);color:#fff}
+/* mobile: bar cuộn ngang được, dropdown mở khi chạm (toggle bằng JS) */
+@media(max-width:76.1875em){
+  .tm-inner{flex-wrap:nowrap;overflow-x:auto}
+  .tm-drop{position:static;box-shadow:none;border:0;display:none;background:rgba(255,255,255,.06)}
+  .tm-item.tm-open .tm-drop{display:block}
+  .tm-drop a{color:#fff}
+}
