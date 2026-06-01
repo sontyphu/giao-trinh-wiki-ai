@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Import nội dung CHUẨN từ vault Obsidian -> MkDocs docs/, chuyển [[wikilink]] -> link md,
 sinh lại mkdocs.yml với nav 7 phần."""
-import os, re, shutil
+import os, re, shutil, json
 
 VAULT = r"C:\Users\Thanh Son\Documents\Obsidian Vault\Son's Brain\wiki\work\Đào tạo\giao-trinh-wiki-ai"
 ROOT  = os.path.dirname(os.path.abspath(__file__))
@@ -142,13 +142,131 @@ for rel in files:
     titles[tgt] = title_of(content, os.path.basename(tgt))
     print("  +", tgt)
 
+# ---- assets: theme xanh đậm + menu ngang gom nhóm có dropdown ----
+ASSETS = os.path.join(DOCS, "assets")
+os.makedirs(ASSETS, exist_ok=True)
+
+EXTRA_CSS = """\
+/* ===== THEME XANH ĐẬM (navy) ===== */
+[data-md-color-primary="blue"]{
+  --md-primary-fg-color:#0d47a1;
+  --md-primary-fg-color--light:#5472d3;
+  --md-primary-fg-color--dark:#002171;
+}
+[data-md-color-accent="light blue"]{ --md-accent-fg-color:#2962ff; }
+[data-md-color-scheme="slate"]{
+  --md-primary-fg-color:#0d47a1;
+  --md-primary-fg-color--dark:#001a5c;
+}
+
+/* ===== MENU NGANG GOM NHÓM (hover dropdown) ===== */
+.tm-bar{position:sticky;top:2.4rem;z-index:5;background:var(--md-primary-fg-color--dark);
+  box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.tm-inner{max-width:61rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:stretch;padding:0 .8rem}
+@media(min-width:76.25em){ .tm-inner{max-width:none;padding:0 1.2rem} }
+.tm-item{position:relative;display:flex}
+.tm-link{display:flex;align-items:center;color:#fff;opacity:.92;text-decoration:none;
+  font-size:.72rem;font-weight:700;line-height:1;padding:.75rem .85rem;white-space:nowrap;cursor:pointer}
+.tm-link:hover{opacity:1}
+.tm-has:hover .tm-link{background:rgba(255,255,255,.14)}
+.tm-drop{position:absolute;top:100%;left:0;min-width:248px;background:var(--md-default-bg-color);
+  border:1px solid var(--md-default-fg-color--lightest);border-radius:.2rem;
+  box-shadow:0 8px 26px rgba(0,0,0,.22);padding:.3rem 0;display:none}
+.tm-has:hover .tm-drop{display:block}
+.tm-drop a{display:block;color:var(--md-default-fg-color);text-decoration:none;
+  font-size:.72rem;padding:.5rem 1rem;line-height:1.35}
+.tm-drop a:hover{background:var(--md-primary-fg-color);color:#fff}
+/* mobile: bar cuộn ngang được, dropdown mở khi chạm (toggle bằng JS) */
+@media(max-width:76.1875em){
+  .tm-inner{flex-wrap:nowrap;overflow-x:auto}
+  .tm-drop{position:static;box-shadow:none;border:0;display:none;background:rgba(255,255,255,.06)}
+  .tm-item.tm-open .tm-drop{display:block}
+  .tm-drop a{color:#fff}
+}
+"""
+with open(os.path.join(ASSETS, "extra.css"), "w", encoding="utf-8") as f:
+    f.write(EXTRA_CSS)
+
+# ---- dữ liệu menu (gom nhóm, FAQ cuối) ----
+def diru(t):
+    return "" if t == "index.md" else t[:-3] + "/"
+
+parts_children = []
+for folder, label in SECTIONS:
+    if folder == "99-templates":
+        continue
+    fs = sorted([x for x in files if x.startswith(folder + "/")])
+    if fs:
+        parts_children.append({"label": label, "href": diru(target_of(fs[0]))})
+
+tpl_children = []
+for x in sorted([x for x in files if x.startswith("99-templates/")]):
+    t = target_of(x)
+    tpl_children.append({"label": titles.get(t, t), "href": diru(t)})
+
+MENU = [
+    {"label": "🏠 Trang chủ", "href": diru("index.md")},
+    {"label": "🚀 Bắt đầu", "children": [
+        {"label": "Quick Start — chọn lộ trình", "href": diru("quick-start.md")},
+        {"label": "Mục lục đầy đủ 41 file", "href": diru("muc-luc.md")},
+    ]},
+    {"label": "📚 Giáo trình", "children": parts_children},
+    {"label": "📋 Templates", "children": tpl_children},
+    {"label": "❓ FAQ", "href": diru("faq.md")},
+]
+
+MENU_JS = "const MENU = " + json.dumps(MENU, ensure_ascii=False) + ";\n" + """\
+(function () {
+  function root() {
+    var l = document.querySelector('.md-header .md-logo') || document.querySelector('a.md-logo');
+    return l ? l.href : (location.origin + '/');
+  }
+  function build() {
+    var header = document.querySelector('.md-header');
+    if (!header || document.querySelector('.tm-bar')) return;
+    var base = root();
+    var bar = document.createElement('nav'); bar.className = 'tm-bar';
+    var inner = document.createElement('div'); inner.className = 'tm-inner';
+    MENU.forEach(function (item) {
+      var wrap = document.createElement('div');
+      wrap.className = 'tm-item' + (item.children ? ' tm-has' : '');
+      var a = document.createElement('a'); a.className = 'tm-link';
+      a.textContent = item.label + (item.children ? '  ▾' : '');
+      a.href = new URL(item.href || '', base).href;
+      if (item.children) {
+        a.addEventListener('click', function (e) {
+          if (window.matchMedia('(max-width: 76.1875em)').matches) { e.preventDefault(); wrap.classList.toggle('tm-open'); }
+        });
+      }
+      wrap.appendChild(a);
+      if (item.children) {
+        var drop = document.createElement('div'); drop.className = 'tm-drop';
+        item.children.forEach(function (c) {
+          var ca = document.createElement('a');
+          ca.href = new URL(c.href, base).href; ca.textContent = c.label;
+          drop.appendChild(ca);
+        });
+        wrap.appendChild(drop);
+      }
+      inner.appendChild(wrap);
+    });
+    bar.appendChild(inner);
+    header.insertAdjacentElement('afterend', bar);
+  }
+  if (document.readyState !== 'loading') build();
+  else document.addEventListener('DOMContentLoaded', build);
+})();
+"""
+with open(os.path.join(ASSETS, "menu.js"), "w", encoding="utf-8") as f:
+    f.write(MENU_JS)
+print("  + assets/extra.css, assets/menu.js")
+
 # ---- sinh mkdocs.yml ----
 def nav_lines():
     L = []
     L.append("  - 🏠 Trang chủ: index.md")
     L.append("  - 🚀 Quick Start: quick-start.md")
     L.append("  - 🗂️ Mục lục: muc-luc.md")
-    L.append("  - ❓ FAQ: faq.md")
     for folder, label in SECTIONS:
         fs = sorted([f for f in files if f.startswith(folder + "/")])
         if not fs:
@@ -158,6 +276,7 @@ def nav_lines():
             tgt = target_of(f_)
             t = titles.get(tgt, os.path.basename(tgt)).replace('"', "'")
             L.append(f'      - "{t}": {tgt}')
+    L.append("  - ❓ FAQ: faq.md")   # FAQ xuống cuối cùng
     return "\n".join(L)
 
 MKDOCS = """\
@@ -192,8 +311,6 @@ theme:
     text: Inter
     code: JetBrains Mono
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
     - navigation.indexes
@@ -216,6 +333,11 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+
+extra_css:
+  - assets/extra.css
+extra_javascript:
+  - assets/menu.js
 
 nav:
 """ + nav_lines() + "\n"

@@ -29,8 +29,6 @@ theme:
     text: Inter
     code: JetBrains Mono
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
     - navigation.indexes
@@ -54,11 +52,15 @@ markdown_extensions:
   - toc:
       permalink: true
 
+extra_css:
+  - assets/extra.css
+extra_javascript:
+  - assets/menu.js
+
 nav:
   - 🏠 Trang chủ: index.md
   - 🚀 Quick Start: quick-start.md
   - 🗂️ Mục lục: muc-luc.md
-  - ❓ FAQ: faq.md
   - 📖 00. Triết lý:
       - "Tại sao hệ thống ghi chú AI": 00-triet-ly/01-tai-sao-ai-first-wiki.md
       - "Tại sao lưu theo khái niệm": 00-triet-ly/02-tai-sao-concept-first.md
@@ -103,3 +105,4 @@ nav:
       - "index.md format": 99-templates/index-md-format.md
       - "log.md format": 99-templates/log-md-format.md
       - "Source page template": 99-templates/source-page-template.md
+  - ❓ FAQ: faq.md

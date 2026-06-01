@@ -5,181 +5,184 @@ created: 2026-06-01
 updated: 2026-06-01
 ---
 
-# FAQ — Câu hỏi thường gặp & Lỗi phổ biến
+# FAQ — Câu hỏi thường gặp về toàn hệ thống
 
-Đọc file này khi bị kẹt. Phần lớn vấn đề đã có câu trả lời ở đây.
+Bộ câu hỏi tổng quan cho cả hệ thống ghi chú AI — từ khái niệm, cài đặt, sử dụng đến chiến lược và chi phí. Các câu được **đánh số liên tục (Q1 → Q33)** và chia 6 nhóm. Bị kẹt ở đâu, tra số ở đó.
 
----
-
-## Nhóm 1 — Câu hỏi về khái niệm
-
-### "Vault là gì? Khác gì với folder thông thường?"
-
-**Vault** chỉ là một folder (thư mục) bình thường trên máy tính, nhưng được **Obsidian nhận ra** và xử lý đặc biệt — tạo liên kết giữa các file, hiển thị sơ đồ mạng, hỗ trợ tìm kiếm nhanh.
-
-Hình dung đơn giản: vault = "thư mục thông minh" mà Obsidian biết cách đọc.
-
-### "CLAUDE.md là gì? Tại sao cần nó?"
-
-CLAUDE.md là file văn bản bạn đặt trong vault, dùng để **dạy AI hiểu kho của bạn** — kho này dùng để làm gì, theo quy tắc nào, lưu thông tin theo cấu trúc gì.
-
-Hình dung đơn giản: CLAUDE.md = "bản nội quy" mà bạn viết ra để AI làm việc đúng ý bạn, không phải làm theo kiểu mặc định của nó.
-
-Không có CLAUDE.md → AI mỗi lần làm mỗi kiểu → kho lộn xộn dần.
-
-### "Raw folder là gì? Tôi có phải đặt mọi thứ vào đó không?"
-
-`raw/` là thư mục chứa **tài liệu gốc** — bài viết bạn lưu về, transcript video, PDF sách, ghi chú thô. Đặt nguyên xi vào, không chỉnh sửa.
-
-AI sẽ đọc raw → viết tóm tắt → lưu vào `wiki/`. Bạn không cần làm thêm bước nào.
-
-Không cần đặt mọi thứ vào raw. Chỉ những tài liệu bạn muốn AI xử lý.
-
-### "Wiki folder dùng để làm gì?"
-
-`wiki/` là nơi chứa **nội dung AI đã xử lý** — các trang tóm tắt, khái niệm, phân tích. AI viết ra đây sau khi đọc raw.
-
-Bạn đọc wiki để tra cứu, không cần đọc lại raw gốc.
-
-### "Wikilink là gì?"
-
-Wikilink là cách liên kết giữa các file: `Tên file`. Khi bạn click vào `Khái niệm A` trong Obsidian, nó sẽ mở file "Khái niệm A" ngay lập tức.
-
-AI tự tạo các liên kết này khi viết wiki — bạn không cần làm thủ công.
-
-### "Markdown là gì? Tôi cần học không?"
-
-Markdown là cách định dạng văn bản đơn giản bằng ký tự đặc biệt:
-- `# Tiêu đề lớn`
-- `## Tiêu đề nhỏ hơn`
-- `**chữ đậm**`
-- `- dấu gạch đầu dòng`
-
-Obsidian dùng markdown. Bạn không cần học sâu — chỉ cần biết `#` là tiêu đề, `-` là danh sách. Phần còn lại AI làm cho bạn.
-
-### "Tại sao cần trả tiền Claude? Miễn phí không được sao?"
-
-Phiên bản miễn phí của Claude có giới hạn số lần hỏi mỗi ngày và không có đủ khả năng đọc file lớn. Để dùng Claude Code (công cụ AI đọc/ghi file trực tiếp), bạn cần tài khoản Pro (~$20/tháng).
-
-Nghĩ đơn giản: bạn đang thuê "nhân viên AI" — phiên bản Pro là nhân viên toàn thời gian, miễn phí là thực tập sinh chỉ làm một lúc rồi nghỉ.
+| Nhóm | Chủ đề | Câu |
+|---|---|---|
+| A | Tổng quan hệ thống | Q1 – Q6 |
+| B | Khái niệm cốt lõi | Q7 – Q14 |
+| C | Cài đặt & công cụ | Q15 – Q20 |
+| D | Sử dụng hằng ngày | Q21 – Q27 |
+| E | Chiến lược & mở rộng | Q28 – Q31 |
+| F | Chi phí · Bảo mật · Team | Q32 – Q33 |
 
 ---
 
-## Nhóm 2 — Lỗi khi cài đặt
+## Nhóm A — Tổng quan hệ thống
 
-### Lỗi: Obsidian mở vault nhưng file không hiện lên
+### Q1. Hệ thống này thực chất là gì?
 
-**Nguyên nhân phổ biến**: Bạn mở *folder con* thay vì folder vault chính.
+Một **hệ thống ghi chú cá nhân do AI quản lý**. Bạn thả tài liệu thô vào, AI đọc, viết thành trang wiki có cấu trúc và tự liên kết. Nguyên tắc cốt lõi: **AI viết, bạn duyệt**.
 
-**Cách fix**: Trong Obsidian, vào `File > Open vault` → chọn đúng folder gốc (folder chứa CLAUDE.md và các folder con 00-triet-ly, 01-cai-dat...).
+### Q2. Nó khác gì Notion, Evernote, Google Docs?
 
-### Lỗi: Claude Code báo "command not found" khi gõ `claude`
+Các app kia bắt **bạn** tự tổ chức, tự liên kết, tự dọn dẹp — nên 80% người bỏ cuộc sau vài tháng. Ở đây **AI** làm phần vận hành đó. Bạn chỉ ra quyết định và duyệt kết quả.
 
-**Nguyên nhân**: Claude Code chưa được cài hoặc chưa thêm vào PATH (đường dẫn hệ thống).
+### Q3. Tôi sẽ có được gì sau khi học xong?
 
-**Cách fix**:
-1. Kiểm tra đã cài chưa: [03-cai-claude-code](01-cai-dat/03-cai-claude-code.md)
-2. Sau khi cài, đóng terminal → mở lại → thử lại
+Một hệ thống nhiều kho (vault) đồng bộ, được AI quản lý: 1 kho kiến thức "Brain", các kho mở rộng (Life / 4DX / Marketing), cùng agent + skill + memory để tự động hoá việc lặp lại. Xem [README](muc-luc.md) để biết chi tiết.
 
-### Lỗi: Claude Code báo "Not authenticated"
+### Q4. Cần biết lập trình không?
 
-**Nguyên nhân**: Chưa đăng nhập hoặc phiên đăng nhập hết hạn.
+Không. Bạn chỉ cần gõ vài lệnh cơ bản (sẽ được hướng dẫn từng bước) và biết copy-paste. Không cần kiến thức lập trình.
 
-**Cách fix**: Gõ `claude auth login` → làm theo hướng dẫn trên màn hình.
+### Q5. Mất bao lâu để chạy được?
 
-### Lỗi: Vault không đồng bộ qua iCloud
+Sau **Phần 02** (khoảng 6-10 giờ đầu) là kho Brain đã dùng được. Toàn bộ 7 phần khoảng **15-20 giờ**, trải dài 1-2 tuần. Phần 03-05 là mở rộng theo nhu cầu.
 
-**Nguyên nhân phổ biến**: Vault không nằm trong thư mục iCloud Drive đúng chỗ.
+### Q6. Máy Windows / Linux có làm được không?
 
-**Đường dẫn đúng trên Mac**: `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/`
-
-**Cách fix**: Di chuyển folder vault vào đúng đường dẫn trên, rồi mở lại trong Obsidian.
-
-### Lỗi: Plugin Dataview không hoạt động sau khi cài
-
-**Cách fix**: Vào `Settings > Community plugins` → bật nút "Enable" cạnh Dataview → restart Obsidian.
+Được. Giáo trình ưu tiên ví dụ trên Mac nhưng có hướng dẫn cho Windows và Linux. Mọi công cụ (Obsidian, Claude Code) đều chạy đa nền tảng.
 
 ---
 
-## Nhóm 3 — Lỗi khi dùng
+## Nhóm B — Khái niệm cốt lõi
 
-### "Tôi nói với AI 'ingest file này' nhưng AI không làm gì"
+### Q7. Vault là gì? Khác gì folder thường?
 
-**Nguyên nhân phổ biến 1**: AI chưa đọc CLAUDE.md của vault. Hãy nói rõ: *"Đọc CLAUDE.md trước, rồi ingest file raw/tên-file.md"*.
+**Vault** là một folder bình thường nhưng được Obsidian nhận diện và xử lý đặc biệt — tạo liên kết giữa file, hiển thị sơ đồ mạng, tìm kiếm toàn văn. Hình dung: "thư mục thông minh".
 
-**Nguyên nhân phổ biến 2**: File bạn chỉ định không tồn tại ở đường dẫn đó. Kiểm tra lại tên file và thư mục.
+### Q8. CLAUDE.md là gì? Tại sao cần?
 
-### "AI viết wiki nhưng nội dung không đúng với tài liệu gốc"
+Là file "nội quy" bạn đặt trong vault để **dạy AI hiểu kho của bạn** — dùng làm gì, theo quy tắc nào, lưu theo cấu trúc gì. Không có nó → AI mỗi lần làm mỗi kiểu → kho lộn xộn dần.
 
-**Nguyên nhân**: File raw quá dài, AI chỉ đọc được một phần.
+### Q9. Folder `raw/` dùng làm gì?
 
-**Cách fix**: Chia file raw thành nhiều phần nhỏ hơn (mỗi phần ~5,000-10,000 chữ). Ingest từng phần một.
+Chứa **tài liệu gốc** (bài viết, transcript, PDF, ghi chú thô) — đặt nguyên xi, không chỉnh sửa. AI đọc `raw/` rồi viết kết quả vào `wiki/`.
 
-### "AI tạo nhiều file cho cùng một khái niệm"
+### Q10. Folder `wiki/` dùng làm gì?
 
-**Ví dụ**: Khái niệm "phễu bán hàng" xuất hiện ở 3 file khác nhau.
+Chứa **nội dung AI đã xử lý** — trang tóm tắt, khái niệm, phân tích. Bạn đọc `wiki/` để tra cứu, không cần đọc lại `raw/`.
 
-**Cách fix**: Nói với AI: *"Tìm tất cả file nói về phễu bán hàng, gộp thành 1 file, xoá 2 file còn lại"*.
+### Q11. Mô hình 3 lớp Raw / Wiki / Schema nghĩa là gì?
 
-Để tránh lặp lại: Trước khi ingest source mới, nhắc AI *"Kiểm tra khái niệm nào đã có trong wiki/ trước khi tạo file mới"*.
+- **Raw** = nguyên liệu thô · **Wiki** = trang đã viết lại, liên kết · **Schema** = quy ước đặt tên/cấu trúc (mô tả trong CLAUDE.md).
 
-### "Wikilink bị gãy — click vào không mở được file"
+Chi tiết: [04-3-lop-raw-wiki-schema](00-triet-ly/04-3-lop-raw-wiki-schema.md).
 
-**Nguyên nhân**: Tên file trong wikilink không khớp với tên file thật (sai chính tả, sai dấu, sai viết hoa).
+### Q12. Wikilink là gì?
 
-**Cách fix**: Trong Obsidian, file gãy link sẽ hiện màu khác. Click phải → "Rename" để đổi tên đúng, hoặc sửa wikilink trong file nguồn.
+Cách liên kết giữa file bằng cú pháp `Tên trang`. Click vào là mở trang đó ngay. AI tự tạo các liên kết này khi viết wiki — bạn không làm thủ công.
 
-### "AI mỗi lần làm mỗi kiểu, không nhất quán"
+### Q13. Concept-first là gì, khác gì lưu theo tài liệu?
 
-**Nguyên nhân**: CLAUDE.md chưa đủ rõ ràng, hoặc AI không đọc CLAUDE.md trước.
+Thay vì lưu theo nguồn (mỗi sách 1 file), ta lưu theo **khái niệm** — mỗi concept 1 trang, nhiều nguồn cùng trỏ tới. Nhờ vậy kiến thức được tổng hợp chéo. Xem [02-tai-sao-concept-first](00-triet-ly/02-tai-sao-concept-first.md).
 
-**Cách fix**:
-1. Mở đầu mỗi session: *"Đọc CLAUDE.md của vault này trước"*
-2. Nếu AI làm sai → chỉ chỗ sai → nói *"Ghi nhớ: lần sau làm kiểu X, không làm kiểu Y"*
-3. Nếu lỗi lặp lại nhiều lần → thêm rule vào CLAUDE.md
+### Q14. Markdown là gì? Cần học không?
+
+Cách định dạng văn bản đơn giản: `#` tiêu đề, `**đậm**`, `-` danh sách. Bạn không cần học sâu — phần còn lại AI làm.
 
 ---
 
-## Nhóm 4 — Câu hỏi về chiến lược
+## Nhóm C — Cài đặt & công cụ
 
-### "Tôi nên bắt đầu ingest tài liệu gì trước?"
+### Q15. Cần cài những gì tối thiểu?
 
-Bắt đầu với tài liệu **ngắn và quen thuộc** nhất — ví dụ 1 bài viết bạn đã đọc và có ý kiến về nó. Tránh bắt đầu với PDF 300 trang.
+Obsidian (đọc/ghi wiki) + Claude Code (AI làm việc với file). Tuỳ chọn: iCloud (đồng bộ), MCP servers, plugins. Xem Phần [01-cai-obsidian](01-cai-dat/01-cai-obsidian.md).
 
-Mục tiêu lần đầu: thấy quy trình hoạt động, không phải hoàn thiện kho ngay.
+### Q16. Lỗi: Obsidian mở vault nhưng không thấy file?
 
-### "Kho tôi nên lưu bao nhiêu tài liệu?"
+Thường do mở nhầm folder con. Vào `File > Open vault` → chọn đúng folder gốc (chứa CLAUDE.md và các folder 00-, 01-...).
 
-Không có giới hạn kỹ thuật, nhưng chất lượng hơn số lượng. 50 tài liệu được tóm tắt tốt hơn 500 tài liệu lộn xộn.
+### Q17. Lỗi: gõ `claude` báo "command not found"?
 
-Ingest có chọn lọc: chỉ những gì bạn thực sự sẽ tra cứu lại.
+Claude Code chưa cài hoặc chưa vào PATH. Kiểm tra lại [03-cai-claude-code](01-cai-dat/03-cai-claude-code.md), sau khi cài thì **đóng terminal mở lại** rồi thử.
 
-### "Khi nào thì tôi cần tách thêm vault mới?"
+### Q18. Lỗi: Claude báo "Not authenticated"?
 
-Khi vault vượt **500 file** VÀ bạn thấy khó tìm kiếm — lúc đó mới nên tách. Đừng tách sớm.
+Chưa đăng nhập hoặc hết phiên. Gõ `claude auth login` và làm theo hướng dẫn.
 
-Chi tiết: [01-khi-nao-tach-vault](03-mo-rong-multi-vault/01-khi-nao-tach-vault.md)
+### Q19. Lỗi: vault không đồng bộ qua iCloud?
 
-### "Tôi có thể dùng hệ thống này cho team không?"
+Vault chưa nằm đúng chỗ. Đường dẫn đúng trên Mac: `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/`. Di chuyển vault vào đó rồi mở lại.
 
-Hệ thống này thiết kế cho **cá nhân** — một người quản lý vault trên máy của mình. Obsidian không hỗ trợ nhiều người cùng sửa một vault.
+### Q20. Lỗi: plugin (Dataview) không chạy sau khi cài?
 
-Nếu cần chia sẻ: xuất nội dung ra Google Docs / Notion, hoặc dùng Git để đồng bộ (xem [02-backup-icloud-git](05-bao-tri-lint/02-backup-icloud-git.md)).
+Vào `Settings > Community plugins` → bật "Enable" cạnh plugin → restart Obsidian.
+
+---
+
+## Nhóm D — Sử dụng hằng ngày
+
+### Q21. Tôi bảo AI "ingest file này" nhưng AI không làm gì?
+
+(1) AI chưa đọc CLAUDE.md — nói rõ *"Đọc CLAUDE.md trước, rồi ingest raw/tên-file.md"*. (2) File không tồn tại ở đường dẫn đó — kiểm tra lại tên & thư mục.
+
+### Q22. AI viết wiki nhưng nội dung sai so với gốc?
+
+File raw quá dài, AI chỉ đọc được một phần. Chia nhỏ raw (~5.000-10.000 chữ/phần) và ingest từng phần.
+
+### Q23. AI tạo nhiều file cho cùng một khái niệm?
+
+Nói: *"Tìm tất cả file nói về X, gộp thành 1, xoá phần còn lại"*. Phòng ngừa: trước khi ingest, nhắc AI *"Kiểm tra khái niệm đã có trong wiki/ trước khi tạo file mới"*.
+
+### Q24. Wikilink bị gãy, click không mở được?
+
+Tên trong wikilink không khớp tên file thật (sai dấu/chính tả/hoa-thường). Trong Obsidian link gãy hiện màu khác — sửa tên file hoặc sửa wikilink.
+
+### Q25. AI làm việc không nhất quán, mỗi lần mỗi kiểu?
+
+Mở đầu mỗi phiên: *"Đọc CLAUDE.md của vault này trước"*. Sai chỗ nào chỉ chỗ đó và nói *"Ghi nhớ: lần sau làm kiểu X"*. Lỗi lặp nhiều → thêm rule vào CLAUDE.md.
+
+### Q26. Làm sao hỏi AI để lấy thông tin từ kho?
+
+Hỏi tự nhiên: *"Tổng hợp giúp tôi mọi điều đã ghi về X"*. AI đọc wiki và trả lời kèm link nguồn. Xem [08-query-wiki-dau-tien](02-vault-dau-tien-brain/08-query-wiki-dau-tien.md).
+
+### Q27. Memory là gì, dùng khi nào?
+
+File lưu thông tin AI cần nhớ qua các phiên (bạn là ai, quy tắc nào, dự án nào). Không có memory → mỗi lần mở mới AI quên hết. Xem [05-memory-system](04-agents-skills-memory/05-memory-system.md).
+
+---
+
+## Nhóm E — Chiến lược & mở rộng
+
+### Q28. Nên ingest tài liệu gì đầu tiên?
+
+Tài liệu **ngắn và quen thuộc** (1 bài bạn đã đọc). Tránh PDF 300 trang. Mục tiêu lần đầu: thấy quy trình chạy, chưa cần hoàn hảo.
+
+### Q29. Kho nên lưu bao nhiêu tài liệu?
+
+Không giới hạn kỹ thuật, nhưng **chất lượng hơn số lượng**. 50 tài liệu tóm tắt tốt > 500 tài liệu lộn xộn. Chỉ ingest thứ bạn sẽ tra cứu lại.
+
+### Q30. Khi nào cần tách thêm vault mới?
+
+Khi vault vượt ~**500 file** VÀ thấy khó tìm. Đừng tách sớm. Chi tiết: [01-khi-nao-tach-vault](03-mo-rong-multi-vault/01-khi-nao-tach-vault.md).
+
+### Q31. Khi nào cần cải tổ (pivot) toàn bộ hệ thống?
+
+Khi schema cũ liên tục cản trở (query khó, nhiều ngoại lệ). Pivot có chủ đích, đừng vá chắp vá. Xem [04-khi-nao-pivot-architecture](05-bao-tri-lint/04-khi-nao-pivot-architecture.md).
+
+---
+
+## Nhóm F — Chi phí · Bảo mật · Team
+
+### Q32. Tại sao phải trả tiền Claude? Bản miễn phí được không?
+
+Bản miễn phí giới hạn lượt hỏi và không đủ sức đọc file lớn. Để dùng Claude Code (đọc/ghi file trực tiếp) cần Pro (~$20/tháng). Hình dung: bạn đang thuê "nhân viên AI" toàn thời gian.
+
+### Q33. Dữ liệu của tôi nằm ở đâu? Dùng cho team được không?
+
+Vault nằm **cục bộ trên máy bạn** (folder thường), đồng bộ qua iCloud/Git tuỳ chọn — không khoá vào nền tảng nào. Hệ thống thiết kế cho **cá nhân**; cần chia sẻ thì xuất ra Google Docs/Notion hoặc dùng Git (xem [02-backup-icloud-git](05-bao-tri-lint/02-backup-icloud-git.md)).
 
 ---
 
 ## Không thấy câu trả lời ở đây?
 
-Hỏi thẳng Claude: mô tả vấn đề + tên file đang gặp lỗi + hành động bạn vừa làm.
+Hỏi thẳng Claude: mô tả vấn đề + tên file đang lỗi + hành động bạn vừa làm.
 
-Ví dụ: *"Tôi vừa gõ lệnh 'claude' trong terminal nhưng nhận được lỗi 'command not found'. Tôi đang dùng Mac, đã cài Claude Code theo bước 3 nhưng vẫn lỗi. Lỗi này nghĩa là gì và sửa thế nào?"*
-
----
-
-## Trước đó
-
-[README](muc-luc.md) — Tổng quan giáo trình
-
+Ví dụ: *"Tôi vừa gõ 'claude' trong terminal nhưng báo 'command not found'. Tôi dùng Mac, đã cài theo bước 3 nhưng vẫn lỗi. Sửa thế nào?"*
 
 ---
 
@@ -188,8 +191,12 @@ Ví dụ: *"Tôi vừa gõ lệnh 'claude' trong terminal nhưng nhận được
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
 - **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
-- **Dataview** = tiện ích mở rộng của Obsidian cho phép tạo danh sách và bảng tự động bằng cách truy vấn thông tin từ frontmatter của các file. Ví dụ: "liệt kê tất cả trang có type = concept theo thứ tự ngày tạo".
-- **terminal** (còn gọi là cửa sổ dòng lệnh) = nơi bạn gõ lệnh văn bản thay vì click chuột. Trên Mac: tìm "Terminal" trong Spotlight. Trên Windows: tìm "PowerShell" hoặc "Command Prompt".
+- **Dataview** = tiện ích mở rộng của Obsidian cho phép tạo danh sách và bảng tự động bằng cách truy vấn thông tin từ frontmatter của các file.
+- **terminal** (cửa sổ dòng lệnh) = nơi bạn gõ lệnh văn bản thay vì click chuột. Trên Mac: tìm "Terminal" trong Spotlight. Trên Windows: tìm "PowerShell".
+
+## Trước đó
+
+[README](muc-luc.md) — Tổng quan giáo trình
 
 ## Tiếp theo
 
