@@ -189,13 +189,25 @@ EXTRA_CSS = """\
 [data-md-color-scheme="slate"]{ --md-typeset-a-color:#64b5f6; }
 
 /* ===== MENU TRÁI: đề mục phụ thụt lề + viền thể hiện là file con ===== */
-.md-nav--primary .md-nav .md-nav{
-  margin-left:.6rem;
-  padding-left:.4rem;
-  border-left:2px solid var(--md-default-fg-color--lightest);
+.md-nav--primary .md-nav__item--nested > nav.md-nav{
+  margin-left:.65rem;
+  padding-left:.6rem;
+  border-left:2px solid var(--md-default-fg-color--lighter);
 }
-.md-nav--primary .md-nav .md-nav .md-nav__link{
+.md-nav--primary .md-nav__item--nested > nav.md-nav .md-nav__link{
   font-size:.7rem;
+}
+/* đề mục chính: in đậm + mũi tên gập/mở nổi bật để biết bấm được */
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > label.md-nav__link{
+  font-weight:700;
+  cursor:pointer;
+}
+.md-nav--primary .md-nav__item--nested > .md-nav__link .md-nav__icon{
+  color:var(--md-primary-fg-color);
+}
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__item--nested > .md-nav__link .md-nav__icon{
+  color:var(--md-accent-fg-color);
 }
 """
 with open(os.path.join(ASSETS, "extra.css"), "w", encoding="utf-8") as f:
