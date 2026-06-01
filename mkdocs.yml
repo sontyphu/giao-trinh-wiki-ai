@@ -1,9 +1,9 @@
 site_name: Giáo trình Wiki AI
 site_description: Xây hệ thống wiki AI-first với Obsidian + Claude — 7 phần, từ triết lý đến template copy-paste.
 site_author: AI Agent Business Kit
-site_url: https://unicorereal.github.io/giao-trinh-wiki-ai/
-repo_url: https://github.com/unicorereal/giao-trinh-wiki-ai
-repo_name: unicorereal/giao-trinh-wiki-ai
+site_url: https://sontyphu.github.io/giao-trinh-wiki-ai/
+repo_url: https://github.com/sontyphu/giao-trinh-wiki-ai
+repo_name: sontyphu/giao-trinh-wiki-ai
 edit_uri: edit/main/docs/
 docs_dir: docs
 
