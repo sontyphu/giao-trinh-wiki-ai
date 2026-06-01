@@ -72,7 +72,10 @@ def relpath_posix(target, from_doc):
     rp = os.path.relpath(target, base) if base else target
     return rp.replace("\\", "/")
 
-def convert(content, from_doc):
+# code span / code block: giữ nguyên, KHÔNG convert wikilink/mdlink bên trong
+PROTECT = re.compile(r"(```[\s\S]*?```|`[^`\n]+`)")
+
+def _convert_text(content, from_doc):
     # 1) wikilink [[target]] / [[target|alias]] / [[target#heading]]
     def w(m):
         raw = m.group(1)
@@ -115,6 +118,13 @@ def convert(content, from_doc):
 
     content = MDLINK.sub(md, content)
     return content
+
+def convert(content, from_doc):
+    # chỉ convert phần NGOÀI code span/block; phần trong backtick giữ nguyên
+    parts = PROTECT.split(content)
+    for i in range(0, len(parts), 2):
+        parts[i] = _convert_text(parts[i], from_doc)
+    return "".join(parts)
 
 def title_of(content, fallback):
     m = re.search(r"^title:\s*(.+)$", content, re.M)
@@ -356,6 +366,9 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
 
 extra_css:
   - assets/extra.css

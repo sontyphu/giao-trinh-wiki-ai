@@ -87,7 +87,7 @@ Subfolder trong `wiki/` là gợi ý. Thêm khi domain đòi hỏi.
 ## Quy ước file
 
 - **Tên file**: tiêu đề có dấu cách dễ đọc OK (Obsidian xử lý được).
-- **Wikilink (liên kết nội bộ)**: link mạnh tay với `Page Name`.
+- **Wikilink (liên kết nội bộ)**: link mạnh tay với `[[Page Name]]`.
 - **Frontmatter (phần thông tin đầu file)**: mọi page mở đầu bằng YAML:
   ```
   ---
@@ -99,7 +99,7 @@ Subfolder trong `wiki/` là gợi ý. Thêm khi domain đòi hỏi.
   ---
   ```
 - **Source page** thêm: `raw_path: raw/...`, `author`, `date`, `url`.
-- **Trích dẫn**: trong văn bản, cite source bằng `Source Title` inline.
+- **Trích dẫn**: trong văn bản, cite source bằng `[[Source Title]]` inline.
 - **Ngôn ngữ**: viết mỗi page theo ngôn ngữ của source.
 
 ## Workflow: Ingest
@@ -288,7 +288,7 @@ Template đầy đủ tổng quát (không specific cho 1 thương hiệu) ở [
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
 - **memory** = file lưu thông tin AI cần nhớ qua các phiên làm việc khác nhau (ai là bạn, quy tắc nào phải theo, dự án nào đang chạy). Không có memory → mỗi lần mở mới AI quên hết.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **schema** = cấu trúc và quy tắc tổ chức kho: mỗi loại trang có những phần nào, thông tin nào bắt buộc, đặt tên file theo kiểu gì. Schema được mô tả trong CLAUDE.md.
 - **terminal** (còn gọi là cửa sổ dòng lệnh) = nơi bạn gõ lệnh văn bản thay vì click chuột. Trên Mac: tìm "Terminal" trong Spotlight. Trên Windows: tìm "PowerShell" hoặc "Command Prompt".

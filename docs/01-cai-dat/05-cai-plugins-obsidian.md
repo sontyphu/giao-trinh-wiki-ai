@@ -108,7 +108,7 @@ Vẽ sketch / diagram trong Obsidian.
 
 Cài: Browse → "Excalidraw" → Install → Enable.
 
-Tạo file Excalidraw: Cmd+P → "Excalidraw: Create new drawing" → vẽ → save → embed vào page khác bằng `!<file>.excalidraw`.
+Tạo file Excalidraw: Cmd+P → "Excalidraw: Create new drawing" → vẽ → save → embed vào page khác bằng `![[<file>.excalidraw]]`.
 
 ### F. Advanced Tables
 
@@ -258,7 +258,7 @@ OK → sang Phần 02 build vault Brain.
 ## 📖 Chú thích
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **MCP Server** (Model Context Protocol) = phần mềm cầu nối giúp AI Claude kết nối và làm việc trực tiếp với ứng dụng khác (Gmail, Google Drive, Slack, lịch...) mà không cần copy-paste thủ công.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **commit** (Git) = hành động lưu lại một điểm phiên bản — như "chụp ảnh" trạng thái toàn bộ kho tại một thời điểm. Có thể khôi phục kho về bất kỳ commit nào trước đó.

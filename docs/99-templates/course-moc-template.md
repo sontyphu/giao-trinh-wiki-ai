@@ -19,10 +19,10 @@ Template Course bản đồ nội dung (bản đồ nội dung — bản đồ n
 type: concept
 tags: [chuong-trinh, course/<code>, <theme-tags>]
 program_code: <CODE>
-parent: "Hệ sinh thái đào tạo của bạn"
+parent: "[[Hệ sinh thái đào tạo của bạn]]"
 sources:
-  - "<Source signature 1>"
-  - "<Source signature 2>"
+  - "[[<Source signature 1>]]"
+  - "[[<Source signature 2>]]"
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 ---
@@ -40,9 +40,9 @@ updated: YYYY-MM-DD
 
 ## Vai trò trong hệ sinh thái
 
-- **Upstream** (học trước): <Course A>
-- **Downstream** (học sau): <Course B>
-- **Song song** (cùng level): <Course C>
+- **Upstream** (học trước): [[<Course A>]]
+- **Downstream** (học sau): [[<Course B>]]
+- **Song song** (cùng level): [[<Course C>]]
 
 ## Cấu trúc khoá
 
@@ -54,24 +54,24 @@ updated: YYYY-MM-DD
 
 ## Modules / Khái niệm cốt lõi
 
-- <Concept 1> — vai trò trong khoá
-- <Concept 2> — ...
-- <Concept N>
+- [[<Concept 1>]] — vai trò trong khoá
+- [[<Concept 2>]] — ...
+- [[<Concept N>]]
 
 ## Stories / Ngụ ngôn dùng
 
-- <Story 1> — illustrate concept X
-- <Story 2>
+- [[<Story 1>]] — illustrate concept X
+- [[<Story 2>]]
 
 ## Topics liên quan
 
-- <Topic 1>
-- <Topic 2>
+- [[<Topic 1>]]
+- [[<Topic 2>]]
 
 ## Cases học viên signature
 
-- <Học viên A> — case nổi bật
-- <Học viên B>
+- [[<Học viên A>]] — case nổi bật
+- [[<Học viên B>]]
 
 ## Tài sản đã sản xuất
 
@@ -84,13 +84,13 @@ updated: YYYY-MM-DD
 
 | # | Phiên bản | Date | Source page | Signature |
 |---|---|---|---|---|
-| <N> | <CODE N> | YYYY-MM-DD | <Source> | <gì signature> |
-| <N-1> | <CODE N-1> | YYYY-MM-DD | <Source> | <gì signature> |
+| <N> | <CODE N> | YYYY-MM-DD | [[<Source>]] | <gì signature> |
+| <N-1> | <CODE N-1> | YYYY-MM-DD | [[<Source>]] | <gì signature> |
 
 ## Khoá học liên quan
 
-- <Course X> — concept overlap
-- <Course Y>
+- [[<Course X>]] — concept overlap
+- [[<Course Y>]]
 
 ## Câu hỏi mở
 
@@ -106,11 +106,11 @@ updated: YYYY-MM-DD
 type: concept
 tags: [chuong-trinh, course/khoa-ban-hang-b, ban-hang]
 program_code: KHOA-BAN-HANG-B
-parent: "Hệ sinh thái đào tạo của bạn"
+parent: "[[Hệ sinh thái đào tạo của bạn]]"
 sources:
-  - "Khoá Bán Hàng A - Phần 1 (Livestream)"
-  - "Khoá Bán Hàng B - Đợt 10 - Ngày 1 (15-07-2020)"
-  - "Khoá Bán Hàng B - Đợt 21 - Ngày 1 (28-11-2025)"
+  - "[[Khoá Bán Hàng A - Phần 1 (Livestream)]]"
+  - "[[Khoá Bán Hàng B - Đợt 10 - Ngày 1 (15-07-2020)]]"
+  - "[[Khoá Bán Hàng B - Đợt 21 - Ngày 1 (28-11-2025)]]"
 ---
 
 # Khoá Bán Hàng B — Hệ thống bán hàng chuyên sâu
@@ -126,9 +126,9 @@ Khoá đào tạo bán hàng B2C cá nhân hoá flagship. Dạy hệ thống 8+2
 
 ## Vai trò trong hệ sinh thái
 
-- **Upstream**: Khoá Tư Duy Doanh Chủ — học tư duy trước
-- **Downstream**: Khoá Marketing Online — scale online sau khi master bán hàng
-- **Song song**: Khoá Intensive Camp — cùng level deep dive
+- **Upstream**: [[Khoá Tư Duy Doanh Chủ]] — học tư duy trước
+- **Downstream**: [[Khoá Marketing Online]] — scale online sau khi master bán hàng
+- **Song song**: [[Khoá Intensive Camp]] — cùng level deep dive
 
 ## Cấu trúc khoá
 
@@ -138,27 +138,27 @@ Khoá đào tạo bán hàng B2C cá nhân hoá flagship. Dạy hệ thống 8+2
 
 ## Modules / Khái niệm cốt lõi
 
-- Hệ thống bán hàng 8+2 — module chính (12h)
-- 14 chiến lược lead generation — module bổ trợ (3h)
-- 7 kỹ thuật xử lý từ chối — practice live (2h)
-- REM-30s — bài thuyết trình 30 giây
-- Customer Value Canvas — tiền đề persona
-- Hot Seat — format coaching ngày 2
+- [[Hệ thống bán hàng 8+2]] — module chính (12h)
+- [[14 chiến lược lead generation]] — module bổ trợ (3h)
+- [[7 kỹ thuật xử lý từ chối]] — practice live (2h)
+- [[REM-30s]] — bài thuyết trình 30 giây
+- [[Customer Value Canvas]] — tiền đề persona
+- [[Hot Seat]] — format coaching ngày 2
 
 ## Stories / Ngụ ngôn dùng
 
-- Gã ăn mày giàu có — illustrate "đầu tư vào bản thân"
-- Bút chì cùn — illustrate "kỹ năng cần mài giũa"
+- [[Gã ăn mày giàu có]] — illustrate "đầu tư vào bản thân"
+- [[Bút chì cùn]] — illustrate "kỹ năng cần mài giũa"
 
 ## Topics liên quan
 
-- Tâm lý khách hàng B2C
-- Persona doanh chủ Việt Nam
+- [[Tâm lý khách hàng B2C]]
+- [[Persona doanh chủ Việt Nam]]
 
 ## Cases học viên signature
 
-- Học viên A — chuyển từ -50% YoY sang +200% sau khoá
-- Học viên B — vận hành team 30 sale rep
+- [[Học viên A]] — chuyển từ -50% YoY sang +200% sau khoá
+- [[Học viên B]] — vận hành team 30 sale rep
 
 ## Tài sản đã sản xuất
 
@@ -171,13 +171,13 @@ Khoá đào tạo bán hàng B2C cá nhân hoá flagship. Dạy hệ thống 8+2
 
 | # | Phiên bản | Date | Source page | Signature |
 |---|---|---|---|---|
-| 21 | Đợt 21 | 2025-11-28 | Khoá Bán Hàng B - Đợt 21 - Ngày 1 + D2/D3 | Mới nhất, +14 lead gen, +7 kỹ thuật xử lý từ chối |
-| 10 | Đợt 10 | 2020-07-15 | Khoá Bán Hàng B - Đợt 10 - Ngày 1 | Hệ thống hoá đủ 8+2 (foundation) |
+| 21 | Đợt 21 | 2025-11-28 | [[Khoá Bán Hàng B - Đợt 21 - Ngày 1]] + D2/D3 | Mới nhất, +14 lead gen, +7 kỹ thuật xử lý từ chối |
+| 10 | Đợt 10 | 2020-07-15 | [[Khoá Bán Hàng B - Đợt 10 - Ngày 1]] | Hệ thống hoá đủ 8+2 (foundation) |
 
 ## Khoá học liên quan
 
-- Khoá Bán Hàng A — tiền thân lịch sử, nền tảng 8+2
-- Khoá Nâng Cao C — mở rộng after-sales
+- [[Khoá Bán Hàng A]] — tiền thân lịch sử, nền tảng 8+2
+- [[Khoá Nâng Cao C]] — mở rộng after-sales
 
 ## Câu hỏi mở
 
@@ -194,7 +194,7 @@ Khoá đào tạo bán hàng B2C cá nhân hoá flagship. Dạy hệ thống 8+2
 type: concept
 tags: [chuong-trinh, course/khoa-email-marketing, email-marketing]
 program_code: EMM
-parent: "Hệ sinh thái đào tạo của bạn"
+parent: "[[Hệ sinh thái đào tạo của bạn]]"
 ---
 
 # EMM — Email Marketing Mastery
@@ -210,9 +210,9 @@ Khoá online tự học 6 module Email Marketing cho freelancer + agency. Mỗi 
 
 ## Vai trò trong hệ sinh thái
 
-- **Upstream**: Khoá Marketing Cơ Bản — cần biết funnel concept cơ bản
-- **Downstream**: Khoá Marketing Automation Nâng Cao — cho người đã master EMM
-- **Song song**: Khoá Content Marketing — paired hữu ích
+- **Upstream**: [[Khoá Marketing Cơ Bản]] — cần biết funnel concept cơ bản
+- **Downstream**: [[Khoá Marketing Automation Nâng Cao]] — cho người đã master EMM
+- **Song song**: [[Khoá Content Marketing]] — paired hữu ích
 
 ## Cấu trúc khoá (6 module)
 
@@ -225,12 +225,12 @@ Khoá online tự học 6 module Email Marketing cho freelancer + agency. Mỗi 
 
 ## Modules / Khái niệm cốt lõi
 
-- Email DNS setup (SPF, DKIM, DMARC)
-- Lead magnet design
-- Segmentation strategy
-- Email automation workflow
-- Email copy patterns
-- ROI tracking email
+- [[Email DNS setup (SPF, DKIM, DMARC)]]
+- [[Lead magnet design]]
+- [[Segmentation strategy]]
+- [[Email automation workflow]]
+- [[Email copy patterns]]
+- [[ROI tracking email]]
 
 ## Tài sản đã sản xuất
 
@@ -243,7 +243,7 @@ Khoá online tự học 6 module Email Marketing cho freelancer + agency. Mỗi 
 
 | # | Phiên bản | Date | Source page | Signature |
 |---|---|---|---|---|
-| 1 | EMM v1 | 2026-04-15 | EMM Module 1-6 (v1) | Launch baseline |
+| 1 | EMM v1 | 2026-04-15 | [[EMM Module 1-6 (v1)]] | Launch baseline |
 
 ## Câu hỏi mở
 
@@ -260,7 +260,7 @@ Khoá online tự học 6 module Email Marketing cho freelancer + agency. Mỗi 
 type: concept
 tags: [chuong-trinh, course/coaching-weekly, coaching-weekly]
 program_code: COACHING-WEEKLY
-parent: "Hệ sinh thái đào tạo của bạn"
+parent: "[[Hệ sinh thái đào tạo của bạn]]"
 ---
 
 # Coaching Weekly — Chương trình 1 năm
@@ -289,9 +289,9 @@ Mỗi buổi:
 
 ## Concept thường dùng
 
-- Hot Seat format
-- Quarterly Goal Review
-- Accountability Partner
+- [[Hot Seat format]]
+- [[Quarterly Goal Review]]
+- [[Accountability Partner]]
 
 ## Cohorts đã ingest
 

@@ -104,22 +104,22 @@ updated: 2026-05-29
 
 ## Entities trong mảng
 
-- <entity-1> — vai trò
-- <entity-2>
+- [[<entity-1>]] — vai trò
+- [[<entity-2>]]
 
 ## Concepts cần nắm
 
-- <concept-1>
-- <concept-2>
+- [[<concept-1>]]
+- [[<concept-2>]]
 
 ## Events nổi bật
 
-- YYYY-MM-DD-event-1
-- YYYY-MM-DD-event-2
+- [[YYYY-MM-DD-event-1]]
+- [[YYYY-MM-DD-event-2]]
 
 ## Analysis định kỳ
 
-- <analysis-1>
+- [[<analysis-1>]]
 ```
 
 ---
@@ -366,7 +366,7 @@ Claude:
 2. Mô tả nội dung (Claude xem ảnh được)
 3. Group event (vd: sáng cafe, trưa câu cá, chiều đi xe)
 4. Tạo `wiki/events/2026-05-29-cafe-sang.md`, `2026-05-29-cau-ca.md`, `2026-05-29-xe-chieu.md`
-5. Update entity page (vd: `ca-phe-X`, `ho-cau-Y`)
+5. Update entity page (vd: `[[ca-phe-X]]`, `[[ho-cau-Y]]`)
 6. Link ảnh gốc
 
 ---
@@ -392,7 +392,7 @@ Quy tắc khi viết Life vs Brain:
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **schema** = cấu trúc và quy tắc tổ chức kho: mỗi loại trang có những phần nào, thông tin nào bắt buộc, đặt tên file theo kiểu gì. Schema được mô tả trong CLAUDE.md.
 - **slug** = cách đặt tên file chuẩn: viết thường không dấu, các từ nối bằng dấu gạch ngang. Ví dụ: `phuong-phap-ban-hang.md`, `tu-khoa-da-xac-minh.md`. Đảm bảo tên file hoạt động trên mọi hệ điều hành.

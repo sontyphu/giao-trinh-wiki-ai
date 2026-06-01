@@ -188,21 +188,21 @@ Claude append vào `index.md`:
 
 ```
 ## Sources
-- Paul Graham — Product Market Fit (2024) — bài về PMF process
+- [[Paul Graham — Product Market Fit (2024)]] — bài về PMF process
 
 ## Concepts
-- Product Market Fit — PMF không phải state
+- [[Product Market Fit]] — PMF không phải state
 
 ## Entities
-- Paul Graham — founder Y Combinator, viết essay
-- Y Combinator — accelerator
+- [[Paul Graham]] — founder Y Combinator, viết essay
+- [[Y Combinator]] — accelerator
 ```
 
 ### 4g — Append `log.md`
 
 ```
 ## [2026-05-29] ingest | Paul Graham — Product Market Fit
-- Created: Paul Graham — Product Market Fit (2024), Product Market Fit, Paul Graham, Y Combinator
+- Created: [[Paul Graham — Product Market Fit (2024)]], [[Product Market Fit]], [[Paul Graham]], [[Y Combinator]]
 - Notes: PMF khái niệm mới chưa có concept page → tạo mới
 ```
 
@@ -211,10 +211,10 @@ Claude append vào `index.md`:
 Claude tổng kết:
 
 ```
-Ingest xong Paul Graham — Product Market Fit (2024)
+Ingest xong [[Paul Graham — Product Market Fit (2024)]]
 - 1 source page mới
-- 1 concept page mới: Product Market Fit
-- 2 entity page mới: Paul Graham, Y Combinator
+- 1 concept page mới: [[Product Market Fit]]
+- 2 entity page mới: [[Paul Graham]], [[Y Combinator]]
 - Index + log updated
 
 3 quan sát đáng chú ý:
@@ -339,7 +339,7 @@ Sau khi xong file này, vault Brain có:
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **Graph view** = chế độ hiển thị của Obsidian dạng mạng lưới, cho thấy tất cả trang và liên kết giữa chúng. Dùng để phát hiện trang mồ côi (không ai liên kết tới) hoặc cluster kiến thức.
 - **terminal** (còn gọi là cửa sổ dòng lệnh) = nơi bạn gõ lệnh văn bản thay vì click chuột. Trên Mac: tìm "Terminal" trong Spotlight. Trên Windows: tìm "PowerShell" hoặc "Command Prompt".

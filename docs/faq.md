@@ -74,7 +74,7 @@ Chi tiết: [04-3-lop-raw-wiki-schema](00-triet-ly/04-3-lop-raw-wiki-schema.md).
 
 ### Q12. Wikilink là gì?
 
-Cách liên kết giữa file bằng cú pháp `Tên trang`. Click vào là mở trang đó ngay. AI tự tạo các liên kết này khi viết wiki — bạn không làm thủ công.
+Cách liên kết giữa file bằng cú pháp `[[Tên trang]]`. Click vào là mở trang đó ngay. AI tự tạo các liên kết này khi viết wiki — bạn không làm thủ công.
 
 ### Q13. Concept-first là gì, khác gì lưu theo tài liệu?
 
@@ -190,7 +190,7 @@ Ví dụ: *"Tôi vừa gõ 'claude' trong terminal nhưng báo 'command not foun
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **Dataview** = tiện ích mở rộng của Obsidian cho phép tạo danh sách và bảng tự động bằng cách truy vấn thông tin từ frontmatter của các file.
 - **terminal** (cửa sổ dòng lệnh) = nơi bạn gõ lệnh văn bản thay vì click chuột. Trên Mac: tìm "Terminal" trong Spotlight. Trên Windows: tìm "PowerShell".
 

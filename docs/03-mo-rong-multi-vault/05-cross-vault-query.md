@@ -48,14 +48,14 @@ CLAUDE.md vault này (nếu có) sẽ là parent — không có cũng được, 
 # CLAUDE.md — Parent of all sibling vaults
 
 Vault list:
-- My Brain — knowledge
-- My Life — lifestyle
-- My 4DX — execution
-- My Marketing — production
+- [[My Brain/]] — knowledge
+- [[My Life/]] — lifestyle
+- [[My 4DX/]] — execution
+- [[My Marketing/]] — production
 
 Mỗi vault có CLAUDE.md riêng. Đọc theo schema vault tương ứng khi work.
 
-Cross-vault wikilink: `<page>`.
+Cross-vault wikilink: `[[<vault>/<path>/<page>]]`.
 ```
 
 ### Cách 2 — Mở Claude ở vault cụ thể, dùng absolute path
@@ -80,7 +80,7 @@ Cumbersome hơn, nhưng vẫn work.
 ### Trong file của vault A, link tới vault B
 
 ```
-Concept này dùng trong sp-khoa-marketing-2026
+Concept này dùng trong [[../My Marketing/wiki/assets/sale-pages/sp-khoa-marketing-2026]]
 ```
 
 ### Quy tắc absolute path
@@ -98,7 +98,7 @@ Thay vì wikilink absolute (dễ vỡ khi rename vault), dùng frontmatter refer
 ---
 brain_ref:
   program_code: khoa-marketing-online
-  course_page: "Khoá Marketing Online"
+  course_page: "[[Khoá Marketing Online]]"
   vault: "My Brain"
 ---
 ```
@@ -184,7 +184,7 @@ Mỗi vault có CLAUDE.md mô tả **vault này** + **mối quan hệ với vaul
 
 - `../My Brain/` — đọc kiến thức course / concept
 - Marketing chỉ đọc Brain, không ghi ngược
-- Reference: frontmatter `brain_ref` hoặc wikilink absolute `...`
+- Reference: frontmatter `brain_ref` hoặc wikilink absolute `[[../My Brain/...]]`
 - Phát hiện concept mới chưa có Brain → log, để user xử lý bên Brain
 ```
 
@@ -306,7 +306,7 @@ Sau Phần 03:
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **memory** = file lưu thông tin AI cần nhớ qua các phiên làm việc khác nhau (ai là bạn, quy tắc nào phải theo, dự án nào đang chạy). Không có memory → mỗi lần mở mới AI quên hết.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **schema** = cấu trúc và quy tắc tổ chức kho: mỗi loại trang có những phần nào, thông tin nào bắt buộc, đặt tên file theo kiểu gì. Schema được mô tả trong CLAUDE.md.
 

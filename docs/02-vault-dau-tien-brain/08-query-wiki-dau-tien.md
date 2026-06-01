@@ -41,7 +41,7 @@ Claude:
 1. Đọc `index.md` tìm page "Product Market Fit"
 2. Đọc `wiki/concepts/Product Market Fit.md`
 3. Tổng hợp định nghĩa
-4. Cite `Paul Graham — Product Market Fit (2024)`
+4. Cite `[[Paul Graham — Product Market Fit (2024)]]`
 
 Trả lời mẫu:
 
@@ -55,7 +55,7 @@ Paul Graham đặc trưng PMF qua 3 dấu hiệu:
 2. Tự nhiên có viral
 3. Sales cycle ngắn lại
 
-Source: Paul Graham — Product Market Fit (2024)
+Source: [[Paul Graham — Product Market Fit (2024)]]
 ```
 
 ---
@@ -77,8 +77,8 @@ Trả lời mẫu:
 ```
 | Source | Year | Insight chính | Quote |
 |---|---|---|---|
-| Paul Graham — Product Market Fit (2024) | 2024 | PMF là process, không state | "PMF is not a destination" |
-| Sam Altman — Startup Playbook | 2022 | PMF = user retention curve flatten | "If retention curve is flat, you have PMF" |
+| [[Paul Graham — Product Market Fit (2024)]] | 2024 | PMF là process, không state | "PMF is not a destination" |
+| [[Sam Altman — Startup Playbook]] | 2022 | PMF = user retention curve flatten | "If retention curve is flat, you have PMF" |
 
 Insight tổng hợp:
 - 2 tác giả đồng ý: PMF không phải feature, mà là user behavior
@@ -118,11 +118,11 @@ Trả lời mẫu:
 
 ```
 5 concept page stub (sources < 2):
-1. Founder Mode — chỉ 1 source mention, chưa có dedicated source
-2. Lean Startup — nhắc nhiều nhưng chưa ingest sách
-3. Burn Rate — định nghĩa stub, chưa case
-4. Pivot — 1 source, cần thêm
-5. Term Sheet — concept legal, chưa ingest source
+1. [[Founder Mode]] — chỉ 1 source mention, chưa có dedicated source
+2. [[Lean Startup]] — nhắc nhiều nhưng chưa ingest sách
+3. [[Burn Rate]] — định nghĩa stub, chưa case
+4. [[Pivot]] — 1 source, cần thêm
+5. [[Term Sheet]] — concept legal, chưa ingest source
 
 Đề xuất ingest tiếp:
 - Sách "Lean Startup" của Eric Ries (PDF)
@@ -147,11 +147,11 @@ Trả lời mẫu:
 ```
 Dựa wiki + tình huống bạn (B2B SaaS, 10 paying), 5 hành động:
 
-1. **Tính retention curve** (theo Sam Altman — Startup Playbook):
+1. **Tính retention curve** (theo [[Sam Altman — Startup Playbook]]):
    - Đo % của 10 customer còn dùng sau 30/60/90 ngày
    - Nếu curve flatten ≥60% sau ngày 30 → có signal PMF early
 
-2. **User interview định kỳ** (theo Lean Startup - stub):
+2. **User interview định kỳ** (theo [[Lean Startup]] - stub):
    - 10 phỏng vấn / quarter
    - Hỏi: "Nếu mai tôi tắt sản phẩm, bạn buồn cỡ nào?" (PMF signal classic)
    - ≥40% buồn rất nhiều → PMF signal
@@ -168,7 +168,7 @@ Dựa wiki + tình huống bạn (B2B SaaS, 10 paying), 5 hành động:
    - Giảm dần qua quý → PMF signal (Paul Graham)
    - Tăng → chưa
 
-Gap: wiki chưa có concept "NPS Score". Có muốn ingest 1 source về NPS?
+Gap: wiki chưa có concept "[[NPS Score]]". Có muốn ingest 1 source về NPS?
 ```
 
 ---
@@ -318,7 +318,7 @@ Sang Phần 03 multi-vault (khi sẵn sàng).
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **schema** = cấu trúc và quy tắc tổ chức kho: mỗi loại trang có những phần nào, thông tin nào bắt buộc, đặt tên file theo kiểu gì. Schema được mô tả trong CLAUDE.md.
 

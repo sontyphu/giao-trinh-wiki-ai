@@ -83,7 +83,7 @@ type: concept
 tags: [sales, marketing]
 created: 2026-06-01
 updated: 2026-06-01
-sources: ["Tài liệu A", "Tài liệu B"]
+sources: ["[[Tài liệu A]]", "[[Tài liệu B]]"]
 ---
 
 # Tên khái niệm
@@ -95,12 +95,12 @@ sources: ["Tài liệu A", "Tài liệu B"]
 - Bước cụ thể cần làm
 
 ## Nguồn học
-- Tài liệu A — học lần đầu từ đây
-- Tài liệu B — bổ sung thêm góc nhìn X
+- [[Tài liệu A]] — học lần đầu từ đây
+- [[Tài liệu B]] — bổ sung thêm góc nhìn X
 
 ## Khái niệm liên quan
-- Khái niệm cha — rộng hơn, chứa cái này
-- Khái niệm liền kề — thường dùng cặp với cái này
+- [[Khái niệm cha]] — rộng hơn, chứa cái này
+- [[Khái niệm liền kề]] — thường dùng cặp với cái này
 ```
 
 Template đầy đủ: [concept-page-template](../99-templates/concept-page-template.md)

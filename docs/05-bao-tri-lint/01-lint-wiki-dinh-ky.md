@@ -59,15 +59,15 @@ Claude:
 Rà soát report 2026-W22
 
 ## Broken wikilink (3)
-- wiki/concepts/X.md → Concept Y không tồn tại
-- wiki/sources/Z.md → Old Source đã rename
+- wiki/concepts/X.md → [[Concept Y không tồn tại]]
+- wiki/sources/Z.md → [[Old Source đã rename]]
 - ...
 
 ## Frontmatter thiếu (1)
 - wiki/concepts/New-Concept.md thiếu `type:`, `tags:`
 
 ## Concept page chưa update (2)
-- Source mới ingest hôm qua nhắc Concept A nhưng A.md chưa update
+- [[Source mới ingest hôm qua]] nhắc Concept A nhưng A.md chưa update
 
 ## Log entry
 - W22 đã có 8 entry — OK
@@ -85,7 +85,7 @@ Sâu hơn weekly:
 > Lint wiki monthly. Check:
 > 1. Mâu thuẫn giữa concept page và source page
 > 2. Concept page tính độc lập — có concept nào gộp 2 idea không?
-> 3. Course bản đồ nội dung 2-chiều — concept page nói "Khoá học sử dụng X" thì X.md có link ngược không?
+> 3. Course bản đồ nội dung 2-chiều — concept page nói "Khoá học sử dụng [[X]]" thì X.md có link ngược không?
 > 4. Tag consistency — có tag duplicate khác case?
 > 5. Stale page — page nào > 3 tháng không update?
 > 6. Concept page nhắc trong 3+ source nhưng chưa có page riêng → đề xuất tạo
@@ -102,16 +102,16 @@ Output dạng:
 Rà soát monthly 2026-05
 
 ## Mâu thuẫn (2)
-- Concept Y nói "PMF = 40% user buồn nếu mất". 
-  Source Z nói "PMF = retention 90%". 
+- [[Concept Y]] nói "PMF = 40% user buồn nếu mất". 
+  [[Source Z]] nói "PMF = retention 90%". 
   → Cần ghi mâu thuẫn / merge / clarify
 
 ## Atomicity vi phạm (1)
-- Concept HD-NT gộp 2 khái niệm "Hướng đến" + "Né tránh" — cấu trúc khác nhau
-  → Tách thành Hướng đến + Né tránh
+- [[Concept HD-NT]] gộp 2 khái niệm "Hướng đến" + "Né tránh" — cấu trúc khác nhau
+  → Tách thành [[Hướng đến]] + [[Né tránh]]
 
 ## Nhất quán 2 chiều (5)
-- Concept A nói "Khoá học sử dụng Khoá Bán Hàng B" nhưng bản đồ nội dung không link A
+- [[Concept A]] nói "Khoá học sử dụng [[Khoá Bán Hàng B]]" nhưng bản đồ nội dung không link [[A]]
 - ...
 
 ## Tag inconsistent (2)
@@ -246,7 +246,7 @@ Sau khi có rà soát report, fix dần:
 ### Fix broken link (liên kết hỏng)
 
 ```
-> Fix broken wikilink trong wiki/concepts/X.md — link Concept Y không tồn tại. 
+> Fix broken wikilink trong wiki/concepts/X.md — link [[Concept Y]] không tồn tại. 
 > Tạo concept page Y dạng stub hoặc rename link.
 ```
 
@@ -284,7 +284,7 @@ Sau khi rà soát xong, log:
 - Fixed: 12
 - Deferred: 4 (chờ user quyết)
 - Skipped: 2 (false positive)
-- Report: 2026-05-29-monthly
+- Report: [[wiki/rà soát-reports/2026-05-29-monthly]]
 ```
 
 ---
@@ -295,7 +295,7 @@ Sau khi rà soát xong, log:
 
 ### Issue 1 — Broken wikilink sau rename file
 
-User rename file `Concept-A.md` → `Concept A.md` (thêm space). Mọi `Concept-A` cũ vỡ.
+User rename file `Concept-A.md` → `Concept A.md` (thêm space). Mọi `[[Concept-A]]` cũ vỡ.
 
 Fix: Obsidian "Refactor file" (Cmd+P → Refactor → rename) → tự update wikilink. Hoặc dùng Claude bulk fix.
 
@@ -303,11 +303,11 @@ Fix: Obsidian "Refactor file" (Cmd+P → Refactor → rename) → tự update wi
 
 Concept page có frontmatter `tags: [course/khoa-ban-hang-b]` nhưng bản đồ nội dung khoá đó không liệt concept.
 
-Fix: update Course bản đồ nội dung, add `## Modules — Concept`.
+Fix: update Course bản đồ nội dung, add `## Modules — [[Concept]]`.
 
 ### Issue 3 — Source page không cite concept
 
-Source page có nội dung touch concept nhưng quên cite `concept`.
+Source page có nội dung touch concept nhưng quên cite `[[concept]]`.
 
 Fix: Claude scan source page → đề xuất concept liên quan → cite.
 
@@ -373,7 +373,7 @@ Claude:
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
 - **memory** = file lưu thông tin AI cần nhớ qua các phiên làm việc khác nhau (ai là bạn, quy tắc nào phải theo, dự án nào đang chạy). Không có memory → mỗi lần mở mới AI quên hết.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **schema** = cấu trúc và quy tắc tổ chức kho: mỗi loại trang có những phần nào, thông tin nào bắt buộc, đặt tên file theo kiểu gì. Schema được mô tả trong CLAUDE.md.
 

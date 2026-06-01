@@ -36,7 +36,7 @@ type: concept
 tags: [framework, course/<code1>, course/<code2>, <theme-tags>, signature]
 created: 2026-05-29
 updated: 2026-05-29
-sources: ["Source A", "Source B"]
+sources: ["[[Source A]]", "[[Source B]]"]
 ---
 
 # Tên concept
@@ -51,7 +51,7 @@ sources: ["Source A", "Source B"]
 | Độ khó | ⭐⭐ (1-5/5) |
 | Độ phổ biến | ⭐⭐⭐⭐ (1-5/5 — số lần dạy) |
 | Khoá áp dụng | <CODE1>, <CODE2>, ... |
-| Module liên quan | Concept X, Concept Y (top 3-5) |
+| Module liên quan | [[Concept X]], [[Concept Y]] (top 3-5) |
 | Từ khoá | keyword1, keyword2, ... |
 
 [Tuỳ chọn: trích câu signature]
@@ -82,25 +82,25 @@ sources: ["Source A", "Source B"]
 
 ## Khoá học sử dụng
 
-- Course A — vai trò trong khoá (1 dòng)
-- Course B — ...
+- [[Course A]] — vai trò trong khoá (1 dòng)
+- [[Course B]] — ...
 
 ## Phiên bản dạy concept
 
-- **Lần đầu**: Source page (~MM/YYYY)
-- **Hệ thống hoá**: Source page (đợt N)
-- **Update lớn**: Source page (đợt M) — thêm gì mới
+- **Lần đầu**: [[Source page]] (~MM/YYYY)
+- **Hệ thống hoá**: [[Source page]] (đợt N)
+- **Update lớn**: [[Source page]] (đợt M) — thêm gì mới
 
 ## Khái niệm liên quan
 
-- **cha** Mother concept — concept rộng hơn chứa concept này
-- **con** Sub concept — concept hẹp hơn nằm trong concept này
-- **đi cặp** Sister concept — paired
-- **đối lập** Opposite concept — opposite
-- **tiền đề** Prerequisite concept — phải hiểu trước
-- **kế thừa** Successor concept — phải hiểu sau
+- **cha** [[Mother concept]] — concept rộng hơn chứa concept này
+- **con** [[Sub concept]] — concept hẹp hơn nằm trong concept này
+- **đi cặp** [[Sister concept]] — paired
+- **đối lập** [[Opposite concept]] — opposite
+- **tiền đề** [[Prerequisite concept]] — phải hiểu trước
+- **kế thừa** [[Successor concept]] — phải hiểu sau
 
-Mỗi item: `- **<nhãn>** Concept X — vai trò 1 dòng`
+Mỗi item: `- **<nhãn>** [[Concept X]] — vai trò 1 dòng`
 
 ## Nguồn gốc & trích dẫn
 
@@ -124,7 +124,7 @@ type: concept                                  # bắt buộc — Dataview query
 tags: [framework, course/khoa-ban-hang-b, signature]  # bắt buộc — graph color
 created: 2026-05-29                            # bắt buộc
 updated: 2026-05-29                            # bắt buộc — track stale
-sources: ["Source A"]                      # bắt buộc — provenance
+sources: ["[[Source A]]"]                      # bắt buộc — provenance
 ---
 ```
 
@@ -173,7 +173,7 @@ Các thành phần cốt lõi. Có thể là:
 Case cụ thể minh hoạ concept hoạt động. Trích từ source.
 
 Quy tắc:
-- Cite source bằng `Source page`
+- Cite source bằng `[[Source page]]`
 - Số liệu phải có source
 - Không bịa case
 
@@ -202,8 +202,8 @@ Format:
 
 Format:
 ```
-- Course A — vai trò trong khoá (1 dòng)
-- Course B — ...
+- [[Course A]] — vai trò trong khoá (1 dòng)
+- [[Course B]] — ...
 ```
 
 Quy tắc 2 chiều: mỗi link concept → course phải có link ngược course → concept ở bản đồ nội dung. Rà soát sẽ check.
@@ -232,7 +232,7 @@ Liệt chỉ version signature:
 
 Mỗi item:
 ```
-- **<nhãn>** Concept X — vai trò 1 dòng
+- **<nhãn>** [[Concept X]] — vai trò 1 dòng
 ```
 
 Tại sao có nhãn? Graph view dùng nhãn để render quan hệ đúng.
@@ -322,16 +322,16 @@ Cite có line ref → trace ngược dễ.
 
 ```
 ## Liên quan
-- Concept A
-- Concept B
+- [[Concept A]]
+- [[Concept B]]
 ```
 
 → Không biết quan hệ gì. Rà soát flag.
 
 Đúng:
 ```
-- **cha** Concept A — concept rộng hơn
-- **đi cặp** Concept B — sister
+- **cha** [[Concept A]] — concept rộng hơn
+- **đi cặp** [[Concept B]] — sister
 ```
 
 ---

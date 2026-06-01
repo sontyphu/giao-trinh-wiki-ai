@@ -49,7 +49,7 @@ location: (nếu là khoá học)
 program_code: (nếu là khoá học)
 version_number: (nếu là khoá học)
 version_date: (nếu là khoá học)
-parent_course: "<Course bản đồ nội dung>" (nếu là khoá học)
+parent_course: "[[<Course bản đồ nội dung>]]" (nếu là khoá học)
 ---
 
 # Tên source — kèm bối cảnh
@@ -66,13 +66,13 @@ parent_course: "<Course bản đồ nội dung>" (nếu là khoá học)
 
 ## Concept đã touch / dạy
 
-- Concept A — đoạn line X (~timecode/page)
-- Concept B — đoạn line Y
+- [[Concept A]] — đoạn line X (~timecode/page)
+- [[Concept B]] — đoạn line Y
 
 ## Entity nhắc đến
 
-- Entity X — vai trò trong source
-- Entity Y
+- [[Entity X]] — vai trò trong source
+- [[Entity Y]]
 
 ## Quote signature
 
@@ -134,7 +134,7 @@ program_code: KHOA-BAN-HANG-B
 version_number: 21
 version_date: 2025-11-28
 location: "Hà Nội"
-parent_course: "Khoá Bán Hàng B"
+parent_course: "[[Khoá Bán Hàng B]]"
 duration: "8h"
 attendees: 700
 raw_path: raw/khoa-ban-hang-b/20251128-D1-chunks/
@@ -171,7 +171,7 @@ Tóm tắt 3-5 đoạn theo cấu trúc gốc.
 Quy tắc:
 - KHÔNG copy nguyên văn (bản quyền + token waste)
 - Giữ điểm chính, lược bỏ ví dụ thừa
-- Cite concept bằng wikilink `wikilink`
+- Cite concept bằng wikilink `[[wikilink]]`
 - Giữ tone gốc (formal/casual)
 
 ### Concept đã touch / dạy
@@ -179,9 +179,9 @@ Quy tắc:
 Liệt concept page liên quan + line ref:
 
 ```
-- Product Engineer — định nghĩa, đoạn 1-2
-- Founder DNA — bàn về hire pattern, đoạn 4
-- Y Combinator playbook — case study YC W24 batch, đoạn 6
+- [[Product Engineer]] — định nghĩa, đoạn 1-2
+- [[Founder DNA]] — bàn về hire pattern, đoạn 4
+- [[Y Combinator playbook]] — case study YC W24 batch, đoạn 6
 ```
 
 Line ref / timecode giúp trace ngược khi cần.
@@ -189,9 +189,9 @@ Line ref / timecode giúp trace ngược khi cần.
 ### Entity nhắc đến
 
 ```
-- Paul Graham — tác giả
-- Y Combinator — công ty
-- Sam Altman — quote từ tweet, đoạn 5
+- [[Paul Graham]] — tác giả
+- [[Y Combinator]] — công ty
+- [[Sam Altman]] — quote từ tweet, đoạn 5
 ```
 
 ### Quote signature
@@ -218,7 +218,7 @@ Source mới khác claim source cũ → ghi rõ:
 ```
 ## Mâu thuẫn
 
-Source Naval Ravikant Almanack (2020) cho rằng "specialist > generalist" — opposite quan điểm Paul Graham.
+Source [[Naval Ravikant Almanack]] (2020) cho rằng "specialist > generalist" — opposite quan điểm Paul Graham.
 
 Cách dung hoà: specialist trong technical skill, generalist trong product taste.
 ```
@@ -248,14 +248,14 @@ Ngoài template chuẩn, thêm:
 ```
 ## Modules đã dạy
 
-- Hệ thống bán hàng 8+2 — module chính
-- 14 chiến lược lead generation — mới thêm version 21
-- 7 kỹ thuật xử lý từ chối — module phụ
+- [[Hệ thống bán hàng 8+2]] — module chính
+- [[14 chiến lược lead generation]] — mới thêm version 21
+- [[7 kỹ thuật xử lý từ chối]] — module phụ
 
 ## Case học viên / Hot seat
 
-- Học viên A — tình huống bán hàng B2B
-- Học viên B — pivot industry
+- [[Học viên A]] — tình huống bán hàng B2B
+- [[Học viên B]] — pivot industry
 
 ## Bài tập trên hội trường
 
@@ -303,8 +303,8 @@ Sau khi chia, source page chỉ tóm tắt high-level + link chunk:
 
 ```
 ## Chunks
-- chunk-001-mo-dau — phần mở đầu (~30 phút)
-- chunk-002-module-1 — module 1: ...
+- [[chunk-001-mo-dau]] — phần mở đầu (~30 phút)
+- [[chunk-002-module-1]] — module 1: ...
 ```
 
 ---
@@ -325,7 +325,7 @@ Claude tạo file → review template đúng chưa.
 ## 📖 Chú thích
 
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **schema** = cấu trúc và quy tắc tổ chức kho: mỗi loại trang có những phần nào, thông tin nào bắt buộc, đặt tên file theo kiểu gì. Schema được mô tả trong CLAUDE.md.
 

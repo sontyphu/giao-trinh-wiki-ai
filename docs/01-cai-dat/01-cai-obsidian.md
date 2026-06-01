@@ -100,7 +100,7 @@ Mở **Settings** (Cmd+, trên Mac / Ctrl+, trên Win):
 
 ### Files & links
 
-- **New link format**: **Shortest path when possible** (vd `Page` thay vì `Page`)
+- **New link format**: **Shortest path when possible** (vd `[[Page]]` thay vì `[[folder/Page]]`)
 - **Use Wikilinks**: On (BẮT BUỘC — chúng ta dùng liên kết nội bộ wikilink)
 - **Default location for new attachments**: `In the folder specified below` → set thành `raw/assets/`
 - **Detect all file extensions**: On (để thấy PDF, ảnh, PowerPoint trong vault)
@@ -163,10 +163,10 @@ Tạo 1 vault test:
    ```
    # Hello
    
-   Đây là note-2 đầu tiên của tôi.
+   Đây là [[note-2]] đầu tiên của tôi.
    ```
 5. Lưu (Cmd+S)
-6. Click vào `note-2` → tạo file mới
+6. Click vào `[[note-2]]` → tạo file mới
 
 Nếu chạy được — Obsidian cài thành công.
 
@@ -208,7 +208,7 @@ Vault > 500 page → graph view rối:
 ## 📖 Chú thích
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **schema** = cấu trúc và quy tắc tổ chức kho: mỗi loại trang có những phần nào, thông tin nào bắt buộc, đặt tên file theo kiểu gì. Schema được mô tả trong CLAUDE.md.
 - **Graph view** = chế độ hiển thị của Obsidian dạng mạng lưới, cho thấy tất cả trang và liên kết giữa chúng. Dùng để phát hiện trang mồ côi (không ai liên kết tới) hoặc cluster kiến thức.
 

@@ -226,7 +226,7 @@ Wikilink trong file move trỏ về page trong Brain → broken.
 #### Strategy 1 — Rewrite absolute path
 
 ```
-Atomic Habits  → Atomic Habits
+[[wiki/concepts/Atomic Habits]]  → [[../My Brain/wiki/concepts/Atomic Habits]]
 ```
 
 #### Strategy 2 — Remove link
@@ -234,7 +234,7 @@ Atomic Habits  → Atomic Habits
 Nếu link đó không quan trọng cho Life context:
 
 ```
-Atomic Habits  → Atomic Habits (concept tham khảo, xem Brain)
+[[wiki/concepts/Atomic Habits]]  → Atomic Habits (concept tham khảo, xem Brain)
 ```
 
 #### Strategy 3 — Tạo concept stub trong Life
@@ -242,20 +242,20 @@ Atomic Habits  → Atomic Habits (concept tham khảo, xem Brain)
 Tạo `Life/wiki/concepts/Atomic Habits-summary.md` 1 đoạn link về Brain:
 
 ```
-Concept "Atomic Habits" — xem chi tiết ở Atomic Habits
+Concept "Atomic Habits" — xem chi tiết ở [[../My Brain/wiki/concepts/Atomic Habits]]
 ```
 
 → Khuyên Strategy 1 nếu cross-ref nhiều, Strategy 2 nếu rare.
 
 ### Bước 5 — Update Brain wikilink trỏ về page move
 
-Trong Brain, page nào trỏ `ca-koi-pH` → broken (page đã move).
+Trong Brain, page nào trỏ `[[ca-koi-pH]]` → broken (page đã move).
 
 Bulk fix:
 
 ```
 > Trong Brain vault, find wikilink trỏ page đã move sang Life.
-> Replace với absolute path "ca-koi-pH".
+> Replace với absolute path "[[../My Life/wiki/concepts/ca-koi-pH]]".
 ```
 
 ### Bước 6 — Update CLAUDE.md
@@ -396,7 +396,7 @@ Investigate root cause trước khi retry.
 ## 📖 Chú thích
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **commit** (Git) = hành động lưu lại một điểm phiên bản — như "chụp ảnh" trạng thái toàn bộ kho tại một thời điểm. Có thể khôi phục kho về bất kỳ commit nào trước đó.
 - **Graph view** = chế độ hiển thị của Obsidian dạng mạng lưới, cho thấy tất cả trang và liên kết giữa chúng. Dùng để phát hiện trang mồ côi (không ai liên kết tới) hoặc cluster kiến thức.

@@ -55,21 +55,21 @@ Nhật ký append-only.
 - Created: folder raw/ + wiki/{sources,concepts,entities,courses}/
 
 ## [2026-04-27] ingest | Paul Graham — Product Market Fit (2024)
-- Created: Paul Graham — Product Market Fit (2024)
-- Created: Product Market Fit (concept mới)
-- Created: Paul Graham, Y Combinator (entity mới)
-- Updated: [index](../muc-luc.md)
+- Created: [[Paul Graham — Product Market Fit (2024)]]
+- Created: [[Product Market Fit]] (concept mới)
+- Created: [[Paul Graham]], [[Y Combinator]] (entity mới)
+- Updated: [[index]]
 - Notes: PMF khái niệm mới, chưa có concept page → tạo mới. Concept "Founder Mode" nhắc cuối bài → chưa tạo, đợi 2 source nữa.
 
 ## [2026-04-28] ingest | Sam Altman — Startup Playbook
-- Created: Sam Altman — Startup Playbook
-- Updated: Product Market Fit (append insight retention curve)
-- Created: Sam Altman (entity mới)
-- Notes: Sam khác Paul Graham về PMF — Sam nhấn retention curve flatten. Ghi vào section "Mâu thuẫn" của Product Market Fit.
+- Created: [[Sam Altman — Startup Playbook]]
+- Updated: [[Product Market Fit]] (append insight retention curve)
+- Created: [[Sam Altman]] (entity mới)
+- Notes: Sam khác Paul Graham về PMF — Sam nhấn retention curve flatten. Ghi vào section "Mâu thuẫn" của [[Product Market Fit]].
 
 ## [2026-04-29] query | "PMF cho B2B SaaS 10 customer nên làm gì?"
-- Read: Product Market Fit, Sam Altman — Startup Playbook, Paul Graham — Product Market Fit (2024)
-- Output: 5 action recommend, save thành Validate-PMF-cho-B2B-SaaS
+- Read: [[Product Market Fit]], [[Sam Altman — Startup Playbook]], [[Paul Graham — Product Market Fit (2024)]]
+- Output: 5 action recommend, save thành [[wiki/analyses/Validate-PMF-cho-B2B-SaaS]]
 
 ## [2026-05-01] rà soát | weekly
 - Issues: 3 broken wikilink, 2 page thiếu frontmatter
@@ -111,8 +111,8 @@ Append vào cuối file, không insert đầu.
 Mọi page touch → wikilink. Vd:
 
 ```
-- Created: Page A
-- Updated: Page B
+- Created: [[Page A]]
+- Updated: [[Page B]]
 ```
 
 → Graph view track inbound link từ log → page.
@@ -194,9 +194,9 @@ Index trong `index.md`:
 ```
 ## Logs
 
-- log — 2026 (current)
-- log-2025
-- log-2024
+- [[log]] — 2026 (current)
+- [[log-2025]]
+- [[log-2024]]
 ```
 
 ### Option B — Archive theo quý
@@ -217,8 +217,8 @@ Cho vault rất active.
 
 ```
 ## [YYYY-MM-DD] ingest | <Source Title>
-- Created: Source, Concept mới (nếu mới)
-- Updated: Concept cũ (nếu append)
+- Created: [[Source]], [[Concept mới]] (nếu mới)
+- Updated: [[Concept cũ]] (nếu append)
 - Notes: <insight đáng nhớ>
 ```
 
@@ -226,8 +226,8 @@ Cho vault rất active.
 
 ```
 ## [YYYY-MM-DD] query | "<câu hỏi>"
-- Read: Page 1, Page 2, Page 3
-- Output: <format>, save thành <file> (nếu lưu)
+- Read: [[Page 1]], [[Page 2]], [[Page 3]]
+- Output: <format>, save thành [[wiki/analyses/<file>]] (nếu lưu)
 ```
 
 ### Rà soát
@@ -237,7 +237,7 @@ Cho vault rất active.
 - Issues: <số issue>
 - Fixed: <số fix>
 - Deferred: <số deferred>
-- Report: <file>
+- Report: [[wiki/rà soát-reports/<file>]]
 ```
 
 ### Refactor
@@ -284,7 +284,7 @@ Log entry là quyền lợi, không phải obligation. Quá nhiều log → nois
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **schema** = cấu trúc và quy tắc tổ chức kho: mỗi loại trang có những phần nào, thông tin nào bắt buộc, đặt tên file theo kiểu gì. Schema được mô tả trong CLAUDE.md.
 - **commit** (Git) = hành động lưu lại một điểm phiên bản — như "chụp ảnh" trạng thái toàn bộ kho tại một thời điểm. Có thể khôi phục kho về bất kỳ commit nào trước đó.

@@ -157,9 +157,9 @@ Lưu.
 
 Vault knowledge cá nhân theo mô hình AI-first wiki concept-first.
 
-- Schema: CLAUDE
-- Mục lục: [index](../muc-luc.md)
-- Nhật ký: log
+- Schema: [[CLAUDE]]
+- Mục lục: [[index]]
+- Nhật ký: [[log]]
 ```
 
 ---

@@ -87,7 +87,7 @@ Vault này lưu trữ + đo lường marketing. 4 nhiệm vụ chính:
 
 - `../My Brain/` — vault anh em chứa kiến thức course / concept
 - Marketing chỉ đọc Brain, không ghi ngược
-- Tham chiếu: wikilink absolute `X` hoặc frontmatter `brain_ref`
+- Tham chiếu: wikilink absolute `[[../My Brain/wiki/courses/X]]` hoặc frontmatter `brain_ref`
 
 ## 2. Hai lớp + 1 schema
 
@@ -195,7 +195,7 @@ asset_kind: lead-page
 brand: mybrand
 brain_ref:
   program_code: emm
-  course_page: "EMM - Email Marketing Mastery"
+  course_page: "[[../My Brain/wiki/courses/EMM - Email Marketing Mastery]]"
 tags: [lead-page, mybrand, funnel-top]
 url_canonical: https://mybrand.com/lp/checklist-30s
 launched: 2026-04-15
@@ -263,8 +263,8 @@ Lead page top funnel cho khoá Email Marketing Mastery. Mục tiêu opt-in email
 
 ## Liên kết
 
-- Brain concept: Email Marketing Mastery
-- Sale page sau lead: sp-mybrand-emm-2026
+- Brain concept: [[../My Brain/wiki/concepts/Email Marketing Mastery]]
+- Sale page sau lead: [[sp-mybrand-emm-2026]]
 ```
 
 ---
@@ -401,7 +401,7 @@ Claude scan:
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **schema** = cấu trúc và quy tắc tổ chức kho: mỗi loại trang có những phần nào, thông tin nào bắt buộc, đặt tên file theo kiểu gì. Schema được mô tả trong CLAUDE.md.
 - **slug** = cách đặt tên file chuẩn: viết thường không dấu, các từ nối bằng dấu gạch ngang. Ví dụ: `phuong-phap-ban-hang.md`, `tu-khoa-da-xac-minh.md`. Đảm bảo tên file hoạt động trên mọi hệ điều hành.

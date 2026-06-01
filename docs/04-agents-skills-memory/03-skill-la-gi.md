@@ -234,10 +234,10 @@ Format output:
 [Đoạn 3]
 
 **Concept đã touch**:
-- Concept A
+- [[Concept A]]
 
 **Entity nhắc đến**:
-- Entity X
+- [[Entity X]]
 
 **Quote signature**:
 

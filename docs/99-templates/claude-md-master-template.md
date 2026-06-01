@@ -90,7 +90,7 @@ Subfolder trong `wiki/` là gợi ý. Thêm khi domain đòi hỏi.
 ## 6. Quy ước file
 
 - **Tên file**: <kebab-case không dấu | tên có dấu cách OK>
-- **Wikilink (liên kết nội bộ)**: `Page Name` mỗi khi nhắc entity/concept/source
+- **Wikilink (liên kết nội bộ)**: `[[Page Name]]` mỗi khi nhắc entity/concept/source
 - **Frontmatter (phần thông tin đầu file)**: mọi page mở đầu bằng YAML:
 
 ```
@@ -145,7 +145,7 @@ Greppable: `grep "^## \[" log.md | tail -10`.
 
 ## 9. Khi không chắc
 
-- Tên entity/concept chưa rõ → placeholder slug `entity-x`
+- Tên entity/concept chưa rõ → placeholder slug `[[entity-x]]`
 - Số liệu mâu thuẫn → ghi cả 2 với section "Mâu thuẫn" + flag `needs-review`
 - Source quá dài (>10k dòng) → chia chunk trước (skill `text-cat-chunk`)
 - AI không đủ context → hỏi user 1 câu ngắn rồi tiếp tục
@@ -304,7 +304,7 @@ Claude trả lời đúng schema → template hợp lệ.
 
 - **vault** = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).
 - **ingest** = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.
-- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `Tên trang`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
+- **wikilink** = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp `[[Tên trang]]`. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.
 - **frontmatter** = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng `---`. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.
 - **schema** = cấu trúc và quy tắc tổ chức kho: mỗi loại trang có những phần nào, thông tin nào bắt buộc, đặt tên file theo kiểu gì. Schema được mô tả trong CLAUDE.md.
 - **slug** = cách đặt tên file chuẩn: viết thường không dấu, các từ nối bằng dấu gạch ngang. Ví dụ: `phuong-phap-ban-hang.md`, `tu-khoa-da-xac-minh.md`. Đảm bảo tên file hoạt động trên mọi hệ điều hành.
