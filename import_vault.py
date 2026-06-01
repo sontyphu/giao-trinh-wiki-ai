@@ -183,6 +183,20 @@ EXTRA_CSS = """\
   .tm-item.tm-open .tm-drop{display:block}
   .tm-drop a{color:#fff}
 }
+
+/* ===== LINK / WIKILINK: xanh sáng hơn (dễ thấy trên nền trắng) ===== */
+[data-md-color-scheme="default"]{ --md-typeset-a-color:#1e88e5; }
+[data-md-color-scheme="slate"]{ --md-typeset-a-color:#64b5f6; }
+
+/* ===== MENU TRÁI: đề mục phụ thụt lề + viền thể hiện là file con ===== */
+.md-nav--primary .md-nav .md-nav{
+  margin-left:.6rem;
+  padding-left:.4rem;
+  border-left:2px solid var(--md-default-fg-color--lightest);
+}
+.md-nav--primary .md-nav .md-nav .md-nav__link{
+  font-size:.7rem;
+}
 """
 with open(os.path.join(ASSETS, "extra.css"), "w", encoding="utf-8") as f:
     f.write(EXTRA_CSS)
@@ -206,10 +220,7 @@ for x in sorted([x for x in files if x.startswith("99-templates/")]):
 
 MENU = [
     {"label": "🏠 Trang chủ", "href": diru("index.md")},
-    {"label": "🚀 Bắt đầu", "children": [
-        {"label": "Quick Start — chọn lộ trình", "href": diru("quick-start.md")},
-        {"label": "Mục lục đầy đủ 41 file", "href": diru("muc-luc.md")},
-    ]},
+    {"label": "🚀 Bắt đầu", "href": diru("quick-start.md")},
     {"label": "📚 Giáo trình", "children": parts_children},
     {"label": "📋 Templates", "children": tpl_children},
     {"label": "❓ FAQ", "href": diru("faq.md")},
@@ -266,7 +277,6 @@ def nav_lines():
     L = []
     L.append("  - 🏠 Trang chủ: index.md")
     L.append("  - 🚀 Quick Start: quick-start.md")
-    L.append("  - 🗂️ Mục lục: muc-luc.md")
     for folder, label in SECTIONS:
         fs = sorted([f for f in files if f.startswith(folder + "/")])
         if not fs:
@@ -288,6 +298,8 @@ repo_url: https://github.com/sontyphu/giao-trinh-wiki-ai
 repo_name: sontyphu/giao-trinh-wiki-ai
 edit_uri: edit/main/docs/
 docs_dir: docs
+not_in_nav: |
+  /muc-luc.md
 
 theme:
   name: material
@@ -311,7 +323,6 @@ theme:
     text: Inter
     code: JetBrains Mono
   features:
-    - navigation.sections
     - navigation.top
     - navigation.indexes
     - navigation.footer

@@ -6,6 +6,8 @@ repo_url: https://github.com/sontyphu/giao-trinh-wiki-ai
 repo_name: sontyphu/giao-trinh-wiki-ai
 edit_uri: edit/main/docs/
 docs_dir: docs
+not_in_nav: |
+  /muc-luc.md
 
 theme:
   name: material
@@ -29,7 +31,6 @@ theme:
     text: Inter
     code: JetBrains Mono
   features:
-    - navigation.sections
     - navigation.top
     - navigation.indexes
     - navigation.footer
@@ -60,7 +61,6 @@ extra_javascript:
 nav:
   - 🏠 Trang chủ: index.md
   - 🚀 Quick Start: quick-start.md
-  - 🗂️ Mục lục: muc-luc.md
   - 📖 00. Triết lý:
       - "Tại sao hệ thống ghi chú AI": 00-triet-ly/01-tai-sao-ai-first-wiki.md
       - "Tại sao lưu theo khái niệm": 00-triet-ly/02-tai-sao-concept-first.md
