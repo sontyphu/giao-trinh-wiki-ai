@@ -1,0 +1,3218 @@
+
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Xây hệ thống ghi chú AI tự quản lý với Obsidian + Claude — concept-first, multi-vault.">
+      
+      
+        <meta name="author" content="Son's Brain">
+      
+      
+        <link rel="canonical" href="https://sontyphu.github.io/giao-trinh-wiki-ai/03-mo-rong-multi-vault/03-vault-4dx-execution/">
+      
+      
+        <link rel="prev" href="../02-vault-life-lifestyle/">
+      
+      
+        <link rel="next" href="../04-vault-marketing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Vault 4DX — execution layer - Giáo trình Wiki AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vault-4dx-execution-layer" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href="../.." title="Giáo trình Wiki AI" class="md-header__button md-logo" aria-label="Giáo trình Wiki AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Giáo trình Wiki AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vault 4DX — execution layer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Chuyển sang tối"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Chuyển sang tối" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Chuyển sang sáng"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Chuyển sang sáng" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Tìm kiếm" placeholder="Tìm kiếm" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Tìm kiếm">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Xoá" aria-label="Xoá" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sontyphu/giao-trinh-wiki-ai" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sontyphu/giao-trinh-wiki-ai
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Trang chủ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🚀 Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../muc-luc/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🗂️ Mục lục
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ❓ FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../00-triet-ly/01-tai-sao-ai-first-wiki/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📖 00. Triết lý
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01-cai-dat/01-cai-obsidian/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  ⚙️ 01. Cài đặt
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02-vault-dau-tien-brain/01-tao-vault-brain/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🧠 02. Kho đầu tiên (Brain)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-khi-nao-tach-vault/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🌳 03. Mở rộng multi-vault
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04-agents-skills-memory/01-agent-la-gi/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🤖 04. Agents · Skills · Memory
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05-bao-tri-lint/01-lint-wiki-dinh-ky/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🛠️ 05. Bảo trì
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../99-templates/claude-md-master-template/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 99. Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Giáo trình Wiki AI" class="md-nav__button md-logo" aria-label="Giáo trình Wiki AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Giáo trình Wiki AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sontyphu/giao-trinh-wiki-ai" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sontyphu/giao-trinh-wiki-ai
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Trang chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../muc-luc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🗂️ Mục lục
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ❓ FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 00. Triết lý
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 00. Triết lý
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-triet-ly/01-tai-sao-ai-first-wiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tại sao hệ thống ghi chú AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-triet-ly/02-tai-sao-concept-first/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tại sao lưu theo khái niệm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-triet-ly/03-tai-sao-multi-vault/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tại sao nhiều kho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-triet-ly/04-3-lop-raw-wiki-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 lớp bên trong mỗi kho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ 01. Cài đặt
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⚙️ 01. Cài đặt
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-cai-dat/01-cai-obsidian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài Obsidian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-cai-dat/02-cai-icloud-sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài iCloud sync
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-cai-dat/03-cai-claude-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài Claude Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-cai-dat/04-cai-mcp-servers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài MCP servers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-cai-dat/05-cai-plugins-obsidian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài plugins Obsidian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧠 02. Kho đầu tiên (Brain)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧠 02. Kho đầu tiên (Brain)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/01-tao-vault-brain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tạo vault Brain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/02-claude-md-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAUDE.md template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/03-cau-truc-folder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cấu trúc folder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/04-concept-page-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept page template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/05-source-page-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source page template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/06-course-moc-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course bản đồ nội dung template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/07-ingest-source-dau-tien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ingest source đầu tiên
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/08-query-wiki-dau-tien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Query wiki đầu tiên
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌳 03. Mở rộng multi-vault
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌳 03. Mở rộng multi-vault
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-khi-nao-tach-vault/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Khi nào tách kho mới
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-vault-life-lifestyle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault Life — lifestyle cá nhân
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault 4DX — execution layer
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault 4DX — execution layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#truoc-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trước đó
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4dx-la-gi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4DX là gì
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vault-4dx-meta-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vault 4DX = META layer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#khi-nao-setup-4dx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Khi nào setup 4DX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-1-identify-muc-tieu-toi-quan-trong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1 — Identify mục tiêu tối quan trọng
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-2-map-muc-tieu-toi-quan-trong-vao-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2 — Map mục tiêu tối quan trọng vào vault
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-3-setup-4dx-subfolder-moi-vault-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3 — Setup 4dx/ subfolder mỗi vault input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bước 3 — Setup 4dx/ subfolder mỗi vault input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-wigmd-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-wig.md (Life)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-lead-measuresmd-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-lead-measures.md (Life)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions2026-w22-actionsmd-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        actions/2026-W22-actions.md (Life)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-4-tao-vault-4dx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 4 — Tạo vault 4DX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-5-claudemd-cho-4dx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 5 — CLAUDE.md cho 4DX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-6-script-scan-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 6 — Script scan (Python)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-7-setup-lenh-tu-ong-theo-lich-launchd-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 7 — Setup lệnh tự động theo lịch (launchd macOS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-8-output-4-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 8 — Output 4 channel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-9-workflow-daily" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 9 — Workflow daily
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-10-khi-khong-chac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 10 — Khi không chắc
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chu-thich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Chú thích
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiep-theo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tiếp theo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-vault-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault Marketing — production + measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-cross-vault-query/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-vault query
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 04. Agents · Skills · Memory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤖 04. Agents · Skills · Memory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-agents-skills-memory/01-agent-la-gi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent là gì
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-agents-skills-memory/02-tao-agent-dau-tien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tạo agent đầu tiên
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-agents-skills-memory/03-skill-la-gi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skill là gì
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-agents-skills-memory/04-tao-skill-dau-tien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tạo skill đầu tiên
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-agents-skills-memory/05-memory-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hệ thống bộ nhớ AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ 05. Bảo trì
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ 05. Bảo trì
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-bao-tri-lint/01-lint-wiki-dinh-ky/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rà soát wiki định kỳ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-bao-tri-lint/02-backup-icloud-git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup iCloud + Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-bao-tri-lint/03-migrate-rename-vault/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate rename vault
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-bao-tri-lint/04-khi-nao-pivot-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Khi nào cải tổ hệ thống
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 99. Templates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📋 99. Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/claude-md-master-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAUDE.md master template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/concept-page-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept page template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/course-moc-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course bản đồ nội dung template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/index-md-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index.md format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/log-md-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    log.md format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/source-page-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source page template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#truoc-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trước đó
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4dx-la-gi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4DX là gì
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vault-4dx-meta-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vault 4DX = META layer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#khi-nao-setup-4dx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Khi nào setup 4DX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-1-identify-muc-tieu-toi-quan-trong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1 — Identify mục tiêu tối quan trọng
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-2-map-muc-tieu-toi-quan-trong-vao-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2 — Map mục tiêu tối quan trọng vào vault
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-3-setup-4dx-subfolder-moi-vault-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3 — Setup 4dx/ subfolder mỗi vault input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bước 3 — Setup 4dx/ subfolder mỗi vault input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-wigmd-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-wig.md (Life)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-lead-measuresmd-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-lead-measures.md (Life)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions2026-w22-actionsmd-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        actions/2026-W22-actions.md (Life)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-4-tao-vault-4dx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 4 — Tạo vault 4DX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-5-claudemd-cho-4dx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 5 — CLAUDE.md cho 4DX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-6-script-scan-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 6 — Script scan (Python)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-7-setup-lenh-tu-ong-theo-lich-launchd-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 7 — Setup lệnh tự động theo lịch (launchd macOS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-8-output-4-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 8 — Output 4 channel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-9-workflow-daily" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 9 — Workflow daily
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buoc-10-khi-khong-chac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 10 — Khi không chắc
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chu-thich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Chú thích
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiep-theo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tiếp theo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/sontyphu/giao-trinh-wiki-ai/edit/main/docs/03-mo-rong-multi-vault/03-vault-4dx-execution.md" title="Chỉnh sửa" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="vault-4dx-execution-layer">Vault 4DX — execution layer<a class="headerlink" href="#vault-4dx-execution-layer" title="Permanent link">&para;</a></h1>
+<h2 id="truoc-o">Trước đó<a class="headerlink" href="#truoc-o" title="Permanent link">&para;</a></h2>
+<p><a href="../02-vault-life-lifestyle/">02-vault-life-lifestyle</a> — vault Life chạy được.</p>
+<hr />
+<h2 id="4dx-la-gi">4DX là gì<a class="headerlink" href="#4dx-la-gi" title="Permanent link">&para;</a></h2>
+<p><strong>4DX</strong> = <strong>4 Disciplines of Execution</strong> (Chris McChesney, Sean Covey, Jim Huling — sách 2012):</p>
+<ol>
+<li><strong>mục tiêu tối quan trọng</strong> — Wildly Important Goal (mục tiêu tối thượng)</li>
+<li><strong>Lead measures</strong> — Thước đo đòn bẩy (action drive mục tiêu tối quan trọng)</li>
+<li><strong>Scoreboard</strong> — Bảng điểm hiển thị</li>
+<li><strong>Cadence</strong> — Phiên họp nhịp</li>
+</ol>
+<p>Ví dụ 4 mục tiêu tối quan trọng điển hình của chuyên gia đào tạo:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>mục tiêu tối quan trọng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Thời gian chất lượng cho gia đình</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cộng đồng thành viên đạt mục tiêu N</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Hoàn thành Ironman sub-14 + BQ</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Doanh thu đào tạo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="vault-4dx-meta-layer">Vault 4DX = META layer<a class="headerlink" href="#vault-4dx-meta-layer" title="Permanent link">&para;</a></h2>
+<p>KHÔNG phải knowledge. KHÔNG phải lifestyle. KHÔNG phải production.</p>
+<p>Vault 4DX = <strong>trung tâm điều hành</strong> tổng hợp data từ 2-3 vault input → generate báo cáo Xanh/Vàng/Đỏ.</p>
+<div class="highlight"><pre><span></span><code>Life/4dx/         Marketing/4dx/
+   │                  │
+   ├── 1-wig.md       ├── 1-wig.md
+   ├── 2-lead.md      ├── 2-lead.md
+   ├── 3-scoreboard   ├── 3-scoreboard
+   ├── 4-cadence      ├── 4-cadence
+   └── actions/W22    └── actions/W22
+       │                  │
+       └───────┬──────────┘
+               ▼
+        tác vụ lệnh tự động theo lịch đêm CN scan
+               │
+               ▼
+      My 4DX/reviews/weekly/W22.md
+        + email + PDF + xlsx
+</code></pre></div>
+<hr />
+<h2 id="khi-nao-setup-4dx">Khi nào setup 4DX<a class="headerlink" href="#khi-nao-setup-4dx" title="Permanent link">&para;</a></h2>
+<p>Setup 4DX nếu:
+- Bạn có 3-5 mục tiêu tối quan trọng 2026 rõ ràng
+- Bạn nhập action daily được 4-6 tuần ổn định
+- Bạn cần báo cáo tuần tự động, không phải tự tổng hợp</p>
+<p>Skip 4DX nếu:
+- Bạn không track OKR
+- Action đời thường không đo được
+- Mới setup vault tuần đầu, chưa cần auto</p>
+<p>→ Khuyên: skip lần đầu. Quay lại sau khi vault Brain + Life chạy 3-6 tháng.</p>
+<hr />
+<h2 id="buoc-1-identify-muc-tieu-toi-quan-trong">Bước 1 — Identify mục tiêu tối quan trọng<a class="headerlink" href="#buoc-1-identify-muc-tieu-toi-quan-trong" title="Permanent link">&para;</a></h2>
+<p>Liệt 3-5 mục tiêu tối quan trọng năm nay:</p>
+<ul>
+<li>mục tiêu tối quan trọng 1: ?</li>
+<li>mục tiêu tối quan trọng 2: ?</li>
+<li>...</li>
+</ul>
+<p>Quy tắc mục tiêu tối quan trọng:
+- Đo được số (dollar, member, hour, km)
+- Có deadline (end of year, Q4)
+- Quan trọng nhất — không phải nice-to-have</p>
+<p>Vd:
+- mục tiêu tối quan trọng 1: "Doanh thu cá nhân $200k năm nay"
+- mục tiêu tối quan trọng 2: "Marathon dưới 4 giờ trước 31/12"
+- mục tiêu tối quan trọng 3: "Đọc 24 sách hết năm"</p>
+<hr />
+<h2 id="buoc-2-map-muc-tieu-toi-quan-trong-vao-vault">Bước 2 — Map mục tiêu tối quan trọng vào vault<a class="headerlink" href="#buoc-2-map-muc-tieu-toi-quan-trong-vao-vault" title="Permanent link">&para;</a></h2>
+<p>Mỗi mục tiêu tối quan trọng nằm ở vault nào tuỳ context:</p>
+<table>
+<thead>
+<tr>
+<th>mục tiêu tối quan trọng</th>
+<th>Vault input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mục tiêu tối quan trọng về gia đình / sức khoẻ / hobby</td>
+<td>Life</td>
+</tr>
+<tr>
+<td>mục tiêu tối quan trọng về business / revenue / marketing</td>
+<td>Marketing</td>
+</tr>
+<tr>
+<td>mục tiêu tối quan trọng về knowledge / đọc sách</td>
+<td>Brain</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="buoc-3-setup-4dx-subfolder-moi-vault-input">Bước 3 — Setup 4dx/ subfolder mỗi vault input<a class="headerlink" href="#buoc-3-setup-4dx-subfolder-moi-vault-input" title="Permanent link">&para;</a></h2>
+<p>Trong Life vault:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;My Life&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>4dx/actions
+<span class="nb">cd</span><span class="w"> </span>4dx
+touch<span class="w"> </span><span class="m">1</span>-wig.md<span class="w"> </span><span class="m">2</span>-lead-measures.md<span class="w"> </span><span class="m">3</span>-scoreboard.md<span class="w"> </span><span class="m">4</span>-cadence.md
+</code></pre></div>
+<h3 id="1-wigmd-life"><code>1-wig.md</code> (Life)<a class="headerlink" href="#1-wigmd-life" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>---
+type: wig-list
+updated: 2026-05-29
+---
+
+# mục tiêu tối quan trọng — Life vault
+
+| # | mục tiêu tối quan trọng | Target | Deadline |
+|---|---|---|---|
+| 2 | Marathon dưới 4 giờ | 3h59 | 2026-12-31 |
+</code></pre></div>
+<h3 id="2-lead-measuresmd-life"><code>2-lead-measures.md</code> (Life)<a class="headerlink" href="#2-lead-measuresmd-life" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>---
+type: lead-measures
+updated: 2026-05-29
+---
+
+# Lead Measures — Life vault
+
+## mục tiêu tối quan trọng 2 — Marathon
+
+Metric đòn bẩy:
+
+| Metric | Đơn vị | Target/tuần |
+|---|---|---|
+| training_hours | giờ | 8 |
+| long_run_km | km | 25 |
+| tempo_run_min | phút | 45 |
+| strength_session | session | 2 |
+</code></pre></div>
+<h3 id="actions2026-w22-actionsmd-life"><code>actions/2026-W22-actions.md</code> (Life)<a class="headerlink" href="#actions2026-w22-actionsmd-life" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code># Actions — Life W22
+
+## T2 25/05/2026
+
+### Sáng
+- [x] 05:00-07:00 | wig=2 | metric=training_hours | val=2 | activity=&quot;Long run 25km Z2&quot;
+
+### Chiều
+- [x] 14:00-15:30 | wig=1 | metric=family_hours | val=1.5 | activity=&quot;Đi siêu thị vợ&quot;
+
+### Tối
+- [x] 19:00-20:30 | wig=1 | metric=family_hours | val=1.5 | activity=&quot;Cơm tối gia đình&quot;
+- [ ] 21:00-23:00 | wig=NONE | val=2 | activity=&quot;Xem YouTube&quot; -- off-plan
+</code></pre></div>
+<hr />
+<h2 id="buoc-4-tao-vault-4dx">Bước 4 — Tạo vault 4DX<a class="headerlink" href="#buoc-4-tao-vault-4dx" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;/Users/</span><span class="nv">$USER</span><span class="s2">/Library/Mobile Documents/iCloud~md~obsidian/Documents&quot;</span>
+mkdir<span class="w"> </span><span class="s2">&quot;My 4DX&quot;</span>
+<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;My 4DX&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>wig<span class="w"> </span>reviews/weekly<span class="w"> </span>scoreboard<span class="w"> </span>scripts<span class="w"> </span>raw/<span class="o">{</span>from-life,from-marketing<span class="o">}</span>
+touch<span class="w"> </span>CLAUDE.md<span class="w"> </span>README.md<span class="w"> </span>index.md<span class="w"> </span>log.md<span class="w"> </span>now.md
+</code></pre></div>
+<hr />
+<h2 id="buoc-5-claudemd-cho-4dx">Bước 5 — CLAUDE.md cho 4DX<a class="headerlink" href="#buoc-5-claudemd-cho-4dx" title="Permanent link">&para;</a></h2>
+<p>Template:</p>
+<p><div class="highlight"><pre><span></span><code># CLAUDE.md — Luật chơi vault &quot;My 4DX&quot;
+
+Vault này là META layer trên Life + Marketing. Đêm CN tác vụ lệnh tự động theo lịch (tự động theo lịch) tự scan 2 vault → generate báo cáo Xanh/Vàng/Đỏ → output sáng T2.
+
+KHÔNG knowledge. KHÔNG lifestyle. KHÔNG production. **Trung tâm điều hành**.
+
+## 1. Chủ vault
+
+[Tên bạn] — [năm sinh + role].
+
+## 2. Mô hình 2 vault input + 1 vault tổng hợp
+
+[Diagram customize số mục tiêu tối quan trọng của bạn]
+
+## 3. mục tiêu tối quan trọng năm nay — mapping vault
+
+| # | mục tiêu tối quan trọng | Vault input | Lead measure file |
+|---|---|---|---|
+| 1 | Family time | Life | `Life/4dx/2-lead-measures.md` |
+| 2 | Marathon | Life | `Life/4dx/2-lead-measures.md` |
+| 3 | Revenue $200k | Marketing | `Marketing/4dx/2-lead-measures.md` |
+
+## 4. Action log convention
+
+Format inline metadata:
+</code></pre></div>
+- [x] HH:MM-HH:MM | wig=N | metric=<name> | val=<number> | activity="..."
+<div class="highlight"><pre><span></span><code>Tag `wig=`:
+- `wig=1` đến `wig=N` → đẩy mục tiêu tối quan trọng
+- `wig=NONE` → off-plan
+- `wig=whirlwind` → daily ops, không tính
+
+## 5. Logic traffic light
+
+Per mục tiêu tối quan trọng:
+- Xanh: lead hit ≥80% target + off-plan ≤10%
+- Vàng: lead hit 50-80% hoặc off-plan 10-25%
+- Đỏ: lead hit &lt;50% hoặc off-plan &gt;25%
+
+## 6. Cron đêm CN (tác vụ tự động)
+
+CN 23:30 → lệnh tự động theo lịch fire → script scan 2 vault → generate review → email + PDF + xlsx.
+
+T2 04:00 backup lệnh tự động theo lịch nếu CN miss.
+
+## 7. Workflow daily
+
+Tối 21:00 nhập actions (10 phút).
+Sáng T2 đọc review (5 phút).
+</code></pre></div></p>
+<hr />
+<h2 id="buoc-6-script-scan-python">Bước 6 — Script scan (Python)<a class="headerlink" href="#buoc-6-script-scan-python" title="Permanent link">&para;</a></h2>
+<p>Tạo <code>scripts/scan_4dx.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;Scan Life + Marketing 4dx/actions/ → generate review tuần.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">VAULT_LIFE</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/Users/&lt;you&gt;/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Life&quot;</span><span class="p">)</span>
+<span class="n">VAULT_MKT</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/Users/&lt;you&gt;/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Marketing&quot;</span><span class="p">)</span>
+<span class="n">VAULT_4DX</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/Users/&lt;you&gt;/Library/Mobile Documents/iCloud~md~obsidian/Documents/My 4DX&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">current_week</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Trả về string &#39;YYYY-Www&#39;.&quot;&quot;&quot;</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="n">iso</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">isocalendar</span><span class="p">()</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">iso</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2">-W</span><span class="si">{</span><span class="n">iso</span><span class="o">.</span><span class="n">week</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_actions</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse file actions, trả list dict {wig, metric, val, activity}.&quot;&quot;&quot;</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">actions</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">r</span><span class="s1">&#39;- \[(x| )\] .*?\| wig=(\w+) \| metric=([\w_]+) \| val=([\d.]+) \| activity=&quot;(.*)&quot;&#39;</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">m</span><span class="p">:</span>
+            <span class="n">done</span><span class="p">,</span> <span class="n">wig</span><span class="p">,</span> <span class="n">metric</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">activity</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+            <span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s1">&#39;done&#39;</span><span class="p">:</span> <span class="n">done</span> <span class="o">==</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;wig&#39;</span><span class="p">:</span> <span class="n">wig</span><span class="p">,</span>
+                <span class="s1">&#39;metric&#39;</span><span class="p">:</span> <span class="n">metric</span><span class="p">,</span>
+                <span class="s1">&#39;val&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">),</span>
+                <span class="s1">&#39;activity&#39;</span><span class="p">:</span> <span class="n">activity</span><span class="p">,</span>
+            <span class="p">})</span>
+    <span class="k">return</span> <span class="n">actions</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">aggregate</span><span class="p">(</span><span class="n">actions</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Aggregate theo wig + metric.&quot;&quot;&quot;</span>
+    <span class="n">agg</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">float</span><span class="p">))</span>
+    <span class="n">off_plan</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">actions</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;done&#39;</span><span class="p">]:</span>
+            <span class="k">continue</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;wig&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;NONE&#39;</span><span class="p">:</span>
+            <span class="n">off_plan</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;wig&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;whirlwind&#39;</span><span class="p">:</span>
+            <span class="n">agg</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;wig&#39;</span><span class="p">]][</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;metric&#39;</span><span class="p">]]</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;val&#39;</span><span class="p">]</span>
+    <span class="n">off_plan_ratio</span> <span class="o">=</span> <span class="n">off_plan</span> <span class="o">/</span> <span class="n">total</span> <span class="k">if</span> <span class="n">total</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">agg</span><span class="p">,</span> <span class="n">off_plan_ratio</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">traffic_light</span><span class="p">(</span><span class="n">agg</span><span class="p">,</span> <span class="n">off_plan_ratio</span><span class="p">,</span> <span class="n">targets</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Trả về xanh/vàng/đỏ per mục tiêu tối quan trọng.&quot;&quot;&quot;</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">wig</span><span class="p">,</span> <span class="n">metrics</span> <span class="ow">in</span> <span class="n">agg</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">hit_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">total_metrics</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">targets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">wig</span><span class="p">,</span> <span class="p">{}))</span>
+        <span class="k">for</span> <span class="n">metric</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">targets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">wig</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">actual</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">metric</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">actual</span> <span class="o">&gt;=</span> <span class="n">target</span> <span class="o">*</span> <span class="mf">0.8</span><span class="p">:</span>
+                <span class="n">hit_count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">hit_ratio</span> <span class="o">=</span> <span class="n">hit_count</span> <span class="o">/</span> <span class="n">total_metrics</span> <span class="k">if</span> <span class="n">total_metrics</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">hit_ratio</span> <span class="o">&gt;=</span> <span class="mf">0.8</span> <span class="ow">and</span> <span class="n">off_plan_ratio</span> <span class="o">&lt;=</span> <span class="mf">0.1</span><span class="p">:</span>
+            <span class="n">results</span><span class="p">[</span><span class="n">wig</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;XANH&#39;</span>
+        <span class="k">elif</span> <span class="n">hit_ratio</span> <span class="o">&gt;=</span> <span class="mf">0.5</span> <span class="ow">or</span> <span class="n">off_plan_ratio</span> <span class="o">&lt;=</span> <span class="mf">0.25</span><span class="p">:</span>
+            <span class="n">results</span><span class="p">[</span><span class="n">wig</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;VANG&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">results</span><span class="p">[</span><span class="n">wig</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;DO&#39;</span>
+    <span class="k">return</span> <span class="n">results</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_review</span><span class="p">(</span><span class="n">week</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate review markdown.&quot;&quot;&quot;</span>
+    <span class="n">life_actions</span> <span class="o">=</span> <span class="n">parse_actions</span><span class="p">(</span><span class="n">VAULT_LIFE</span> <span class="o">/</span> <span class="s2">&quot;4dx/actions&quot;</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;2026-</span><span class="si">{</span><span class="n">week</span><span class="si">}</span><span class="s2">-actions.md&quot;</span><span class="p">)</span>
+    <span class="n">mkt_actions</span> <span class="o">=</span> <span class="n">parse_actions</span><span class="p">(</span><span class="n">VAULT_MKT</span> <span class="o">/</span> <span class="s2">&quot;4dx/actions&quot;</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;2026-</span><span class="si">{</span><span class="n">week</span><span class="si">}</span><span class="s2">-actions.md&quot;</span><span class="p">)</span>
+
+    <span class="n">all_actions</span> <span class="o">=</span> <span class="n">life_actions</span> <span class="o">+</span> <span class="n">mkt_actions</span>
+    <span class="n">agg</span><span class="p">,</span> <span class="n">off_plan</span> <span class="o">=</span> <span class="n">aggregate</span><span class="p">(</span><span class="n">all_actions</span><span class="p">)</span>
+
+    <span class="c1"># Targets — customize</span>
+    <span class="n">targets</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;family_hours&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">},</span>
+        <span class="s1">&#39;2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;training_hours&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;long_run_km&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span>
+        <span class="s1">&#39;3&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;revenue_usd&#39;</span><span class="p">:</span> <span class="mi">4000</span><span class="p">},</span>
+    <span class="p">}</span>
+    <span class="n">lights</span> <span class="o">=</span> <span class="n">traffic_light</span><span class="p">(</span><span class="n">agg</span><span class="p">,</span> <span class="n">off_plan</span><span class="p">,</span> <span class="n">targets</span><span class="p">)</span>
+
+    <span class="n">output_path</span> <span class="o">=</span> <span class="n">VAULT_4DX</span> <span class="o">/</span> <span class="s2">&quot;reviews/weekly&quot;</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;2026-</span><span class="si">{</span><span class="n">week</span><span class="si">}</span><span class="s2">-review.md&quot;</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;# Review </span><span class="si">{</span><span class="n">week</span><span class="si">}</span>
+
+<span class="s2">Generated: </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="si">}</span>
+
+<span class="s2">## Traffic light per mục tiêu tối quan trọng</span>
+
+<span class="s2">| mục tiêu tối quan trọng | Màu |</span>
+<span class="s2">|---|---|</span>
+<span class="s2">&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">wig</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">lights</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="n">content</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;| mục tiêu tối quan trọng </span><span class="si">{</span><span class="n">wig</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">lights</span><span class="p">[</span><span class="n">wig</span><span class="p">]</span><span class="si">}</span><span class="s2"> |</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="n">content</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">## Off-plan ratio: </span><span class="si">{</span><span class="n">off_plan</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="n">content</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">## Aggregate metrics</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+    <span class="k">for</span> <span class="n">wig</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">agg</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="n">content</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;### mục tiêu tối quan trọng </span><span class="si">{</span><span class="n">wig</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">for</span> <span class="n">metric</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">agg</span><span class="p">[</span><span class="n">wig</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">content</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">metric</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">val</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">content</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="n">output_path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wrote </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">week</span> <span class="o">=</span> <span class="n">current_week</span><span class="p">()</span>
+    <span class="n">generate_review</span><span class="p">(</span><span class="n">week</span><span class="p">)</span>
+</code></pre></div>
+<p>Test thủ công:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>scripts/scan_4dx.py
+</code></pre></div>
+<hr />
+<h2 id="buoc-7-setup-lenh-tu-ong-theo-lich-launchd-macos">Bước 7 — Setup lệnh tự động theo lịch (launchd macOS)<a class="headerlink" href="#buoc-7-setup-lenh-tu-ong-theo-lich-launchd-macos" title="Permanent link">&para;</a></h2>
+<p>Tác vụ tự động theo lịch (lệnh tự động theo lịch) trên macOS dùng launchd. Tạo <code>scripts/com.you.4dx-weekly.plist</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; </span>
+<span class="cp">  &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+<span class="w">  </span><span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;</span>
+<span class="w">  </span><span class="nt">&lt;string&gt;</span>com.you.4dx-weekly<span class="nt">&lt;/string&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
+<span class="w">  </span><span class="nt">&lt;array&gt;</span>
+<span class="w">    </span><span class="nt">&lt;string&gt;</span>/usr/bin/env<span class="nt">&lt;/string&gt;</span>
+<span class="w">    </span><span class="nt">&lt;string&gt;</span>python3<span class="nt">&lt;/string&gt;</span>
+<span class="w">    </span><span class="nt">&lt;string&gt;</span>/Users/you/Library/Mobile<span class="w"> </span>Documents/iCloud~md~obsidian/Documents/My<span class="w"> </span>4DX/scripts/scan_4dx.py<span class="nt">&lt;/string&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/array&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;key&gt;</span>StartCalendarInterval<span class="nt">&lt;/key&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dict&gt;</span>
+<span class="w">    </span><span class="nt">&lt;key&gt;</span>Weekday<span class="nt">&lt;/key&gt;</span>
+<span class="w">    </span><span class="nt">&lt;integer&gt;</span>0<span class="nt">&lt;/integer&gt;</span>
+<span class="w">    </span><span class="nt">&lt;key&gt;</span>Hour<span class="nt">&lt;/key&gt;</span>
+<span class="w">    </span><span class="nt">&lt;integer&gt;</span>23<span class="nt">&lt;/integer&gt;</span>
+<span class="w">    </span><span class="nt">&lt;key&gt;</span>Minute<span class="nt">&lt;/key&gt;</span>
+<span class="w">    </span><span class="nt">&lt;integer&gt;</span>30<span class="nt">&lt;/integer&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/dict&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;key&gt;</span>StandardOutPath<span class="nt">&lt;/key&gt;</span>
+<span class="w">  </span><span class="nt">&lt;string&gt;</span>/Users/you/Library/Logs/4dx-weekly.log<span class="nt">&lt;/string&gt;</span>
+<span class="w">  </span><span class="nt">&lt;key&gt;</span>StandardErrorPath<span class="nt">&lt;/key&gt;</span>
+<span class="w">  </span><span class="nt">&lt;string&gt;</span>/Users/you/Library/Logs/4dx-weekly.error.log<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</code></pre></div>
+<p>Install:</p>
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>scripts/com.you.4dx-weekly.plist<span class="w"> </span>~/Library/LaunchAgents/
+launchctl<span class="w"> </span>load<span class="w"> </span>~/Library/LaunchAgents/com.you.4dx-weekly.plist
+</code></pre></div>
+<p>Verify:</p>
+<div class="highlight"><pre><span></span><code>launchctl<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>com.you.4dx
+</code></pre></div>
+<p>Disable tạm:</p>
+<div class="highlight"><pre><span></span><code>launchctl<span class="w"> </span>unload<span class="w"> </span>~/Library/LaunchAgents/com.you.4dx-weekly.plist
+</code></pre></div>
+<hr />
+<h2 id="buoc-8-output-4-channel">Bước 8 — Output 4 channel<a class="headerlink" href="#buoc-8-output-4-channel" title="Permanent link">&para;</a></h2>
+<p>Sau khi lệnh tự động theo lịch generate review markdown, script còn:</p>
+<ol>
+<li><strong>Markdown</strong> trong vault (done)</li>
+<li><strong>Email</strong> gửi qua Gmail (cần MCP Gmail hoặc Python smtplib)</li>
+<li><strong>PDF</strong> in giấy (pandoc convert md → PDF)</li>
+<li><strong>xlsx</strong> dashboard (openpyxl)</li>
+</ol>
+<p>Code email + PDF + xlsx — phức tạp hơn, xem script mẫu để tham khảo full.</p>
+<hr />
+<h2 id="buoc-9-workflow-daily">Bước 9 — Workflow daily<a class="headerlink" href="#buoc-9-workflow-daily" title="Permanent link">&para;</a></h2>
+<p>Tối 21:00 (10 phút):
+- Mở <code>My Life/4dx/actions/2026-W22-actions.md</code> hoặc <code>My Marketing/4dx/actions/2026-W22-actions.md</code>
+- Thêm action đã làm hôm nay</p>
+<p>Sáng T2 (5 phút):
+- Mở <code>My 4DX/reviews/weekly/2026-W22-review.md</code>
+- Đọc traffic light
+- Xanh → tiếp tục
+- Vàng → adjust DMO
+- Đỏ → reflection + hỏi accountability partner</p>
+<hr />
+<h2 id="buoc-10-khi-khong-chac">Bước 10 — Khi không chắc<a class="headerlink" href="#buoc-10-khi-khong-chac" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Action không biết mục tiêu tối quan trọng → <code>wig=whirlwind</code> (daily ops)</li>
+<li>Tuần lỡ không nhập → lệnh tự động theo lịch vẫn chạy, flag "data sparse" + treat as đỏ</li>
+<li>Metric mới → thêm vào <code>2-lead-measures.md</code> trước, rồi log action</li>
+</ul>
+<hr />
+<h2 id="chu-thich">📖 Chú thích<a class="headerlink" href="#chu-thich" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>vault</strong> = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).</li>
+<li><strong>MCP Server</strong> (Model Context Protocol) = phần mềm cầu nối giúp AI Claude kết nối và làm việc trực tiếp với ứng dụng khác (Gmail, Google Drive, Slack, lịch...) mà không cần copy-paste thủ công.</li>
+</ul>
+<h2 id="tiep-theo">Tiếp theo<a class="headerlink" href="#tiep-theo" title="Permanent link">&para;</a></h2>
+<p>Đọc tiếp: <a href="../04-vault-marketing/">04-vault-marketing</a> — Build vault Marketing.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Trở lại mục lục
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Chân trang" >
+        
+          
+          <a href="../02-vault-life-lifestyle/" class="md-footer__link md-footer__link--prev" aria-label="Trước: Vault Life — lifestyle cá nhân">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Trước
+              </span>
+              <div class="md-ellipsis">
+                Vault Life — lifestyle cá nhân
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-vault-marketing/" class="md-footer__link md-footer__link--next" aria-label="Sau: Vault Marketing — production + measurement">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sau
+              </span>
+              <div class="md-ellipsis">
+                Vault Marketing — production + measurement
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

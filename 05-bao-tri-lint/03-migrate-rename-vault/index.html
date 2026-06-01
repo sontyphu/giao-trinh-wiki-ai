@@ -1,0 +1,3833 @@
+
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Xây hệ thống ghi chú AI tự quản lý với Obsidian + Claude — concept-first, multi-vault.">
+      
+      
+        <meta name="author" content="Son's Brain">
+      
+      
+        <link rel="canonical" href="https://sontyphu.github.io/giao-trinh-wiki-ai/05-bao-tri-lint/03-migrate-rename-vault/">
+      
+      
+        <link rel="prev" href="../02-backup-icloud-git/">
+      
+      
+        <link rel="next" href="../04-khi-nao-pivot-architecture/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Migrate rename vault - Giáo trình Wiki AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migrate-rename-vault" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href="../.." title="Giáo trình Wiki AI" class="md-header__button md-logo" aria-label="Giáo trình Wiki AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Giáo trình Wiki AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Migrate rename vault
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Chuyển sang tối"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Chuyển sang tối" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Chuyển sang sáng"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Chuyển sang sáng" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Tìm kiếm" placeholder="Tìm kiếm" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Tìm kiếm">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Xoá" aria-label="Xoá" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sontyphu/giao-trinh-wiki-ai" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sontyphu/giao-trinh-wiki-ai
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Trang chủ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🚀 Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../muc-luc/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🗂️ Mục lục
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ❓ FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../00-triet-ly/01-tai-sao-ai-first-wiki/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📖 00. Triết lý
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01-cai-dat/01-cai-obsidian/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  ⚙️ 01. Cài đặt
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02-vault-dau-tien-brain/01-tao-vault-brain/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🧠 02. Kho đầu tiên (Brain)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03-mo-rong-multi-vault/01-khi-nao-tach-vault/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🌳 03. Mở rộng multi-vault
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04-agents-skills-memory/01-agent-la-gi/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🤖 04. Agents · Skills · Memory
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-lint-wiki-dinh-ky/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  🛠️ 05. Bảo trì
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../99-templates/claude-md-master-template/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📋 99. Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Giáo trình Wiki AI" class="md-nav__button md-logo" aria-label="Giáo trình Wiki AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Giáo trình Wiki AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sontyphu/giao-trinh-wiki-ai" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sontyphu/giao-trinh-wiki-ai
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Trang chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../muc-luc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🗂️ Mục lục
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ❓ FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 00. Triết lý
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 00. Triết lý
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-triet-ly/01-tai-sao-ai-first-wiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tại sao hệ thống ghi chú AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-triet-ly/02-tai-sao-concept-first/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tại sao lưu theo khái niệm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-triet-ly/03-tai-sao-multi-vault/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tại sao nhiều kho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-triet-ly/04-3-lop-raw-wiki-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 lớp bên trong mỗi kho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ 01. Cài đặt
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⚙️ 01. Cài đặt
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-cai-dat/01-cai-obsidian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài Obsidian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-cai-dat/02-cai-icloud-sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài iCloud sync
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-cai-dat/03-cai-claude-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài Claude Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-cai-dat/04-cai-mcp-servers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài MCP servers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-cai-dat/05-cai-plugins-obsidian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài plugins Obsidian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧠 02. Kho đầu tiên (Brain)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧠 02. Kho đầu tiên (Brain)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/01-tao-vault-brain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tạo vault Brain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/02-claude-md-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAUDE.md template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/03-cau-truc-folder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cấu trúc folder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/04-concept-page-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept page template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/05-source-page-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source page template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/06-course-moc-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course bản đồ nội dung template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/07-ingest-source-dau-tien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ingest source đầu tiên
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-vault-dau-tien-brain/08-query-wiki-dau-tien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Query wiki đầu tiên
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌳 03. Mở rộng multi-vault
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌳 03. Mở rộng multi-vault
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-mo-rong-multi-vault/01-khi-nao-tach-vault/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Khi nào tách kho mới
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-mo-rong-multi-vault/02-vault-life-lifestyle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault Life — lifestyle cá nhân
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-mo-rong-multi-vault/03-vault-4dx-execution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault 4DX — execution layer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-mo-rong-multi-vault/04-vault-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault Marketing — production + measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-mo-rong-multi-vault/05-cross-vault-query/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-vault query
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 04. Agents · Skills · Memory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤖 04. Agents · Skills · Memory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-agents-skills-memory/01-agent-la-gi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent là gì
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-agents-skills-memory/02-tao-agent-dau-tien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tạo agent đầu tiên
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-agents-skills-memory/03-skill-la-gi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skill là gì
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-agents-skills-memory/04-tao-skill-dau-tien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tạo skill đầu tiên
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-agents-skills-memory/05-memory-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hệ thống bộ nhớ AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ 05. Bảo trì
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ 05. Bảo trì
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-lint-wiki-dinh-ky/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rà soát wiki định kỳ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-backup-icloud-git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup iCloud + Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate rename vault
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate rename vault
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#truoc-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trước đó
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tinh-huong-can-migrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tình huống cần migrate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tình huống cần migrate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-rename-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Rename vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-move-vault-sang-location-khac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Move vault sang location khác
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-split-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Split vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-merge-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Merge vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quy-tac-chung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quy tắc chung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quy tắc chung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rule-1-backup-truoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 1 — Backup trước
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-2-ong-obsidian-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 2 — Đóng Obsidian + Claude Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-3-test-voi-vault-copy-truoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 3 — Test với vault copy trước
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-4-verify-tung-buoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 4 — Verify từng bước
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-a-rename-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use case A — Rename vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use case A — Rename vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-ong-obsidian-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1 — Đóng Obsidian + Claude Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-rename-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2 — Rename folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-update-reference-trong-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3 — Update reference trong vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-4-update-frontmatter-brain_ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 4 — Update frontmatter brain_ref
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-5-update-claudemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 5 — Update CLAUDE.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-6-reopen-obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 6 — Reopen Obsidian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-7-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 7 — Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-b-move-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use case B — Move vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use case B — Move vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1 — Backup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-move-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2 — Move folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-update-vault-settings-obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3 — Update vault settings Obsidian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-4-cap-nhat-script-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 4 — Cập nhật script reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-5-update-claudemd-cross-vault-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 5 — Update CLAUDE.md cross-vault reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-c-split-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use case C — Split vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use case C — Split vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-identify-page-chuyen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1 — Identify page chuyển
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-tao-vault-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2 — Tạo vault Life
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-move-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3 — Move file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-4-update-wikilink-trong-page-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 4 — Update wikilink trong page move
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bước 4 — Update wikilink trong page move">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategy-1-rewrite-absolute-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy 1 — Rewrite absolute path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategy-2-remove-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy 2 — Remove link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategy-3-tao-concept-stub-trong-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy 3 — Tạo concept stub trong Life
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-5-update-brain-wikilink-tro-ve-page-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 5 — Update Brain wikilink trỏ về page move
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-6-update-claudemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 6 — Update CLAUDE.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-7-test_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 7 — Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-d-merge-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use case D — Merge vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use case D — Merge vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-identify-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1 — Identify overlap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-resolve-duplicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2 — Resolve duplicate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-move-page-tu-b-sang-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3 — Move page từ B sang A
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-4-verify-wikilink" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 4 — Verify wikilink
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-5-delete-vault-b-sau-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 5 — Delete Vault-B (sau verify)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfall-loi-hay-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common pitfall (lỗi hay gặp)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common pitfall (lỗi hay gặp)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pitfall-1-quen-backup-truoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfall 1 — Quên backup trước
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitfall-2-migrate-khi-obsidian-ang-mo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfall 2 — Migrate khi Obsidian đang mở
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitfall-3-wikilink-broken-massive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfall 3 — Wikilink broken massive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitfall-4-encoding-loi-tieng-viet-co-dau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfall 4 — Encoding lỗi (tiếng Việt có dấu)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitfall-5-icloud-sync-chua-hoan-tat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfall 5 — iCloud sync chưa hoàn tất
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-sau-migrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify sau migrate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#khi-migrate-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Khi migrate fail
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chu-thich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Chú thích
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiep-theo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tiếp theo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-khi-nao-pivot-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Khi nào cải tổ hệ thống
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 99. Templates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📋 99. Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/claude-md-master-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLAUDE.md master template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/concept-page-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept page template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/course-moc-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course bản đồ nội dung template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/index-md-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index.md format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/log-md-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    log.md format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../99-templates/source-page-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source page template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#truoc-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trước đó
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tinh-huong-can-migrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tình huống cần migrate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tình huống cần migrate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-rename-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Rename vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-move-vault-sang-location-khac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Move vault sang location khác
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-split-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Split vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-merge-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Merge vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quy-tac-chung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quy tắc chung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quy tắc chung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rule-1-backup-truoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 1 — Backup trước
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-2-ong-obsidian-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 2 — Đóng Obsidian + Claude Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-3-test-voi-vault-copy-truoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 3 — Test với vault copy trước
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-4-verify-tung-buoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 4 — Verify từng bước
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-a-rename-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use case A — Rename vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use case A — Rename vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-ong-obsidian-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1 — Đóng Obsidian + Claude Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-rename-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2 — Rename folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-update-reference-trong-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3 — Update reference trong vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-4-update-frontmatter-brain_ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 4 — Update frontmatter brain_ref
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-5-update-claudemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 5 — Update CLAUDE.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-6-reopen-obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 6 — Reopen Obsidian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-7-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 7 — Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-b-move-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use case B — Move vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use case B — Move vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1 — Backup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-move-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2 — Move folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-update-vault-settings-obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3 — Update vault settings Obsidian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-4-cap-nhat-script-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 4 — Cập nhật script reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-5-update-claudemd-cross-vault-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 5 — Update CLAUDE.md cross-vault reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-c-split-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use case C — Split vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use case C — Split vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-identify-page-chuyen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1 — Identify page chuyển
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-tao-vault-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2 — Tạo vault Life
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-move-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3 — Move file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-4-update-wikilink-trong-page-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 4 — Update wikilink trong page move
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bước 4 — Update wikilink trong page move">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategy-1-rewrite-absolute-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy 1 — Rewrite absolute path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategy-2-remove-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy 2 — Remove link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategy-3-tao-concept-stub-trong-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy 3 — Tạo concept stub trong Life
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-5-update-brain-wikilink-tro-ve-page-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 5 — Update Brain wikilink trỏ về page move
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-6-update-claudemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 6 — Update CLAUDE.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-7-test_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 7 — Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-d-merge-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use case D — Merge vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use case D — Merge vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-identify-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1 — Identify overlap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-resolve-duplicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2 — Resolve duplicate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-move-page-tu-b-sang-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3 — Move page từ B sang A
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-4-verify-wikilink" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 4 — Verify wikilink
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-5-delete-vault-b-sau-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 5 — Delete Vault-B (sau verify)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfall-loi-hay-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common pitfall (lỗi hay gặp)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common pitfall (lỗi hay gặp)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pitfall-1-quen-backup-truoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfall 1 — Quên backup trước
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitfall-2-migrate-khi-obsidian-ang-mo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfall 2 — Migrate khi Obsidian đang mở
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitfall-3-wikilink-broken-massive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfall 3 — Wikilink broken massive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitfall-4-encoding-loi-tieng-viet-co-dau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfall 4 — Encoding lỗi (tiếng Việt có dấu)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitfall-5-icloud-sync-chua-hoan-tat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfall 5 — iCloud sync chưa hoàn tất
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-sau-migrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify sau migrate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#khi-migrate-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Khi migrate fail
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chu-thich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Chú thích
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tiep-theo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tiếp theo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/sontyphu/giao-trinh-wiki-ai/edit/main/docs/05-bao-tri-lint/03-migrate-rename-vault.md" title="Chỉnh sửa" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="migrate-rename-vault">Migrate / rename vault<a class="headerlink" href="#migrate-rename-vault" title="Permanent link">&para;</a></h1>
+<h2 id="truoc-o">Trước đó<a class="headerlink" href="#truoc-o" title="Permanent link">&para;</a></h2>
+<p><a href="../02-backup-icloud-git/">02-backup-icloud-git</a> — bạn đã có backup.</p>
+<hr />
+<h2 id="tinh-huong-can-migrate">Tình huống cần migrate<a class="headerlink" href="#tinh-huong-can-migrate" title="Permanent link">&para;</a></h2>
+<p>3 use case:</p>
+<h3 id="a-rename-vault">A. Rename vault<a class="headerlink" href="#a-rename-vault" title="Permanent link">&para;</a></h3>
+<p><code>My Brain</code> → <code>Acme Brain</code>. Đổi tên vì đổi brand / personal name.</p>
+<h3 id="b-move-vault-sang-location-khac">B. Move vault sang location khác<a class="headerlink" href="#b-move-vault-sang-location-khac" title="Permanent link">&para;</a></h3>
+<p>iCloud → Dropbox. Hoặc Documents/ → ~/Vault/.</p>
+<h3 id="c-split-vault">C. Split vault<a class="headerlink" href="#c-split-vault" title="Permanent link">&para;</a></h3>
+<p><code>Brain</code> quá to → tách Life ra → 2 vault sibling.</p>
+<h3 id="d-merge-vault">D. Merge vault<a class="headerlink" href="#d-merge-vault" title="Permanent link">&para;</a></h3>
+<p>2 vault redundant → gộp lại 1.</p>
+<p>Mọi case → quy tắc chung: <strong>backup trước, test sau, migrate cuối</strong>.</p>
+<hr />
+<h2 id="quy-tac-chung">Quy tắc chung<a class="headerlink" href="#quy-tac-chung" title="Permanent link">&para;</a></h2>
+<h3 id="rule-1-backup-truoc">Rule 1 — Backup trước<a class="headerlink" href="#rule-1-backup-truoc" title="Permanent link">&para;</a></h3>
+<p>Git commit + push:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;&lt;old vault&gt;&quot;</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Before migration&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div>
+<h3 id="rule-2-ong-obsidian-claude-code">Rule 2 — Đóng Obsidian + Claude Code<a class="headerlink" href="#rule-2-ong-obsidian-claude-code" title="Permanent link">&para;</a></h3>
+<p>Tránh write conflict trong khi migrate:
+- Quit Obsidian (Cmd+Q)
+- Exit Claude Code (<code>/exit</code>)</p>
+<h3 id="rule-3-test-voi-vault-copy-truoc">Rule 3 — Test với vault copy trước<a class="headerlink" href="#rule-3-test-voi-vault-copy-truoc" title="Permanent link">&para;</a></h3>
+<p>Đừng migrate vault real. Copy ra test:</p>
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>-R<span class="w"> </span><span class="s2">&quot;My Brain&quot;</span><span class="w"> </span><span class="s2">&quot;My Brain-test&quot;</span>
+<span class="c1"># Migrate trên copy trước</span>
+</code></pre></div>
+<p>Nếu OK → apply real.</p>
+<h3 id="rule-4-verify-tung-buoc">Rule 4 — Verify từng bước<a class="headerlink" href="#rule-4-verify-tung-buoc" title="Permanent link">&para;</a></h3>
+<p>Sau mỗi step:
+- Mở Obsidian xem load OK
+- Test wikilink random 5-10 cái
+- Run rà soát kiểm broken link</p>
+<hr />
+<h2 id="use-case-a-rename-vault">Use case A — Rename vault<a class="headerlink" href="#use-case-a-rename-vault" title="Permanent link">&para;</a></h2>
+<p><code>My Brain</code> → <code>Acme Brain</code>.</p>
+<h3 id="buoc-1-ong-obsidian-claude-code">Bước 1 — Đóng Obsidian + Claude Code<a class="headerlink" href="#buoc-1-ong-obsidian-claude-code" title="Permanent link">&para;</a></h3>
+<h3 id="buoc-2-rename-folder">Bước 2 — Rename folder<a class="headerlink" href="#buoc-2-rename-folder" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;/Users/</span><span class="nv">$USER</span><span class="s2">/Library/Mobile Documents/iCloud~md~obsidian/Documents&quot;</span>
+mv<span class="w"> </span><span class="s2">&quot;My Brain&quot;</span><span class="w"> </span><span class="s2">&quot;Acme Brain&quot;</span>
+</code></pre></div>
+<h3 id="buoc-3-update-reference-trong-vault">Bước 3 — Update reference trong vault<a class="headerlink" href="#buoc-3-update-reference-trong-vault" title="Permanent link">&para;</a></h3>
+<p>Wikilink absolute từ vault khác trỏ về vault này:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Trong Marketing vault, replace</span>
+grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;../My Brain/&quot;</span><span class="w"> </span>Marketing/<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="w">    </span><span class="c1"># count broken</span>
+</code></pre></div>
+<p>Bulk replace với Claude:</p>
+<div class="highlight"><pre><span></span><code>&gt; Trong Marketing vault, replace &quot;../My Brain/&quot; thành &quot;../Acme Brain/&quot; trong mọi file .md.
+</code></pre></div>
+<p>Hoặc với sed:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;Marketing&quot;</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.md&quot;</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="s1">&#39;s|\.\./My Brain/|../Acme Brain/|g&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</code></pre></div>
+<h3 id="buoc-4-update-frontmatter-brain_ref">Bước 4 — Update frontmatter brain_ref<a class="headerlink" href="#buoc-4-update-frontmatter-brain_ref" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.md&quot;</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="s1">&#39;s|vault: &quot;My Brain&quot;|vault: &quot;Acme Brain&quot;|g&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</code></pre></div>
+<h3 id="buoc-5-update-claudemd">Bước 5 — Update CLAUDE.md<a class="headerlink" href="#buoc-5-update-claudemd" title="Permanent link">&para;</a></h3>
+<p>Vault CLAUDE.md tự reference tên cũ → update.</p>
+<h3 id="buoc-6-reopen-obsidian">Bước 6 — Reopen Obsidian<a class="headerlink" href="#buoc-6-reopen-obsidian" title="Permanent link">&para;</a></h3>
+<p>Mở Obsidian → File → Open Vault → chọn folder mới rename.</p>
+<h3 id="buoc-7-test">Bước 7 — Test<a class="headerlink" href="#buoc-7-test" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cmd+O quick switcher → tìm vài page</li>
+<li>Cmd+G graph view → xem link</li>
+<li><code>&gt; Lint wiki</code> → check broken</li>
+</ul>
+<hr />
+<h2 id="use-case-b-move-vault">Use case B — Move vault<a class="headerlink" href="#use-case-b-move-vault" title="Permanent link">&para;</a></h2>
+<p><code>iCloud/Documents/My Brain</code> → <code>~/Documents/Vaults/My Brain</code>.</p>
+<p>Lý do:
+- iCloud sync chậm với vault to
+- Muốn dùng Dropbox thay
+- Local-only, không cloud sync</p>
+<h3 id="buoc-1-backup">Bước 1 — Backup<a class="headerlink" href="#buoc-1-backup" title="Permanent link">&para;</a></h3>
+<h3 id="buoc-2-move-folder">Bước 2 — Move folder<a class="headerlink" href="#buoc-2-move-folder" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/Documents/Vaults
+mv<span class="w"> </span><span class="s2">&quot;/Users/</span><span class="nv">$USER</span><span class="s2">/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Brain&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span><span class="s2">&quot;~/Documents/Vaults/&quot;</span>
+</code></pre></div>
+<h3 id="buoc-3-update-vault-settings-obsidian">Bước 3 — Update vault settings Obsidian<a class="headerlink" href="#buoc-3-update-vault-settings-obsidian" title="Permanent link">&para;</a></h3>
+<p>Obsidian → Open Vault → chọn location mới.</p>
+<h3 id="buoc-4-cap-nhat-script-reference">Bước 4 — Cập nhật script reference<a class="headerlink" href="#buoc-4-cap-nhat-script-reference" title="Permanent link">&para;</a></h3>
+<p>Mọi script (lệnh tự động theo lịch, agent prompt) ref absolute path → update.</p>
+<p>Vd <code>bin/backup.sh</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># old</span>
+<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;/Users/</span><span class="nv">$USER</span><span class="s2">/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Brain&quot;</span>
+
+<span class="c1"># new</span>
+<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;/Users/</span><span class="nv">$USER</span><span class="s2">/Documents/Vaults/My Brain&quot;</span>
+</code></pre></div>
+<h3 id="buoc-5-update-claudemd-cross-vault-reference">Bước 5 — Update CLAUDE.md cross-vault reference<a class="headerlink" href="#buoc-5-update-claudemd-cross-vault-reference" title="Permanent link">&para;</a></h3>
+<p>Nếu Brain CLAUDE.md ref Life/Marketing với path cũ → update.</p>
+<hr />
+<h2 id="use-case-c-split-vault">Use case C — Split vault<a class="headerlink" href="#use-case-c-split-vault" title="Permanent link">&para;</a></h2>
+<p>Tách Life ra khỏi Brain.</p>
+<h3 id="buoc-1-identify-page-chuyen">Bước 1 — Identify page chuyển<a class="headerlink" href="#buoc-1-identify-page-chuyen" title="Permanent link">&para;</a></h3>
+<p>Liệt page sẽ chuyển từ Brain → Life:</p>
+<div class="highlight"><pre><span></span><code>&gt; List concept page có tag &quot;lifestyle&quot; hoặc &quot;ca-koi&quot; hoặc &quot;the-thao&quot;. Đó là page cần move.
+</code></pre></div>
+<p>Claude output list page.</p>
+<h3 id="buoc-2-tao-vault-life">Bước 2 — Tạo vault Life<a class="headerlink" href="#buoc-2-tao-vault-life" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;/Users/</span><span class="nv">$USER</span><span class="s2">/Library/Mobile Documents/iCloud~md~obsidian/Documents&quot;</span>
+mkdir<span class="w"> </span><span class="s2">&quot;My Life&quot;</span>
+<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;My Life&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>raw/<span class="o">{</span>photos,articles,assets<span class="o">}</span><span class="w"> </span>wiki/<span class="o">{</span>domains,entities,events,concepts<span class="o">}</span>
+touch<span class="w"> </span>CLAUDE.md<span class="w"> </span>README.md<span class="w"> </span>index.md<span class="w"> </span>log.md
+</code></pre></div>
+<p>Setup CLAUDE.md cho Life (xem <a href="../../03-mo-rong-multi-vault/02-vault-life-lifestyle/">02-vault-life-lifestyle</a>).</p>
+<h3 id="buoc-3-move-file">Bước 3 — Move file<a class="headerlink" href="#buoc-3-move-file" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span><span class="s2">&quot;../My Brain/wiki/concepts/ca-koi-pH.md&quot;</span><span class="w"> </span><span class="s2">&quot;wiki/concepts/&quot;</span>
+mv<span class="w"> </span><span class="s2">&quot;../My Brain/wiki/entities/ho-koi.md&quot;</span><span class="w"> </span><span class="s2">&quot;wiki/entities/&quot;</span>
+</code></pre></div>
+<p>Hoặc bulk với Claude:</p>
+<div class="highlight"><pre><span></span><code>&gt; Move tất cả page có tag &quot;lifestyle&quot;/&quot;ca-koi&quot;/&quot;the-thao&quot; từ Brain sang Life vault.
+&gt; Preserve folder structure (concepts/ → concepts/, entities/ → entities/).
+</code></pre></div>
+<h3 id="buoc-4-update-wikilink-trong-page-move">Bước 4 — Update wikilink trong page move<a class="headerlink" href="#buoc-4-update-wikilink-trong-page-move" title="Permanent link">&para;</a></h3>
+<p>Wikilink trong file move trỏ về page trong Brain → broken.</p>
+<p>3 chiến lược:</p>
+<h4 id="strategy-1-rewrite-absolute-path">Strategy 1 — Rewrite absolute path<a class="headerlink" href="#strategy-1-rewrite-absolute-path" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Atomic Habits  → Atomic Habits
+</code></pre></div>
+<h4 id="strategy-2-remove-link">Strategy 2 — Remove link<a class="headerlink" href="#strategy-2-remove-link" title="Permanent link">&para;</a></h4>
+<p>Nếu link đó không quan trọng cho Life context:</p>
+<div class="highlight"><pre><span></span><code>Atomic Habits  → Atomic Habits (concept tham khảo, xem Brain)
+</code></pre></div>
+<h4 id="strategy-3-tao-concept-stub-trong-life">Strategy 3 — Tạo concept stub trong Life<a class="headerlink" href="#strategy-3-tao-concept-stub-trong-life" title="Permanent link">&para;</a></h4>
+<p>Tạo <code>Life/wiki/concepts/Atomic Habits-summary.md</code> 1 đoạn link về Brain:</p>
+<div class="highlight"><pre><span></span><code>Concept &quot;Atomic Habits&quot; — xem chi tiết ở Atomic Habits
+</code></pre></div>
+<p>→ Khuyên Strategy 1 nếu cross-ref nhiều, Strategy 2 nếu rare.</p>
+<h3 id="buoc-5-update-brain-wikilink-tro-ve-page-move">Bước 5 — Update Brain wikilink trỏ về page move<a class="headerlink" href="#buoc-5-update-brain-wikilink-tro-ve-page-move" title="Permanent link">&para;</a></h3>
+<p>Trong Brain, page nào trỏ <code>ca-koi-pH</code> → broken (page đã move).</p>
+<p>Bulk fix:</p>
+<div class="highlight"><pre><span></span><code>&gt; Trong Brain vault, find wikilink trỏ page đã move sang Life.
+&gt; Replace với absolute path &quot;ca-koi-pH&quot;.
+</code></pre></div>
+<h3 id="buoc-6-update-claudemd">Bước 6 — Update CLAUDE.md<a class="headerlink" href="#buoc-6-update-claudemd" title="Permanent link">&para;</a></h3>
+<p>Cả 2 vault CLAUDE.md update section "Vault song song":</p>
+<p>Brain:
+<div class="highlight"><pre><span></span><code>## Vault song song
+
+- `../My Life/` — vault anh em chứa lifestyle. Brain = kiến thức work; Life = personal hobby.
+</code></pre></div></p>
+<p>Life:
+<div class="highlight"><pre><span></span><code>## Vault song song
+
+- `../My Brain/` — vault anh em chứa knowledge work. Life đọc Brain concept khi cần.
+</code></pre></div></p>
+<h3 id="buoc-7-test_1">Bước 7 — Test<a class="headerlink" href="#buoc-7-test_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mở Brain, rà soát kho → check broken link</li>
+<li>Mở Life, rà soát kho → check broken link</li>
+<li>Mở cả 2 cùng lúc → test cross-vault wikilink</li>
+</ul>
+<hr />
+<h2 id="use-case-d-merge-vault">Use case D — Merge vault<a class="headerlink" href="#use-case-d-merge-vault" title="Permanent link">&para;</a></h2>
+<p>2 vault redundant → gộp.</p>
+<h3 id="buoc-1-identify-overlap">Bước 1 — Identify overlap<a class="headerlink" href="#buoc-1-identify-overlap" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>&gt; Find page tồn tại cả Vault-A và Vault-B (cùng tên hoặc cùng concept).
+</code></pre></div>
+<h3 id="buoc-2-resolve-duplicate">Bước 2 — Resolve duplicate<a class="headerlink" href="#buoc-2-resolve-duplicate" title="Permanent link">&para;</a></h3>
+<p>Mỗi cặp duplicate:
+- Giữ version mới nhất / đầy đủ nhất
+- Merge nội dung 2 page (nếu khác nhau)
+- Update wikilink ref</p>
+<h3 id="buoc-3-move-page-tu-b-sang-a">Bước 3 — Move page từ B sang A<a class="headerlink" href="#buoc-3-move-page-tu-b-sang-a" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span><span class="s2">&quot;Vault-B/wiki/concepts/X.md&quot;</span><span class="w"> </span><span class="s2">&quot;Vault-A/wiki/concepts/&quot;</span>
+</code></pre></div>
+<h3 id="buoc-4-verify-wikilink">Bước 4 — Verify wikilink<a class="headerlink" href="#buoc-4-verify-wikilink" title="Permanent link">&para;</a></h3>
+<p>Page move có link trỏ về Vault-B khác → update absolute path hoặc remove.</p>
+<h3 id="buoc-5-delete-vault-b-sau-verify">Bước 5 — Delete Vault-B (sau verify)<a class="headerlink" href="#buoc-5-delete-vault-b-sau-verify" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span><span class="s2">&quot;Vault-B&quot;</span><span class="w"> </span><span class="s2">&quot;Vault-B-archive-2026-05-29&quot;</span>
+<span class="c1"># Đợi 1 tháng confirm không thiếu gì, rồi delete</span>
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;Vault-B-archive-2026-05-29&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="common-pitfall-loi-hay-gap">Common pitfall (lỗi hay gặp)<a class="headerlink" href="#common-pitfall-loi-hay-gap" title="Permanent link">&para;</a></h2>
+<h3 id="pitfall-1-quen-backup-truoc">Pitfall 1 — Quên backup trước<a class="headerlink" href="#pitfall-1-quen-backup-truoc" title="Permanent link">&para;</a></h3>
+<p>Migration fail → mất data. ALWAYS Git commit trước.</p>
+<h3 id="pitfall-2-migrate-khi-obsidian-ang-mo">Pitfall 2 — Migrate khi Obsidian đang mở<a class="headerlink" href="#pitfall-2-migrate-khi-obsidian-ang-mo" title="Permanent link">&para;</a></h3>
+<p>File lock → write conflict. Đóng app trước.</p>
+<h3 id="pitfall-3-wikilink-broken-massive">Pitfall 3 — Wikilink broken massive<a class="headerlink" href="#pitfall-3-wikilink-broken-massive" title="Permanent link">&para;</a></h3>
+<p>Migrate 100 page → 500 wikilink broken. Bulk fix với Claude:</p>
+<div class="highlight"><pre><span></span><code>&gt; Find all broken wikilink trong vault, đề xuất fix (rewrite path, remove, hoặc create stub).
+</code></pre></div>
+<h3 id="pitfall-4-encoding-loi-tieng-viet-co-dau">Pitfall 4 — Encoding lỗi (tiếng Việt có dấu)<a class="headerlink" href="#pitfall-4-encoding-loi-tieng-viet-co-dau" title="Permanent link">&para;</a></h3>
+<p><code>mv</code> Mac có thể fail với tên file có dấu. Dùng:</p>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;tên có dấu&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>iconv<span class="w"> </span>-f<span class="w"> </span>UTF-8-MAC<span class="w"> </span>-t<span class="w"> </span>UTF-8<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;tên mới&quot;</span>
+</code></pre></div>
+<p>Hoặc đổi tên không dấu trước, rồi mv.</p>
+<h3 id="pitfall-5-icloud-sync-chua-hoan-tat">Pitfall 5 — iCloud sync chưa hoàn tất<a class="headerlink" href="#pitfall-5-icloud-sync-chua-hoan-tat" title="Permanent link">&para;</a></h3>
+<p>Move file trên Mac → iCloud chưa sync → iPhone vẫn thấy file cũ.</p>
+<p>Đợi iCloud sync xong (status icon Finder) trước khi mở Obsidian iPhone.</p>
+<hr />
+<h2 id="verify-sau-migrate">Verify sau migrate<a class="headerlink" href="#verify-sau-migrate" title="Permanent link">&para;</a></h2>
+<p>Checklist:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Backup before migrate (Git commit)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Folder mới có đầy đủ file expected</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CLAUDE.md updated</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> index.md updated</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Wikilink test 10 random — OK</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Graph view render OK</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Rà soát clean (broken link &lt; 5)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> iCloud sync hoàn tất</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Obsidian mở vault mới OK</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Claude Code chạy <code>claude</code> trong vault mới OK</li>
+</ul>
+<hr />
+<h2 id="khi-migrate-fail">Khi migrate fail<a class="headerlink" href="#khi-migrate-fail" title="Permanent link">&para;</a></h2>
+<p>Backup is friend. Restore:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD
+</code></pre></div>
+<p>Hoặc clone fresh:</p>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;Broken vault&quot;</span>
+git<span class="w"> </span>clone<span class="w"> </span>&lt;repo&gt;<span class="w"> </span><span class="s2">&quot;Restored vault&quot;</span>
+</code></pre></div>
+<p>Investigate root cause trước khi retry.</p>
+<hr />
+<h2 id="chu-thich">📖 Chú thích<a class="headerlink" href="#chu-thich" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>vault</strong> = kho ghi chú — một folder thông thường trên máy tính được Obsidian nhận diện và quản lý đặc biệt (tạo liên kết giữa file, tìm kiếm toàn văn, hiển thị sơ đồ mạng lưới).</li>
+<li><strong>wikilink</strong> = cách tạo liên kết nội bộ trong Obsidian bằng cú pháp <code>Tên trang</code>. Click vào liên kết → mở trang đó ngay. AI tự tạo các wikilink này khi viết wiki.</li>
+<li><strong>frontmatter</strong> = phần thông tin khai báo ở đầu mỗi file, nằm giữa hai dòng <code>---</code>. Ví dụ: loại trang (type), từ khoá (tags), ngày tạo. AI dùng phần này để phân loại và tìm kiếm trang.</li>
+<li><strong>commit</strong> (Git) = hành động lưu lại một điểm phiên bản — như "chụp ảnh" trạng thái toàn bộ kho tại một thời điểm. Có thể khôi phục kho về bất kỳ commit nào trước đó.</li>
+<li><strong>Graph view</strong> = chế độ hiển thị của Obsidian dạng mạng lưới, cho thấy tất cả trang và liên kết giữa chúng. Dùng để phát hiện trang mồ côi (không ai liên kết tới) hoặc cluster kiến thức.</li>
+</ul>
+<h2 id="tiep-theo">Tiếp theo<a class="headerlink" href="#tiep-theo" title="Permanent link">&para;</a></h2>
+<p>Bạn đã hoàn thành Phần 05 bảo trì. Giáo trình hoàn chỉnh.</p>
+<p>Quay lại README để review toàn bộ hoặc bắt đầu apply vault của bạn.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Trở lại mục lục
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Chân trang" >
+        
+          
+          <a href="../02-backup-icloud-git/" class="md-footer__link md-footer__link--prev" aria-label="Trước: Backup iCloud + Git">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Trước
+              </span>
+              <div class="md-ellipsis">
+                Backup iCloud + Git
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-khi-nao-pivot-architecture/" class="md-footer__link md-footer__link--next" aria-label="Sau: Khi nào cải tổ hệ thống">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sau
+              </span>
+              <div class="md-ellipsis">
+                Khi nào cải tổ hệ thống
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
