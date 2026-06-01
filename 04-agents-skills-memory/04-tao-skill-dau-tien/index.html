@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tao-skill-au-tien" class="md-skip">
+        <a href="#tạo-skill-đầu-tiên" class="md-skip">
           Bỏ qua
         </a>
       
@@ -1409,7 +1409,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#truoc-o" class="md-nav__link">
+  <a href="#trước-đó" class="md-nav__link">
     <span class="md-ellipsis">
       
         Trước đó
@@ -1431,7 +1431,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-1-tao-folder-skill" class="md-nav__link">
+  <a href="#bước-1--tạo-folder-skill" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 1 — Tạo folder skill
@@ -1442,7 +1442,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-2-viet-skillmd" class="md-nav__link">
+  <a href="#bước-2--viết-skillmd" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 2 — Viết SKILL.md
@@ -1453,7 +1453,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-name-srt-to-chunks-description-cat-file-srt-transcript-subtitle-thanh-chunk-txt-nho-moi-chunk-3-phut-audio-timecode-yaml-metadata-use-bat-cu-khi-nao-user-noi-cat-srt-chia-chunk-srt-xu-ly-transcript-xsrt-chunk-file-ysrt-output-folder-chunks-voi-file-txt-metadata-srt-chunks-skill-muc-tieu-chuyen-file-srt-1000-3000-dong-thanh-nhieu-file-txt-chunk-moi-chunk-3-phut-audio-co-yaml-metadata-chunk_id-time_start-time_end-output-srt_dirchunkschunk-nnntxt-trigger-user-noi-cat-srt-rawtranscriptsxsrt-chia-chunk-transcript-y-xu-ly-file-zsrt-invoke-skill-workflow-1-get-input-user-cung-cap-srt-file-path-relative-hoac-absolute-chunk-duration-default-3-phut-180-giay-neu-thieu-hoi-user-2-run-script-chay-bash-claudeskillssrt-to-chunksscriptschunk_srtpy-srt_path-duration-180-3-verify-output-check-folder-srt_dirchunks-co-file-chunk-001txt-chunk-002txt-4-bao-cao-user-so-chunk-tao-tong-duration-output-path-e-xuat-buoc-tiep-ingest-tung-chunk-vao-wiki-output-format-moi-chunk" class="md-nav__link">
+  <a href="#----name-srt-to-chunks-description-cắt-file-srt-transcript-subtitle-thành-chunk-txt-nhỏ-mỗi-chunk-3-phút-audio--timecode--yaml-metadata-use-bất-cứ-khi-nào-user-nói-cắt-srt-chia-chunk-srt-xử-lý-transcript-xsrt-chunk-file-ysrt-output-folder-chunks-với-file-txt--metadata------srt--chunks-skill--mục-tiêu-chuyển-file-srt-1000-3000-dòng-thành-nhiều-file-txt-chunk---mỗi-chunk--3-phút-audio---có-yaml-metadata-chunk_id-time_start-time_end---output-chunkschunk-nnntxt--trigger-user-nói---cắt-srt-rawtranscriptsxsrt---chia-chunk-transcript-y---xử-lý-file-zsrt--invoke-skill--workflow--1-get-input-user-cung-cấp---srt-file-path-relative-hoặc-absolute---chunk-duration-default-3-phút--180-giây-nếu-thiếu--hỏi-user--2-run-script-chạy-bash-claudeskillssrt-to-chunksscriptschunk_srtpy----duration-180--3-verify-output-check-folder-chunks-có-file---chunk-001txt---chunk-002txt-----4-báo-cáo-user---số-chunk-tạo---tổng-duration---output-path---đề-xuất-bước-tiếp-ingest-từng-chunk-vào-wiki--output-format-mỗi-chunk" class="md-nav__link">
     <span class="md-ellipsis">
       
         --- name: srt-to-chunks description: &quot;Cắt file SRT (transcript subtitle) thành chunk txt nhỏ, mỗi chunk ~3 phút audio + timecode + YAML metadata. Use BẤT CỨ KHI NÀO user nói &#39;cắt SRT&#39;, &#39;chia chunk SRT&#39;, &#39;xử lý transcript X.srt&#39;, &#39;chunk file Y.srt&#39;. Output: folder chunks/ với file txt + metadata.&quot; --- # SRT → Chunks Skill ## Mục tiêu Chuyển file SRT 1000-3000 dòng thành nhiều file txt chunk: - Mỗi chunk = 3 phút audio - Có YAML metadata (chunk_id, time_start, time_end) - Output: `&lt;srt_dir&gt;/chunks/chunk-NNN.txt` ## Trigger User nói: - &quot;Cắt SRT raw/transcripts/X.srt&quot; - &quot;Chia chunk transcript Y&quot; - &quot;Xử lý file Z.srt&quot; → Invoke skill. ## Workflow ### 1. Get input User cung cấp: - SRT file path (relative hoặc absolute) - Chunk duration (default: 3 phút = 180 giây) Nếu thiếu — hỏi user. ### 2. Run script Chạy: bash .claude/skills/srt-to-chunks/scripts/chunk_srt.py &lt;srt_path&gt; --duration 180 ### 3. Verify output Check folder `&lt;srt_dir&gt;/chunks/` có file: - `chunk-001.txt` - `chunk-002.txt` - ... ### 4. Báo cáo user - Số chunk tạo - Tổng duration - Output path - Đề xuất bước tiếp: ingest từng chunk vào wiki ## Output format mỗi chunk
@@ -1464,7 +1464,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-3-viet-script-python" class="md-nav__link">
+  <a href="#bước-3--viết-script-python" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 3 — Viết script Python
@@ -1475,7 +1475,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-4-test-script-thu-cong" class="md-nav__link">
+  <a href="#bước-4--test-script-thủ-công" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 4 — Test script thủ công
@@ -1486,7 +1486,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-5-test-skill-qua-claude-code" class="md-nav__link">
+  <a href="#bước-5--test-skill-qua-claude-code" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 5 — Test skill qua Claude Code
@@ -1497,7 +1497,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-6-iterate-skill" class="md-nav__link">
+  <a href="#bước-6--iterate-skill" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 6 — Iterate skill
@@ -1509,7 +1509,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#edge-1-user-noi-chunk-5-phut" class="md-nav__link">
+  <a href="#edge-1--user-nói-chunk-5-phút" class="md-nav__link">
     <span class="md-ellipsis">
       
         Edge 1 — User nói "chunk 5 phút"
@@ -1520,7 +1520,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#edge-2-file-output-a-ton-tai" class="md-nav__link">
+  <a href="#edge-2--file-output-đã-tồn-tại" class="md-nav__link">
     <span class="md-ellipsis">
       
         Edge 2 — File output đã tồn tại
@@ -1531,7 +1531,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#edge-3-user-upload-file-srt-truc-tiep-khong-co-path" class="md-nav__link">
+  <a href="#edge-3--user-upload-file-srt-trực-tiếp-không-có-path" class="md-nav__link">
     <span class="md-ellipsis">
       
         Edge 3 — User upload file SRT trực tiếp (không có path)
@@ -1547,7 +1547,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-7-skill-chain-voi-agent" class="md-nav__link">
+  <a href="#bước-7--skill-chain-với-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 7 — Skill chain với agent
@@ -1558,7 +1558,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-8-anti-pattern-khi-viet-skill" class="md-nav__link">
+  <a href="#bước-8--anti-pattern-khi-viết-skill" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 8 — Anti-pattern khi viết skill
@@ -1570,7 +1570,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sai-1-script-bug-khong-handle-gracefully" class="md-nav__link">
+  <a href="#sai-1--script-bug-không-handle-gracefully" class="md-nav__link">
     <span class="md-ellipsis">
       
         Sai 1 — Script bug không handle gracefully
@@ -1581,7 +1581,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sai-2-skill-hardcode-path" class="md-nav__link">
+  <a href="#sai-2--skill-hardcode-path" class="md-nav__link">
     <span class="md-ellipsis">
       
         Sai 2 — Skill hardcode path
@@ -1592,7 +1592,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sai-3-skill-khong-cite-file-output" class="md-nav__link">
+  <a href="#sai-3--skill-không-cite-file-output" class="md-nav__link">
     <span class="md-ellipsis">
       
         Sai 3 — Skill không cite file output
@@ -1603,7 +1603,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sai-4-skill-phu-thuoc-lib-chua-cai" class="md-nav__link">
+  <a href="#sai-4--skill-phụ-thuộc-lib-chưa-cài" class="md-nav__link">
     <span class="md-ellipsis">
       
         Sai 4 — Skill phụ thuộc lib chưa cài
@@ -1619,7 +1619,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-9-best-practice-viet-skill" class="md-nav__link">
+  <a href="#bước-9--best-practice-viết-skill" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 9 — Best practice viết skill
@@ -1630,7 +1630,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-10-khi-nao-nang-skill-len-agent" class="md-nav__link">
+  <a href="#bước-10--khi-nào-nâng-skill-lên-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 10 — Khi nào nâng skill lên agent
@@ -1641,7 +1641,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#chu-thich" class="md-nav__link">
+  <a href="#-chú-thích" class="md-nav__link">
     <span class="md-ellipsis">
       
         📖 Chú thích
@@ -1652,7 +1652,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tiep-theo" class="md-nav__link">
+  <a href="#tiếp-theo" class="md-nav__link">
     <span class="md-ellipsis">
       
         Tiếp theo
@@ -2172,7 +2172,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#truoc-o" class="md-nav__link">
+  <a href="#trước-đó" class="md-nav__link">
     <span class="md-ellipsis">
       
         Trước đó
@@ -2194,7 +2194,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-1-tao-folder-skill" class="md-nav__link">
+  <a href="#bước-1--tạo-folder-skill" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 1 — Tạo folder skill
@@ -2205,7 +2205,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-2-viet-skillmd" class="md-nav__link">
+  <a href="#bước-2--viết-skillmd" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 2 — Viết SKILL.md
@@ -2216,7 +2216,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-name-srt-to-chunks-description-cat-file-srt-transcript-subtitle-thanh-chunk-txt-nho-moi-chunk-3-phut-audio-timecode-yaml-metadata-use-bat-cu-khi-nao-user-noi-cat-srt-chia-chunk-srt-xu-ly-transcript-xsrt-chunk-file-ysrt-output-folder-chunks-voi-file-txt-metadata-srt-chunks-skill-muc-tieu-chuyen-file-srt-1000-3000-dong-thanh-nhieu-file-txt-chunk-moi-chunk-3-phut-audio-co-yaml-metadata-chunk_id-time_start-time_end-output-srt_dirchunkschunk-nnntxt-trigger-user-noi-cat-srt-rawtranscriptsxsrt-chia-chunk-transcript-y-xu-ly-file-zsrt-invoke-skill-workflow-1-get-input-user-cung-cap-srt-file-path-relative-hoac-absolute-chunk-duration-default-3-phut-180-giay-neu-thieu-hoi-user-2-run-script-chay-bash-claudeskillssrt-to-chunksscriptschunk_srtpy-srt_path-duration-180-3-verify-output-check-folder-srt_dirchunks-co-file-chunk-001txt-chunk-002txt-4-bao-cao-user-so-chunk-tao-tong-duration-output-path-e-xuat-buoc-tiep-ingest-tung-chunk-vao-wiki-output-format-moi-chunk" class="md-nav__link">
+  <a href="#----name-srt-to-chunks-description-cắt-file-srt-transcript-subtitle-thành-chunk-txt-nhỏ-mỗi-chunk-3-phút-audio--timecode--yaml-metadata-use-bất-cứ-khi-nào-user-nói-cắt-srt-chia-chunk-srt-xử-lý-transcript-xsrt-chunk-file-ysrt-output-folder-chunks-với-file-txt--metadata------srt--chunks-skill--mục-tiêu-chuyển-file-srt-1000-3000-dòng-thành-nhiều-file-txt-chunk---mỗi-chunk--3-phút-audio---có-yaml-metadata-chunk_id-time_start-time_end---output-chunkschunk-nnntxt--trigger-user-nói---cắt-srt-rawtranscriptsxsrt---chia-chunk-transcript-y---xử-lý-file-zsrt--invoke-skill--workflow--1-get-input-user-cung-cấp---srt-file-path-relative-hoặc-absolute---chunk-duration-default-3-phút--180-giây-nếu-thiếu--hỏi-user--2-run-script-chạy-bash-claudeskillssrt-to-chunksscriptschunk_srtpy----duration-180--3-verify-output-check-folder-chunks-có-file---chunk-001txt---chunk-002txt-----4-báo-cáo-user---số-chunk-tạo---tổng-duration---output-path---đề-xuất-bước-tiếp-ingest-từng-chunk-vào-wiki--output-format-mỗi-chunk" class="md-nav__link">
     <span class="md-ellipsis">
       
         --- name: srt-to-chunks description: &quot;Cắt file SRT (transcript subtitle) thành chunk txt nhỏ, mỗi chunk ~3 phút audio + timecode + YAML metadata. Use BẤT CỨ KHI NÀO user nói &#39;cắt SRT&#39;, &#39;chia chunk SRT&#39;, &#39;xử lý transcript X.srt&#39;, &#39;chunk file Y.srt&#39;. Output: folder chunks/ với file txt + metadata.&quot; --- # SRT → Chunks Skill ## Mục tiêu Chuyển file SRT 1000-3000 dòng thành nhiều file txt chunk: - Mỗi chunk = 3 phút audio - Có YAML metadata (chunk_id, time_start, time_end) - Output: `&lt;srt_dir&gt;/chunks/chunk-NNN.txt` ## Trigger User nói: - &quot;Cắt SRT raw/transcripts/X.srt&quot; - &quot;Chia chunk transcript Y&quot; - &quot;Xử lý file Z.srt&quot; → Invoke skill. ## Workflow ### 1. Get input User cung cấp: - SRT file path (relative hoặc absolute) - Chunk duration (default: 3 phút = 180 giây) Nếu thiếu — hỏi user. ### 2. Run script Chạy: bash .claude/skills/srt-to-chunks/scripts/chunk_srt.py &lt;srt_path&gt; --duration 180 ### 3. Verify output Check folder `&lt;srt_dir&gt;/chunks/` có file: - `chunk-001.txt` - `chunk-002.txt` - ... ### 4. Báo cáo user - Số chunk tạo - Tổng duration - Output path - Đề xuất bước tiếp: ingest từng chunk vào wiki ## Output format mỗi chunk
@@ -2227,7 +2227,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-3-viet-script-python" class="md-nav__link">
+  <a href="#bước-3--viết-script-python" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 3 — Viết script Python
@@ -2238,7 +2238,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-4-test-script-thu-cong" class="md-nav__link">
+  <a href="#bước-4--test-script-thủ-công" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 4 — Test script thủ công
@@ -2249,7 +2249,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-5-test-skill-qua-claude-code" class="md-nav__link">
+  <a href="#bước-5--test-skill-qua-claude-code" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 5 — Test skill qua Claude Code
@@ -2260,7 +2260,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-6-iterate-skill" class="md-nav__link">
+  <a href="#bước-6--iterate-skill" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 6 — Iterate skill
@@ -2272,7 +2272,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#edge-1-user-noi-chunk-5-phut" class="md-nav__link">
+  <a href="#edge-1--user-nói-chunk-5-phút" class="md-nav__link">
     <span class="md-ellipsis">
       
         Edge 1 — User nói "chunk 5 phút"
@@ -2283,7 +2283,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#edge-2-file-output-a-ton-tai" class="md-nav__link">
+  <a href="#edge-2--file-output-đã-tồn-tại" class="md-nav__link">
     <span class="md-ellipsis">
       
         Edge 2 — File output đã tồn tại
@@ -2294,7 +2294,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#edge-3-user-upload-file-srt-truc-tiep-khong-co-path" class="md-nav__link">
+  <a href="#edge-3--user-upload-file-srt-trực-tiếp-không-có-path" class="md-nav__link">
     <span class="md-ellipsis">
       
         Edge 3 — User upload file SRT trực tiếp (không có path)
@@ -2310,7 +2310,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-7-skill-chain-voi-agent" class="md-nav__link">
+  <a href="#bước-7--skill-chain-với-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 7 — Skill chain với agent
@@ -2321,7 +2321,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-8-anti-pattern-khi-viet-skill" class="md-nav__link">
+  <a href="#bước-8--anti-pattern-khi-viết-skill" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 8 — Anti-pattern khi viết skill
@@ -2333,7 +2333,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sai-1-script-bug-khong-handle-gracefully" class="md-nav__link">
+  <a href="#sai-1--script-bug-không-handle-gracefully" class="md-nav__link">
     <span class="md-ellipsis">
       
         Sai 1 — Script bug không handle gracefully
@@ -2344,7 +2344,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sai-2-skill-hardcode-path" class="md-nav__link">
+  <a href="#sai-2--skill-hardcode-path" class="md-nav__link">
     <span class="md-ellipsis">
       
         Sai 2 — Skill hardcode path
@@ -2355,7 +2355,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sai-3-skill-khong-cite-file-output" class="md-nav__link">
+  <a href="#sai-3--skill-không-cite-file-output" class="md-nav__link">
     <span class="md-ellipsis">
       
         Sai 3 — Skill không cite file output
@@ -2366,7 +2366,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sai-4-skill-phu-thuoc-lib-chua-cai" class="md-nav__link">
+  <a href="#sai-4--skill-phụ-thuộc-lib-chưa-cài" class="md-nav__link">
     <span class="md-ellipsis">
       
         Sai 4 — Skill phụ thuộc lib chưa cài
@@ -2382,7 +2382,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-9-best-practice-viet-skill" class="md-nav__link">
+  <a href="#bước-9--best-practice-viết-skill" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 9 — Best practice viết skill
@@ -2393,7 +2393,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#buoc-10-khi-nao-nang-skill-len-agent" class="md-nav__link">
+  <a href="#bước-10--khi-nào-nâng-skill-lên-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bước 10 — Khi nào nâng skill lên agent
@@ -2404,7 +2404,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#chu-thich" class="md-nav__link">
+  <a href="#-chú-thích" class="md-nav__link">
     <span class="md-ellipsis">
       
         📖 Chú thích
@@ -2415,7 +2415,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tiep-theo" class="md-nav__link">
+  <a href="#tiếp-theo" class="md-nav__link">
     <span class="md-ellipsis">
       
         Tiếp theo
@@ -2445,8 +2445,8 @@
   
 
 
-<h1 id="tao-skill-au-tien">Tạo skill đầu tiên<a class="headerlink" href="#tao-skill-au-tien" title="Permanent link">&para;</a></h1>
-<h2 id="truoc-o">Trước đó<a class="headerlink" href="#truoc-o" title="Permanent link">&para;</a></h2>
+<h1 id="tạo-skill-đầu-tiên">Tạo skill đầu tiên<a class="headerlink" href="#tạo-skill-đầu-tiên" title="Permanent link">&para;</a></h1>
+<h2 id="trước-đó">Trước đó<a class="headerlink" href="#trước-đó" title="Permanent link">&para;</a></h2>
 <p><a href="../03-skill-la-gi/">03-skill-la-gi</a> — bạn đã hiểu skill.</p>
 <hr />
 <h2 id="use-case">Use case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h2>
@@ -2459,14 +2459,14 @@
 <p>Quá nặng để làm tay. Tạo skill <code>srt-to-chunks</code>.</p>
 <p>(Có sẵn skill <code>text-cat-chunk</code> và <code>srt-cat-chunk</code> trong hệ sinh thái. Chúng ta build phiên bản đơn giản hơn để học.)</p>
 <hr />
-<h2 id="buoc-1-tao-folder-skill">Bước 1 — Tạo folder skill<a class="headerlink" href="#buoc-1-tao-folder-skill" title="Permanent link">&para;</a></h2>
+<h2 id="bước-1--tạo-folder-skill">Bước 1 — Tạo folder skill<a class="headerlink" href="#bước-1--tạo-folder-skill" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;/Users/</span><span class="nv">$USER</span><span class="s2">/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Brain&quot;</span>
 mkdir<span class="w"> </span>-p<span class="w"> </span>.claude/skills/srt-to-chunks/scripts
 </code></pre></div>
 <hr />
-<h2 id="buoc-2-viet-skillmd">Bước 2 — Viết SKILL.md<a class="headerlink" href="#buoc-2-viet-skillmd" title="Permanent link">&para;</a></h2>
+<h2 id="bước-2--viết-skillmd">Bước 2 — Viết SKILL.md<a class="headerlink" href="#bước-2--viết-skillmd" title="Permanent link">&para;</a></h2>
 <p><code>.claude/skills/srt-to-chunks/SKILL.md</code>:</p>
-<h2 id="-name-srt-to-chunks-description-cat-file-srt-transcript-subtitle-thanh-chunk-txt-nho-moi-chunk-3-phut-audio-timecode-yaml-metadata-use-bat-cu-khi-nao-user-noi-cat-srt-chia-chunk-srt-xu-ly-transcript-xsrt-chunk-file-ysrt-output-folder-chunks-voi-file-txt-metadata-srt-chunks-skill-muc-tieu-chuyen-file-srt-1000-3000-dong-thanh-nhieu-file-txt-chunk-moi-chunk-3-phut-audio-co-yaml-metadata-chunk_id-time_start-time_end-output-srt_dirchunkschunk-nnntxt-trigger-user-noi-cat-srt-rawtranscriptsxsrt-chia-chunk-transcript-y-xu-ly-file-zsrt-invoke-skill-workflow-1-get-input-user-cung-cap-srt-file-path-relative-hoac-absolute-chunk-duration-default-3-phut-180-giay-neu-thieu-hoi-user-2-run-script-chay-bash-claudeskillssrt-to-chunksscriptschunk_srtpy-srt_path-duration-180-3-verify-output-check-folder-srt_dirchunks-co-file-chunk-001txt-chunk-002txt-4-bao-cao-user-so-chunk-tao-tong-duration-output-path-e-xuat-buoc-tiep-ingest-tung-chunk-vao-wiki-output-format-moi-chunk"><div class="highlight"><pre><span></span><code>---
+<h2 id="----name-srt-to-chunks-description-cắt-file-srt-transcript-subtitle-thành-chunk-txt-nhỏ-mỗi-chunk-3-phút-audio--timecode--yaml-metadata-use-bất-cứ-khi-nào-user-nói-cắt-srt-chia-chunk-srt-xử-lý-transcript-xsrt-chunk-file-ysrt-output-folder-chunks-với-file-txt--metadata------srt--chunks-skill--mục-tiêu-chuyển-file-srt-1000-3000-dòng-thành-nhiều-file-txt-chunk---mỗi-chunk--3-phút-audio---có-yaml-metadata-chunk_id-time_start-time_end---output-chunkschunk-nnntxt--trigger-user-nói---cắt-srt-rawtranscriptsxsrt---chia-chunk-transcript-y---xử-lý-file-zsrt--invoke-skill--workflow--1-get-input-user-cung-cấp---srt-file-path-relative-hoặc-absolute---chunk-duration-default-3-phút--180-giây-nếu-thiếu--hỏi-user--2-run-script-chạy-bash-claudeskillssrt-to-chunksscriptschunk_srtpy----duration-180--3-verify-output-check-folder-chunks-có-file---chunk-001txt---chunk-002txt-----4-báo-cáo-user---số-chunk-tạo---tổng-duration---output-path---đề-xuất-bước-tiếp-ingest-từng-chunk-vào-wiki--output-format-mỗi-chunk"><div class="highlight"><pre><span></span><code>---
 name: srt-to-chunks
 description: &quot;Cắt file SRT (transcript subtitle) thành chunk txt nhỏ, mỗi chunk ~3 phút audio + timecode + YAML metadata. Use BẤT CỨ KHI NÀO user nói &#39;cắt SRT&#39;, &#39;chia chunk SRT&#39;, &#39;xử lý transcript X.srt&#39;, &#39;chunk file Y.srt&#39;. Output: folder chunks/ với file txt + metadata.&quot;
 ---
@@ -2520,7 +2520,7 @@ Check folder `&lt;srt_dir&gt;/chunks/` có file:
 - Đề xuất bước tiếp: ingest từng chunk vào wiki
 
 ## Output format mỗi chunk
-</code></pre></div><a class="headerlink" href="#-name-srt-to-chunks-description-cat-file-srt-transcript-subtitle-thanh-chunk-txt-nho-moi-chunk-3-phut-audio-timecode-yaml-metadata-use-bat-cu-khi-nao-user-noi-cat-srt-chia-chunk-srt-xu-ly-transcript-xsrt-chunk-file-ysrt-output-folder-chunks-voi-file-txt-metadata-srt-chunks-skill-muc-tieu-chuyen-file-srt-1000-3000-dong-thanh-nhieu-file-txt-chunk-moi-chunk-3-phut-audio-co-yaml-metadata-chunk_id-time_start-time_end-output-srt_dirchunkschunk-nnntxt-trigger-user-noi-cat-srt-rawtranscriptsxsrt-chia-chunk-transcript-y-xu-ly-file-zsrt-invoke-skill-workflow-1-get-input-user-cung-cap-srt-file-path-relative-hoac-absolute-chunk-duration-default-3-phut-180-giay-neu-thieu-hoi-user-2-run-script-chay-bash-claudeskillssrt-to-chunksscriptschunk_srtpy-srt_path-duration-180-3-verify-output-check-folder-srt_dirchunks-co-file-chunk-001txt-chunk-002txt-4-bao-cao-user-so-chunk-tao-tong-duration-output-path-e-xuat-buoc-tiep-ingest-tung-chunk-vao-wiki-output-format-moi-chunk" title="Permanent link">&para;</a></h2>
+</code></pre></div><a class="headerlink" href="#----name-srt-to-chunks-description-cắt-file-srt-transcript-subtitle-thành-chunk-txt-nhỏ-mỗi-chunk-3-phút-audio--timecode--yaml-metadata-use-bất-cứ-khi-nào-user-nói-cắt-srt-chia-chunk-srt-xử-lý-transcript-xsrt-chunk-file-ysrt-output-folder-chunks-với-file-txt--metadata------srt--chunks-skill--mục-tiêu-chuyển-file-srt-1000-3000-dòng-thành-nhiều-file-txt-chunk---mỗi-chunk--3-phút-audio---có-yaml-metadata-chunk_id-time_start-time_end---output-chunkschunk-nnntxt--trigger-user-nói---cắt-srt-rawtranscriptsxsrt---chia-chunk-transcript-y---xử-lý-file-zsrt--invoke-skill--workflow--1-get-input-user-cung-cấp---srt-file-path-relative-hoặc-absolute---chunk-duration-default-3-phút--180-giây-nếu-thiếu--hỏi-user--2-run-script-chạy-bash-claudeskillssrt-to-chunksscriptschunk_srtpy----duration-180--3-verify-output-check-folder-chunks-có-file---chunk-001txt---chunk-002txt-----4-báo-cáo-user---số-chunk-tạo---tổng-duration---output-path---đề-xuất-bước-tiếp-ingest-từng-chunk-vào-wiki--output-format-mỗi-chunk" title="Permanent link">&para;</a></h2>
 <p>chunk_id: 001
 time_start: "00:00:00.000"
 time_end: "00:03:00.000"
@@ -2541,7 +2541,7 @@ source_srt: <path></p>
 - Folder chunks/ đã có file → hỏi overwrite hay skip
 </code></pre></div></p>
 <hr />
-<h2 id="buoc-3-viet-script-python">Bước 3 — Viết script Python<a class="headerlink" href="#buoc-3-viet-script-python" title="Permanent link">&para;</a></h2>
+<h2 id="bước-3--viết-script-python">Bước 3 — Viết script Python<a class="headerlink" href="#bước-3--viết-script-python" title="Permanent link">&para;</a></h2>
 <p><code>.claude/skills/srt-to-chunks/scripts/chunk_srt.py</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
 <span class="sd">&quot;&quot;&quot;Cắt SRT thành chunk txt theo duration.&quot;&quot;&quot;</span>
@@ -2659,7 +2659,7 @@ source_srt: <path></p>
 <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>.claude/skills/srt-to-chunks/scripts/chunk_srt.py
 </code></pre></div>
 <hr />
-<h2 id="buoc-4-test-script-thu-cong">Bước 4 — Test script thủ công<a class="headerlink" href="#buoc-4-test-script-thu-cong" title="Permanent link">&para;</a></h2>
+<h2 id="bước-4--test-script-thủ-công">Bước 4 — Test script thủ công<a class="headerlink" href="#bước-4--test-script-thủ-công" title="Permanent link">&para;</a></h2>
 <p>Tải 1 SRT mẫu (vd YouTube transcript) vào <code>raw/transcripts/test.srt</code>:</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>.claude/skills/srt-to-chunks/scripts/chunk_srt.py<span class="w"> </span>raw/transcripts/test.srt<span class="w"> </span>--duration<span class="w"> </span><span class="m">180</span>
 </code></pre></div>
@@ -2671,7 +2671,7 @@ source_srt: <path></p>
 </code></pre></div></p>
 <p>Verify format đúng.</p>
 <hr />
-<h2 id="buoc-5-test-skill-qua-claude-code">Bước 5 — Test skill qua Claude Code<a class="headerlink" href="#buoc-5-test-skill-qua-claude-code" title="Permanent link">&para;</a></h2>
+<h2 id="bước-5--test-skill-qua-claude-code">Bước 5 — Test skill qua Claude Code<a class="headerlink" href="#bước-5--test-skill-qua-claude-code" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;/Users/</span><span class="nv">$USER</span><span class="s2">/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Brain&quot;</span>
 claude
 </code></pre></div>
@@ -2684,9 +2684,9 @@ claude
 - Run script
 - Báo cáo: "Created 8 chunks. Path: raw/transcripts/chunks/"</p>
 <hr />
-<h2 id="buoc-6-iterate-skill">Bước 6 — Iterate skill<a class="headerlink" href="#buoc-6-iterate-skill" title="Permanent link">&para;</a></h2>
+<h2 id="bước-6--iterate-skill">Bước 6 — Iterate skill<a class="headerlink" href="#bước-6--iterate-skill" title="Permanent link">&para;</a></h2>
 <p>Sau lần test, edge case:</p>
-<h3 id="edge-1-user-noi-chunk-5-phut">Edge 1 — User nói "chunk 5 phút"<a class="headerlink" href="#edge-1-user-noi-chunk-5-phut" title="Permanent link">&para;</a></h3>
+<h3 id="edge-1--user-nói-chunk-5-phút">Edge 1 — User nói "chunk 5 phút"<a class="headerlink" href="#edge-1--user-nói-chunk-5-phút" title="Permanent link">&para;</a></h3>
 <p>Skill cần parse "5 phút" → 300 giây. Update SKILL.md:</p>
 <div class="highlight"><pre><span></span><code>### 1. Get input
 
@@ -2695,7 +2695,7 @@ User cung cấp:
 - Chunk duration (default: 180s = 3 phút)
   - Parse format: &quot;X phút&quot; → X*60, &quot;X giây&quot; → X
 </code></pre></div>
-<h3 id="edge-2-file-output-a-ton-tai">Edge 2 — File output đã tồn tại<a class="headerlink" href="#edge-2-file-output-a-ton-tai" title="Permanent link">&para;</a></h3>
+<h3 id="edge-2--file-output-đã-tồn-tại">Edge 2 — File output đã tồn tại<a class="headerlink" href="#edge-2--file-output-đã-tồn-tại" title="Permanent link">&para;</a></h3>
 <p>Update script:</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">output_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;chunk-001.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
     <span class="n">confirm</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Output exists. Overwrite? [y/N]: &quot;</span><span class="p">)</span>
@@ -2703,12 +2703,12 @@ User cung cấp:
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Skipped&quot;</span><span class="p">)</span>
         <span class="k">return</span>
 </code></pre></div>
-<h3 id="edge-3-user-upload-file-srt-truc-tiep-khong-co-path">Edge 3 — User upload file SRT trực tiếp (không có path)<a class="headerlink" href="#edge-3-user-upload-file-srt-truc-tiep-khong-co-path" title="Permanent link">&para;</a></h3>
+<h3 id="edge-3--user-upload-file-srt-trực-tiếp-không-có-path">Edge 3 — User upload file SRT trực tiếp (không có path)<a class="headerlink" href="#edge-3--user-upload-file-srt-trực-tiếp-không-có-path" title="Permanent link">&para;</a></h3>
 <p>Hỏi user thả file vào folder cụ thể trước:</p>
 <div class="highlight"><pre><span></span><code>Vui lòng thả file SRT vào raw/transcripts/ trước. Sau đó tôi sẽ xử lý.
 </code></pre></div>
 <hr />
-<h2 id="buoc-7-skill-chain-voi-agent">Bước 7 — Skill chain với agent<a class="headerlink" href="#buoc-7-skill-chain-voi-agent" title="Permanent link">&para;</a></h2>
+<h2 id="bước-7--skill-chain-với-agent">Bước 7 — Skill chain với agent<a class="headerlink" href="#bước-7--skill-chain-với-agent" title="Permanent link">&para;</a></h2>
 <p>Skill <code>srt-to-chunks</code> chỉ chia chunk. Để ingest chunk vào wiki → kết hợp với agent:</p>
 <div class="highlight"><pre><span></span><code>&gt; Cắt SRT raw/transcripts/khoa-ban-hang-b-D1.srt, rồi ingest từng chunk vào wiki
 </code></pre></div>
@@ -2717,22 +2717,22 @@ User cung cấp:
 2. Agent <code>article-ingest</code> (đã build) → ingest từng chunk</p>
 <p>Bạn type 1 lệnh → 2 tool chạy tự động.</p>
 <hr />
-<h2 id="buoc-8-anti-pattern-khi-viet-skill">Bước 8 — Anti-pattern khi viết skill<a class="headerlink" href="#buoc-8-anti-pattern-khi-viet-skill" title="Permanent link">&para;</a></h2>
-<h3 id="sai-1-script-bug-khong-handle-gracefully">Sai 1 — Script bug không handle gracefully<a class="headerlink" href="#sai-1-script-bug-khong-handle-gracefully" title="Permanent link">&para;</a></h3>
+<h2 id="bước-8--anti-pattern-khi-viết-skill">Bước 8 — Anti-pattern khi viết skill<a class="headerlink" href="#bước-8--anti-pattern-khi-viết-skill" title="Permanent link">&para;</a></h2>
+<h3 id="sai-1--script-bug-không-handle-gracefully">Sai 1 — Script bug không handle gracefully<a class="headerlink" href="#sai-1--script-bug-không-handle-gracefully" title="Permanent link">&para;</a></h3>
 <p>Script panic khi file không exist → user thấy stack trace Python. Bad UX.</p>
 <p>Update:</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="ow">not</span> <span class="n">srt_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ERROR: File not found: </span><span class="si">{</span><span class="n">srt_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="sai-2-skill-hardcode-path">Sai 2 — Skill hardcode path<a class="headerlink" href="#sai-2-skill-hardcode-path" title="Permanent link">&para;</a></h3>
+<h3 id="sai-2--skill-hardcode-path">Sai 2 — Skill hardcode path<a class="headerlink" href="#sai-2--skill-hardcode-path" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>1. Đọc raw/transcripts/specific-file.srt
 </code></pre></div>
 <p>→ Skill chỉ work cho file đó. Sửa: <code>Đọc &lt;file user chỉ&gt;</code>.</p>
-<h3 id="sai-3-skill-khong-cite-file-output">Sai 3 — Skill không cite file output<a class="headerlink" href="#sai-3-skill-khong-cite-file-output" title="Permanent link">&para;</a></h3>
+<h3 id="sai-3--skill-không-cite-file-output">Sai 3 — Skill không cite file output<a class="headerlink" href="#sai-3--skill-không-cite-file-output" title="Permanent link">&para;</a></h3>
 <p>User không biết output ở đâu sau khi skill chạy.</p>
 <p>→ Output report: "Created N files in <path>".</p>
-<h3 id="sai-4-skill-phu-thuoc-lib-chua-cai">Sai 4 — Skill phụ thuộc lib chưa cài<a class="headerlink" href="#sai-4-skill-phu-thuoc-lib-chua-cai" title="Permanent link">&para;</a></h3>
+<h3 id="sai-4--skill-phụ-thuộc-lib-chưa-cài">Sai 4 — Skill phụ thuộc lib chưa cài<a class="headerlink" href="#sai-4--skill-phụ-thuộc-lib-chưa-cài" title="Permanent link">&para;</a></h3>
 <p>Script import package chưa pip install.</p>
 <p>→ Document yêu cầu trong SKILL.md:</p>
 <div class="highlight"><pre><span></span><code>## Yêu cầu
@@ -2741,7 +2741,7 @@ User cung cấp:
 - Không cần package extra (chỉ stdlib)
 </code></pre></div>
 <hr />
-<h2 id="buoc-9-best-practice-viet-skill">Bước 9 — Best practice viết skill<a class="headerlink" href="#buoc-9-best-practice-viet-skill" title="Permanent link">&para;</a></h2>
+<h2 id="bước-9--best-practice-viết-skill">Bước 9 — Best practice viết skill<a class="headerlink" href="#bước-9--best-practice-viết-skill" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Single-purpose</strong>: skill làm 1 thứ, làm tốt</li>
 <li><strong>Idempotent</strong>: chạy lần 2 với input cũ → output giống (hoặc skip)</li>
@@ -2750,7 +2750,7 @@ User cung cấp:
 <li><strong>Documentation trong SKILL.md</strong>: workflow, constraint, edge case</li>
 </ol>
 <hr />
-<h2 id="buoc-10-khi-nao-nang-skill-len-agent">Bước 10 — Khi nào nâng skill lên agent<a class="headerlink" href="#buoc-10-khi-nao-nang-skill-len-agent" title="Permanent link">&para;</a></h2>
+<h2 id="bước-10--khi-nào-nâng-skill-lên-agent">Bước 10 — Khi nào nâng skill lên agent<a class="headerlink" href="#bước-10--khi-nào-nâng-skill-lên-agent" title="Permanent link">&para;</a></h2>
 <p>Skill grow → có dấu hiệu:
 - SKILL.md &gt; 200 dòng
 - Workflow nhiều step phụ thuộc nhau
@@ -2759,11 +2759,11 @@ User cung cấp:
 <p>→ Migrate skill → agent. Move logic SKILL.md vào <code>.claude/agents/&lt;name&gt;.md</code> system prompt.</p>
 <p>Vd: <code>srt-to-chunks</code> skill có thể migrate sang <code>raw-chunk-ingest-pipeline</code> agent khi workflow phức tạp (chunk + chia folder trang chính thức + organize raw + update wiki).</p>
 <hr />
-<h2 id="chu-thich">📖 Chú thích<a class="headerlink" href="#chu-thich" title="Permanent link">&para;</a></h2>
+<h2 id="-chú-thích">📖 Chú thích<a class="headerlink" href="#-chú-thích" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>ingest</strong> = đưa tài liệu thô vào kho để AI đọc và xử lý thành trang wiki — gồm: đọc nội dung, rút ý chính, tạo trang tóm tắt và cập nhật trang khái niệm liên quan.</li>
 </ul>
-<h2 id="tiep-theo">Tiếp theo<a class="headerlink" href="#tiep-theo" title="Permanent link">&para;</a></h2>
+<h2 id="tiếp-theo">Tiếp theo<a class="headerlink" href="#tiếp-theo" title="Permanent link">&para;</a></h2>
 <p>Bạn đã hoàn thành Phần 04 agents + skills. Sang Phần 05 bảo trì.</p>
 <p>Đọc tiếp: <a href="../../05-bao-tri-lint/01-lint-wiki-dinh-ky/">01-lint-wiki-dinh-ky</a> — Rà soát wiki định kỳ.</p>
 
