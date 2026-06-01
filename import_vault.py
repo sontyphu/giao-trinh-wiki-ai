@@ -343,7 +343,6 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.action.edit
 
 markdown_extensions:
   - admonition
