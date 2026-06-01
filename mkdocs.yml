@@ -1,6 +1,6 @@
 site_name: Giáo trình Wiki AI
-site_description: Xây hệ thống wiki AI-first với Obsidian + Claude — 7 phần, từ triết lý đến template copy-paste.
-site_author: AI Agent Business Kit
+site_description: Xây hệ thống ghi chú AI tự quản lý với Obsidian + Claude — concept-first, multi-vault.
+site_author: Son's Brain
 site_url: https://sontyphu.github.io/giao-trinh-wiki-ai/
 repo_url: https://github.com/sontyphu/giao-trinh-wiki-ai
 repo_name: sontyphu/giao-trinh-wiki-ai
@@ -39,12 +39,15 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.action.edit
 
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - attr_list
   - md_in_html
   - tables
@@ -54,41 +57,49 @@ markdown_extensions:
 nav:
   - 🏠 Trang chủ: index.md
   - 🚀 Quick Start: quick-start.md
+  - 🗂️ Mục lục: muc-luc.md
+  - ❓ FAQ: faq.md
   - 📖 00. Triết lý:
-      - Tại sao AI-first: 00-triet-ly/01-tai-sao-ai-first.md
-      - Tại sao concept-first: 00-triet-ly/02-tai-sao-concept-first.md
-      - Tại sao multi-vault: 00-triet-ly/03-tai-sao-multi-vault.md
-      - 3 lớp Raw/Wiki/Schema: 00-triet-ly/04-ba-lop-raw-wiki-schema.md
+      - "Tại sao hệ thống ghi chú AI": 00-triet-ly/01-tai-sao-ai-first-wiki.md
+      - "Tại sao lưu theo khái niệm": 00-triet-ly/02-tai-sao-concept-first.md
+      - "Tại sao nhiều kho": 00-triet-ly/03-tai-sao-multi-vault.md
+      - "3 lớp bên trong mỗi kho": 00-triet-ly/04-3-lop-raw-wiki-schema.md
   - ⚙️ 01. Cài đặt:
-      - Cài Obsidian: 01-cai-dat/01-cai-obsidian.md
-      - Cài iCloud sync: 01-cai-dat/02-cai-icloud-sync.md
-      - Cài Claude Code: 01-cai-dat/03-cai-claude-code.md
-      - Cài MCP servers: 01-cai-dat/04-cai-mcp-servers.md
-      - Cài plugins Obsidian: 01-cai-dat/05-cai-plugins-obsidian.md
-  - 🧠 02. Vault Brain:
-      - Tạo vault Brain: 02-vault-brain/01-tao-vault-brain.md
-      - CLAUDE.md template: 02-vault-brain/02-claude-md-template.md
-      - Cấu trúc folder: 02-vault-brain/03-cau-truc-folder.md
-      - Concept page template: 02-vault-brain/04-concept-page-template.md
-      - Source page template: 02-vault-brain/05-source-page-template.md
-      - Course MOC template: 02-vault-brain/06-course-moc-template.md
-      - Ingest source đầu tiên: 02-vault-brain/07-ingest-source-dau-tien.md
-      - Query wiki đầu tiên: 02-vault-brain/08-query-wiki-dau-tien.md
-  - 🌳 03. Multi-vault:
-      - Khi nào tách vault: 03-multi-vault/01-khi-nao-tach-vault.md
-      - Vault Life: 03-multi-vault/02-vault-life.md
-      - Vault 4DX: 03-multi-vault/03-vault-4dx.md
-      - Vault Marketing: 03-multi-vault/04-vault-marketing.md
-      - Cross-vault query: 03-multi-vault/05-cross-vault-query.md
-  - 🤖 04. Agents-Skills:
-      - Agent là gì: 04-agents-skills/01-agent-la-gi.md
-      - Tạo agent đầu tiên: 04-agents-skills/02-tao-agent-dau-tien.md
-      - Skill là gì: 04-agents-skills/03-skill-la-gi.md
-      - Tạo skill đầu tiên: 04-agents-skills/04-tao-skill-dau-tien.md
-      - Memory system: 04-agents-skills/05-memory-system.md
+      - "Cài Obsidian": 01-cai-dat/01-cai-obsidian.md
+      - "Cài iCloud sync": 01-cai-dat/02-cai-icloud-sync.md
+      - "Cài Claude Code": 01-cai-dat/03-cai-claude-code.md
+      - "Cài MCP servers": 01-cai-dat/04-cai-mcp-servers.md
+      - "Cài plugins Obsidian": 01-cai-dat/05-cai-plugins-obsidian.md
+  - 🧠 02. Kho đầu tiên (Brain):
+      - "Tạo vault Brain": 02-vault-dau-tien-brain/01-tao-vault-brain.md
+      - "CLAUDE.md template": 02-vault-dau-tien-brain/02-claude-md-template.md
+      - "Cấu trúc folder": 02-vault-dau-tien-brain/03-cau-truc-folder.md
+      - "Concept page template": 02-vault-dau-tien-brain/04-concept-page-template.md
+      - "Source page template": 02-vault-dau-tien-brain/05-source-page-template.md
+      - "Course bản đồ nội dung template": 02-vault-dau-tien-brain/06-course-moc-template.md
+      - "Ingest source đầu tiên": 02-vault-dau-tien-brain/07-ingest-source-dau-tien.md
+      - "Query wiki đầu tiên": 02-vault-dau-tien-brain/08-query-wiki-dau-tien.md
+  - 🌳 03. Mở rộng multi-vault:
+      - "Khi nào tách kho mới": 03-mo-rong-multi-vault/01-khi-nao-tach-vault.md
+      - "Vault Life — lifestyle cá nhân": 03-mo-rong-multi-vault/02-vault-life-lifestyle.md
+      - "Vault 4DX — execution layer": 03-mo-rong-multi-vault/03-vault-4dx-execution.md
+      - "Vault Marketing — production + measurement": 03-mo-rong-multi-vault/04-vault-marketing.md
+      - "Cross-vault query": 03-mo-rong-multi-vault/05-cross-vault-query.md
+  - 🤖 04. Agents · Skills · Memory:
+      - "Agent là gì": 04-agents-skills-memory/01-agent-la-gi.md
+      - "Tạo agent đầu tiên": 04-agents-skills-memory/02-tao-agent-dau-tien.md
+      - "Skill là gì": 04-agents-skills-memory/03-skill-la-gi.md
+      - "Tạo skill đầu tiên": 04-agents-skills-memory/04-tao-skill-dau-tien.md
+      - "Hệ thống bộ nhớ AI": 04-agents-skills-memory/05-memory-system.md
   - 🛠️ 05. Bảo trì:
-      - Lint định kỳ: 05-bao-tri/01-lint-dinh-ky.md
-      - Backup iCloud + Git: 05-bao-tri/02-backup-icloud-git.md
-      - Migrate / rename: 05-bao-tri/03-migrate-rename-vault.md
-      - Khi nào pivot: 05-bao-tri/04-khi-nao-pivot.md
-  - 📋 99. Templates: 99-templates/index.md
+      - "Rà soát wiki định kỳ": 05-bao-tri-lint/01-lint-wiki-dinh-ky.md
+      - "Backup iCloud + Git": 05-bao-tri-lint/02-backup-icloud-git.md
+      - "Migrate rename vault": 05-bao-tri-lint/03-migrate-rename-vault.md
+      - "Khi nào cải tổ hệ thống": 05-bao-tri-lint/04-khi-nao-pivot-architecture.md
+  - 📋 99. Templates:
+      - "CLAUDE.md master template": 99-templates/claude-md-master-template.md
+      - "Concept page template": 99-templates/concept-page-template.md
+      - "Course bản đồ nội dung template": 99-templates/course-moc-template.md
+      - "index.md format": 99-templates/index-md-format.md
+      - "log.md format": 99-templates/log-md-format.md
+      - "Source page template": 99-templates/source-page-template.md
